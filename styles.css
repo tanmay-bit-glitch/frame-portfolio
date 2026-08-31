@@ -1665,54 +1665,15 @@ body:hover .custom-cursor {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 25%;
-  filter: contrast(1.08) brightness(0.98) saturate(1.05);
+  object-position: center center;
+  filter: contrast(1.05) brightness(1.0) saturate(1.02);
+  display: block;
   transition: transform var(--dur-slow) var(--ease-cinema), filter var(--dur-slow);
 }
 
 .portrait-frame:hover .portrait-img {
-  transform: scale(1.03);
-  filter: contrast(1.14) brightness(1.02) saturate(1.1);
-}
-
-.portrait-overlay {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 10px 14px;
-  background: rgba(7, 7, 6, 0.82);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-}
-
-.portrait-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  font-size: 10px;
-}
-
-.portrait-meta span:first-child {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-.portrait-meta span:last-child {
-  color: var(--accent);
-  font-size: 9px;
-}
-
-.signature-svg {
-  font-family: 'Syne', cursive, serif;
-  font-size: 20px;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.85);
-  font-style: italic;
+  transform: scale(1.02);
+  filter: contrast(1.08) brightness(1.02) saturate(1.05);
 }
 
 .camera-tag {
@@ -1720,6 +1681,7 @@ body:hover .custom-cursor {
   text-align: center;
   margin-top: 14px;
   font-size: 10px;
+  letter-spacing: 0.12em;
 }
 
 /* ==========================================================================
