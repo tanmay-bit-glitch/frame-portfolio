@@ -1560,8 +1560,8 @@ body:hover .custom-cursor {
    ========================================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 64px;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 60px;
   align-items: center;
 }
 
@@ -1640,7 +1640,7 @@ body:hover .custom-cursor {
 /* Portrait Card with Film Sprockets */
 .about-portrait-card {
   position: relative;
-  max-width: 380px;
+  max-width: 310px;
   margin: 0 auto;
 }
 
@@ -1650,14 +1650,14 @@ body:hover .custom-cursor {
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid var(--border-bright);
-  box-shadow: var(--shadow-cinema);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
 .portrait-sprocket {
-  height: 14px;
+  height: 12px;
   background: repeating-linear-gradient(90deg,
-      var(--border-bright) 0, var(--border-bright) 12px,
-      transparent 12px, transparent 24px);
+      var(--border-bright) 0, var(--border-bright) 10px,
+      transparent 10px, transparent 20px);
   opacity: 0.45;
 }
 
@@ -1665,26 +1665,26 @@ body:hover .custom-cursor {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 15%;
-  filter: contrast(1.06) brightness(0.98) saturate(1.03);
+  object-position: center 25%;
+  filter: contrast(1.08) brightness(0.98) saturate(1.05);
   transition: transform var(--dur-slow) var(--ease-cinema), filter var(--dur-slow);
 }
 
 .portrait-frame:hover .portrait-img {
   transform: scale(1.03);
-  filter: contrast(1.1) brightness(1.02) saturate(1.06);
+  filter: contrast(1.14) brightness(1.02) saturate(1.1);
 }
 
 .portrait-overlay {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 16px 20px;
-  background: rgba(7, 7, 6, 0.75);
+  padding: 10px 14px;
+  background: rgba(7, 7, 6, 0.82);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
@@ -1694,7 +1694,7 @@ body:hover .custom-cursor {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .portrait-meta span:first-child {
@@ -1704,11 +1704,12 @@ body:hover .custom-cursor {
 
 .portrait-meta span:last-child {
   color: var(--accent);
+  font-size: 9px;
 }
 
 .signature-svg {
   font-family: 'Syne', cursive, serif;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.85);
   font-style: italic;
