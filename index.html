@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="FRAME — Tanmay's evolving photography, videography, and editing portfolio. Based in Pune, India.">
+  <meta name="theme-color" content="#080807">
+  <title>FRAME — Tanmay | Photography &amp; Videography</title>
+
+  <!-- Website Favicon & App Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <script>
+    (() => {
+      const stored = localStorage.getItem('frame-theme') || 'dark';
+      const resolved = stored === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : stored;
+      document.documentElement.dataset.theme = resolved;
+      document.documentElement.dataset.themePreference = stored;
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Archivo+Black&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="loading-state">
+  <!-- Custom Viewfinder Cursor -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-label">VIEW</span>
+  </div>
+
+  <!-- Grain & Cinema Overlays -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="film-vignette" aria-hidden="true"></div>
+  <div class="rail rail-left" aria-hidden="true"></div>
+  <div class="rail rail-right" aria-hidden="true"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="header-left">
+      <a class="wordmark" href="#top" aria-label="FRAME home">
+        FR<span class="aperture-glyph">A</span>ME
+      </a>
+      <div class="live-timecode-pill" title="Live 24 FPS SMPTE Timecode">
+        <span class="rec-dot"></span>
+        <span class="tc-label">REC</span>
+        <span class="tc-display" id="timecodeDisplay">00:00:00:00</span>
+        <span class="tc-fps">24 FPS</span>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <!-- Sound FX Toggle -->
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Toggle camera shutter audio sound effects"
+        title="Toggle audio feedback">
+        <span class="sound-icon sound-off">🔇</span>
+        <span class="sound-icon sound-on">🔊</span>
+        <span class="sound-text">FX OFF</span>
+      </button>
+
+      <!-- Theme Switcher -->
+      <div class="theme-switcher" role="radiogroup" aria-label="Color theme selector">
+        <button type="button" data-theme-choice="dark" aria-label="Dark mode">NOIR</button>
+        <button type="button" data-theme-choice="light" aria-label="Light mode">STUDIO</button>
+        <button type="button" data-theme-choice="system" aria-label="System preference">SYS</button>
+      </div>
+
+      <!-- Pre-Interview Tasks Quick Tab -->
+      <a href="#tasks" class="header-task-pill" title="Jump to Pre-Interview Tasks & Assignments">
+        <span class="pulse-ring-dot"></span>
+        <span>TASKS</span>
+      </a>
+
+      <!-- Book CTA Button -->
+      <a href="#contact" class="header-cta-btn">
+        <span>SAY HELLO</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M7 17L17 7M17 7H7M17 7V17" />
+        </svg>
+      </a>
+
+      <!-- Menu Trigger -->
+      <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="menu-label">INDEX</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen Navigation Overlay -->
+  <nav class="menu-overlay" id="site-menu" aria-label="Primary navigation" aria-hidden="true" inert>
+    <div class="menu-bg-glow" aria-hidden="true"></div>
+    <div class="menu-top-bar">
+      <span class="mono">INDEX // ARCHIVE DIRECTORY</span>
+      <button class="menu-close" type="button" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="menu-inner">
+      <div class="menu-links">
+        <a href="#work" data-num="01">
+          <span class="link-meta">PHOTOGRAPHY & REELS</span>
+          <span class="link-text">SELECTED WORKS</span>
+        </a>
+        <a href="#instagram" data-num="02">
+          <span class="link-meta">DAILY VISUAL FEED</span>
+          <span class="link-text">INSTAGRAM</span>
+        </a>
+        <a href="#tasks" data-num="03">
+          <span class="link-meta">BRIEFS &amp; SUBMISSIONS</span>
+          <span class="link-text">PRE-INTERVIEW TASKS</span>
+        </a>
+        <a href="#about" data-num="04">
+          <span class="link-meta">PHILOSOPHY &amp; PROFILE</span>
+          <span class="link-text">ABOUT ME</span>
+        </a>
+        <a href="#gear" data-num="05">
+          <span class="link-meta">CAMERAS &amp; EDITING SETUP</span>
+          <span class="link-text">MY SETUP</span>
+        </a>
+        <a href="#skills" data-num="06">
+          <span class="link-meta">APPROACH &amp; PACING</span>
+          <span class="link-text">HOW I CREATE</span>
+        </a>
+        <a href="#contact" data-num="07">
+          <span class="link-meta">CONVERSATIONS &amp; PROJECTS</span>
+          <span class="link-text">GET IN TOUCH</span>
+        </a>
+      </div>
+
+      <div class="menu-footer-grid">
+        <div class="menu-col">
+          <span class="col-title">LOCATION</span>
+          <p>Pune, Maharashtra, India<br>Roots in Nagpur<br>Open for creative projects</p>
+        </div>
+        <div class="menu-col">
+          <span class="col-title">DIRECT DISPATCH</span>
+          <p><a href="mailto:tchavan265@gmail.com">tchavan265@gmail.com</a><br>+91 86686 40565</p>
+        </div>
+        <div class="menu-col">
+          <span class="col-title">INSTAGRAM CHANNELS</span>
+          <div class="menu-socials">
+            <a href="https://instagram.com/io.tanmay" target="_blank" rel="noopener">@io.tanmay ↗</a>
+            <a href="https://instagram.com/by_tanmay_" target="_blank" rel="noopener">@by_tanmay_ ↗</a>
+            <a href="https://instagram.com/co0kedd_edits" target="_blank" rel="noopener">@co0kedd_edits ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero section-pad is-counting" aria-labelledby="hero-heading">
+      <!-- Cinematic Headphone Hero Background Layer -->
+      <div class="hero-bg-layer" aria-hidden="true">
+        <img src="assets/hero_headphone_bg.png" alt="Tanmay Chavan — Cinematic Headphone Frame" class="hero-bg-img">
+        <div class="hero-bg-gradient-overlay"></div>
+      </div>
+
+      <!-- 35mm Academy Optical Countdown Leader -->
+      <div class="leader-countdown" data-frame="number" aria-hidden="true">
+        <div class="leader-target">
+          <div class="target-crosshair horiz"></div>
+          <div class="target-crosshair vert"></div>
+          <div class="target-circle c1"></div>
+          <div class="target-circle c2"></div>
+          <div class="target-sweep"></div>
+        </div>
+        <span class="leader-number is-ticking">3</span>
+        <div class="leader-hud">
+          <span class="film-stock-tag">35MM SMPTE // 5219</span>
+          <span class="take-tag">TAKE 001 · 24 FPS</span>
+        </div>
+      </div>
+
+      <div class="countdown-haze" aria-hidden="true"></div>
+
+      <!-- Ambient Optical Light Glow -->
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+      <!-- Viewfinder Overlay Corner Marks -->
+      <div class="viewfinder-hud" aria-hidden="true">
+        <div class="vf-corner tl">⌜</div>
+        <div class="vf-corner tr">⌝</div>
+        <div class="vf-corner bl">⌞</div>
+        <div class="vf-corner br">⌟</div>
+        <div class="vf-center-cross">+</div>
+        <div class="vf-aspect-guide">2.39:1 ANAMORPHIC SCOPE</div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-top-meta">
+          <p class="eyebrow">
+            <span class="availability-dot"></span>
+            <span>STUDENT CREATOR IN PUNE — BUILDING ONE FRAME AT A TIME</span>
+          </p>
+          <button class="replay-leader-btn" id="replayCountdownBtn" type="button"
+            title="Replay 35mm Academy countdown leader">
+            ↺ REPLAY LEADER
+          </button>
+        </div>
+
+        <h1 id="hero-heading">
+          I STOP WHEN<br>
+          <span class="headline-accent">A FRAME</span><br>
+          FEELS RIGHT.
+        </h1>
+
+        <div class="hero-actions-row">
+          <a href="#work" class="btn-primary">
+            <span>EXPLORE FRAMES</span>
+            <span class="btn-arrow">↓</span>
+          </a>
+          <button class="btn-secondary" id="watchReelBtn" type="button">
+            <span class="play-icon-triangle">▶</span>
+            <span>WATCH THE REEL</span>
+            <span class="reel-duration">01:45</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-footer">
+        <ul class="role-tags" aria-label="Creative Disciplines">
+          <li>Photography</li>
+          <li>Videography</li>
+          <li>Editing</li>
+          <li>Always exploring</li>
+        </ul>
+        <div class="hero-footer-location mono">
+          <span>PUNE, MAHARASHTRA // ROOTS IN NAGPUR</span>
+          <span class="lat-long">MAKING WITH A SAMSUNG GALAXY S23</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK SECTION -->
+    <section class="work section-pad" id="work" aria-labelledby="work-heading">
+      <div class="section-header-split">
+        <div>
+          <p class="eyebrow">A GROWING ARCHIVE // 01</p>
+          <h2 id="work-heading">FRAMES FROM<br><span class="text-stroke">THE CUT.</span></h2>
+        </div>
+        <p class="section-intro-text">
+          Things that make me stop: people, streets, bikes, cars, skies, architecture, travel, shadows, textures, and
+          the unplanned moments in between. Captured on Samsung Galaxy S23 and graded for cinematic presence.
+        </p>
+      </div>
+
+      <!-- Work Filters & View Switcher Toolbar -->
+      <div class="work-toolbar">
+        <div class="filter-tabs" role="tablist" aria-label="Filter portfolio projects">
+          <button class="filter-tab is-active" type="button" role="tab" aria-selected="true" data-filter="all">ALL
+            [06]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="editorial">STREETS
+            &amp; DETAILS [02]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="campaign">PLACES &amp;
+            STRUCTURE [02]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="film">STAGE &amp; VIDEO
+            [01]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="portrait">PEOPLE
+            [01]</button>
+        </div>
+
+        <div class="layout-toggles">
+          <span class="mono layout-label">VIEW:</span>
+          <button class="layout-btn is-active" id="viewStripBtn" type="button" aria-label="Filmstrip carousel layout"
+            title="Filmstrip carousel">FILMSTRIP</button>
+          <button class="layout-btn" id="viewGridBtn" type="button" aria-label="Contact sheet grid layout"
+            title="Contact sheet grid">GRID</button>
+        </div>
+      </div>
+
+      <!-- Filmstrip / Project Container -->
+      <div class="filmstrip-wrapper">
+        <div class="filmstrip-edge top-edge" aria-hidden="true">
+          <div class="sprocket-track"></div>
+          <div class="edge-code">TANMAY CHAVAN • PERSONAL ARCHIVE • PUNE / NAGPUR • FRAMES IN PROGRESS</div>
+        </div>
+
+        <div class="filmstrip" id="filmstrip" aria-label="Selected portfolio work">
+
+          <!-- PROJECT 01 -->
+          <article class="project-frame" tabindex="0" data-category="portrait" data-id="1"
+            data-title="Portraits of Wisdom" data-year="2026" data-type="PORTRAIT — MONOCHROME"
+            data-camera="SAMSUNG GALAXY S23" data-film="ILFORD HP5 PLUS 400 EMULATION" data-location="PUNE, MAHARASHTRA"
+            data-aspect="4:3 ACADEMY"
+            data-desc="Natural light monochrome portraiture capturing character, age, and quiet dignity in traditional Maharashtrian attire. High micro-contrast grade."
+            data-colors="#0c0d0f,#2b2d31,#60656f,#9da3ae,#f1f3f5" data-img="assets/drive_photos/20260214_101223_1.jpg">
+            <div class="film-rebate-top" aria-hidden="true">
+              <span>▶ 14A</span>
+              <span class="barcode-graphic"></span>
+              <span>ISO 400</span>
+            </div>
+
+            <div class="frame-media-container">
+              <div class="frame-aspect-box">
+                <img src="assets/drive_photos/20260214_101223_1.jpg"
+                  alt="Portraits of Wisdom — Monochrome elder portrait by Tanmay Chavan" loading="lazy"
+                  class="project-image">
+                <div class="frame-lens-overlay"></div>
+                <div class="frame-hover-hud">
+                  <span class="hud-reticle">⌜ ⌟</span>
+                  <span class="hud-action">INSPECT SHOT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-rebate-bottom" aria-hidden="true">
+              <span>KODAK SAFETY FILM</span>
+              <span>FRAME 001</span>
+            </div>
+
+            <div class="frame-meta">
+              <span class="meta-tag">S23 / B&amp;W</span>
+              <span class="meta-frame-id">FRAME #01</span>
+            </div>
+            <div class="frame-info">
+              <h3>Portraits of Wisdom</h3>
+              <p class="category-tag">PORTRAIT / MONOCHROME</p>
+            </div>
+          </article>
+
+          <!-- PROJECT 02 -->
+          <article class="project-frame" tabindex="0" data-category="campaign" data-id="2"
+            data-title="Horizon &amp; Silhouette" data-year="2026" data-type="LANDSCAPE — DUSK"
+            data-camera="SAMSUNG GALAXY S23" data-film="KODAK VISION3 500T" data-location="KORIGAD FORT / SAHYADRIS"
+            data-aspect="4:3 SCOPE"
+            data-desc="Sunset silhouette atop the Sahyadris ridgeline overlooking the expansive city haze below. A study in human posture, negative space, and amber twilight gradients."
+            data-colors="#1a0c0a,#4a2016,#984524,#d8793b,#f5be7a" data-img="assets/drive_photos/20260306_190702.jpg">
+            <div class="film-rebate-top" aria-hidden="true">
+              <span>▶ 15A</span>
+              <span class="barcode-graphic"></span>
+              <span>ISO 500</span>
+            </div>
+
+            <div class="frame-media-container">
+              <div class="frame-aspect-box">
+                <img src="assets/drive_photos/20260306_190702.jpg"
+                  alt="Horizon &amp; Silhouette — Sunset over Sahyadris by Tanmay Chavan" loading="lazy"
+                  class="project-image">
+                <div class="frame-lens-overlay"></div>
+                <div class="frame-hover-hud">
+                  <span class="hud-reticle">⌜ ⌟</span>
+                  <span class="hud-action">INSPECT SHOT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-rebate-bottom" aria-hidden="true">
+              <span>KODAK PORTRA</span>
+              <span>FRAME 002</span>
+            </div>
+
+            <div class="frame-meta">
+              <span class="meta-tag">S23 / TWILIGHT</span>
+              <span class="meta-frame-id">FRAME #02</span>
+            </div>
+            <div class="frame-info">
+              <h3>Horizon &amp; Silhouette</h3>
+              <p class="category-tag">TRAVEL / DUSK</p>
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+          <article class="project-frame" tabindex="0" data-category="editorial" data-id="3"
+            data-title="Apex Stunt // KTM Wheelie" data-year="2026" data-type="ACTION — STREET"
+            data-camera="SAMSUNG GALAXY S23" data-film="FUJI ETERNA 250D" data-location="MAHARASHTRA"
+            data-aspect="3:4 VERTICAL"
+            data-desc="High-shutter street action capture freezing a vertical motorcycle wheelie stunt mid-festival. Balance, tire smoke, and crowd excitement preserved in crisp clarity."
+            data-colors="#0e1217,#2a333f,#5c6f84,#a5b7cc,#e8eff7" data-img="assets/drive_photos/20260621_1009200_1.jpg">
+            <div class="film-rebate-top" aria-hidden="true">
+              <span>▶ 16A</span>
+              <span class="barcode-graphic"></span>
+              <span>1/1000 SEC</span>
+            </div>
+
+            <div class="frame-media-container">
+              <div class="frame-aspect-box">
+                <img src="assets/drive_photos/20260621_1009200_1.jpg" alt="Apex Stunt KTM Wheelie by Tanmay Chavan"
+                  loading="lazy" class="project-image">
+                <div class="frame-lens-overlay"></div>
+                <div class="frame-hover-hud">
+                  <span class="hud-reticle">⌜ ⌟</span>
+                  <span class="hud-action">INSPECT SHOT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-rebate-bottom" aria-hidden="true">
+              <span>FUJI ETERNA CINE</span>
+              <span>FRAME 003</span>
+            </div>
+
+            <div class="frame-meta">
+              <span class="meta-tag">S23 / ACTION</span>
+              <span class="meta-frame-id">FRAME #03</span>
+            </div>
+            <div class="frame-info">
+              <h3>Apex Stunt // KTM Wheelie</h3>
+              <p class="category-tag">ACTION / MOTION</p>
+            </div>
+          </article>
+
+          <!-- PROJECT 04 -->
+          <article class="project-frame" tabindex="0" data-category="editorial" data-id="4"
+            data-title="Shelby GT500 // Custom Drift Livery" data-year="2026" data-type="AUTOMOTIVE — CULTURE"
+            data-camera="SAMSUNG GALAXY S23" data-film="KODAK PORTRA 400" data-location="PUNE TRACK DAY"
+            data-aspect="3:4 VERTICAL"
+            data-desc="Deep metallic purple Shelby Mustang GT500 with custom track drift livery. Low three-quarter perspective accentuating wheel camber and aerodynamic body contour."
+            data-colors="#120919,#311843,#672a8b,#9f5cd3,#e9d4ff" data-img="assets/drive_photos/20260406_183233_3.jpg">
+            <div class="film-rebate-top" aria-hidden="true">
+              <span>▶ 17A</span>
+              <span class="barcode-graphic"></span>
+              <span>ISO 200</span>
+            </div>
+
+            <div class="frame-media-container">
+              <div class="frame-aspect-box">
+                <img src="assets/drive_photos/20260406_183233_3.jpg"
+                  alt="Shelby GT500 Custom Drift Livery by Tanmay Chavan" loading="lazy" class="project-image">
+                <div class="frame-lens-overlay"></div>
+                <div class="frame-hover-hud">
+                  <span class="hud-reticle">⌜ ⌟</span>
+                  <span class="hud-action">INSPECT SHOT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-rebate-bottom" aria-hidden="true">
+              <span>KODAK PORTRA</span>
+              <span>FRAME 004</span>
+            </div>
+
+            <div class="frame-meta">
+              <span class="meta-tag">S23 / AUTOMOTIVE</span>
+              <span class="meta-frame-id">FRAME #04</span>
+            </div>
+            <div class="frame-info">
+              <h3>Shelby GT500 // Drift Livery</h3>
+              <p class="category-tag">AUTOMOTIVE / CULTURE</p>
+            </div>
+          </article>
+
+          <!-- PROJECT 05 -->
+          <article class="project-frame" tabindex="0" data-category="film" data-id="5"
+            data-title="Stage Spotlight // Rock Soloist" data-year="2026" data-type="PERFORMANCE — LIVE"
+            data-camera="SAMSUNG GALAXY S23" data-film="CINESTILL 800T TUNGSTEN" data-location="PUNE COLLEGE FEST"
+            data-aspect="3:4 VERTICAL"
+            data-desc="Live rock stage captured from the pit. Dramatic tungsten down-light isolating the electric guitarist under raining confetti and dense concert haze."
+            data-colors="#0f0b14,#321b44,#703577,#c9689f,#fed5e8" data-img="assets/drive_photos/20260412_214957_2.jpg">
+            <div class="film-rebate-top" aria-hidden="true">
+              <span>▶ 18A</span>
+              <span class="barcode-graphic"></span>
+              <span>CINESTILL 800T</span>
+            </div>
+
+            <div class="frame-media-container">
+              <div class="frame-aspect-box">
+                <img src="assets/drive_photos/20260412_214957_2.jpg" alt="Stage Spotlight Rock Soloist by Tanmay Chavan"
+                  loading="lazy" class="project-image">
+                <div class="frame-lens-overlay"></div>
+                <div class="frame-hover-hud">
+                  <span class="hud-reticle">⌜ ⌟</span>
+                  <span class="hud-action">INSPECT SHOT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-rebate-bottom" aria-hidden="true">
+              <span>800T TUNGSTEN</span>
+              <span>FRAME 005</span>
+            </div>
+
+            <div class="frame-meta">
+              <span class="meta-tag">S23 / LIVE STAGE</span>
+              <span class="meta-frame-id">FRAME #05</span>
+            </div>
+            <div class="frame-info">
+              <h3>Stage Spotlight // Soloist</h3>
+              <p class="category-tag">PERFORMANCE / LIVE</p>
+            </div>
+          </article>
+
+          <!-- PROJECT 06 -->
+          <article class="project-frame" tabindex="0" data-category="campaign" data-id="6"
+            data-title="The Taj Mahal Palace // Mumbai" data-year="2026" data-type="ARCHITECTURE — HERITAGE"
+            data-camera="SAMSUNG GALAXY S23" data-film="LEICA 35MM ARCHIVAL" data-location="COLABA, MUMBAI"
+            data-aspect="3:4 EDITORIAL"
+            data-desc="The iconic Taj Mahal Palace hotel Mumbai against crisp blue skies. Architectural rhythm, heritage stone arches, and maritime atmosphere."
+            data-colors="#0e141a,#223344,#4a6d88,#86a8c4,#d7e7f4"
+            data-img="assets/drive_photos/Screenshot_20260513_022247_Instagram.jpg">
+            <div class="film-rebate-top" aria-hidden="true">
+              <span>▶ 19A</span>
+              <span class="barcode-graphic"></span>
+              <span>ISO 100</span>
+            </div>
+
+            <div class="frame-media-container">
+              <div class="frame-aspect-box">
+                <img src="assets/drive_photos/Screenshot_20260513_022247_Instagram.jpg"
+                  alt="The Taj Mahal Palace Mumbai by Tanmay Chavan" loading="lazy" class="project-image">
+                <div class="frame-lens-overlay"></div>
+                <div class="frame-hover-hud">
+                  <span class="hud-reticle">⌜ ⌟</span>
+                  <span class="hud-action">INSPECT SHOT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-rebate-bottom" aria-hidden="true">
+              <span>LEICA ARCHIVAL</span>
+              <span>FRAME 006</span>
+            </div>
+
+            <div class="frame-meta">
+              <span class="meta-tag">S23 / ARCHITECTURE</span>
+              <span class="meta-frame-id">FRAME #06</span>
+            </div>
+            <div class="frame-info">
+              <h3>The Taj Mahal Palace</h3>
+              <p class="category-tag">ARCHITECTURE / MUMBAI</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="filmstrip-edge bottom-edge" aria-hidden="true">
+          <div class="sprocket-track"></div>
+          <div class="edge-code">PERSONAL PLACEHOLDERS • REPLACE WITH ORIGINAL WORK • ALL RIGHTS RESERVED</div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation & Scrubber -->
+      <div class="scroll-controls-row">
+        <div class="scroll-hint mono">
+          <span class="drag-icon">↔</span>
+          <span>DRAG OR SWIPE TO NAVIGATE</span>
+        </div>
+        <div class="filmstrip-nav-arrows">
+          <button class="strip-arrow" id="stripPrevBtn" type="button" aria-label="Previous frame">← PREV</button>
+          <div class="strip-indicator" id="stripIndicator">01 / 06</div>
+          <button class="strip-arrow" id="stripNextBtn" type="button" aria-label="Next frame">NEXT →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM INTEGRATION SECTION -->
+    <section class="instagram-section section-pad" id="instagram" aria-labelledby="instagram-heading">
+      <div class="instagram-container">
+
+        <!-- Section Header & Profile Card -->
+        <header class="instagram-header">
+          <div class="ig-header-meta">
+            <div class="ig-eyebrow-row">
+              <span class="mono eyebrow">LIVE DISPATCH // 02 — SOCIAL ARCHIVE & MOTION</span>
+              <div class="ig-api-badge" id="igApiBadge" title="Official Instagram Graph API Status">
+                <span class="status-pulse-dot"></span>
+                <span class="status-text mono" id="igApiStatusText">API: CONNECTED</span>
+              </div>
+            </div>
+            <h2 id="instagram-heading" class="ig-main-heading">
+              FROM THE FEED.<br>
+              <span class="text-stroke">@IO.TANMAY</span>
+            </h2>
+            <p class="ig-header-subtitle">
+              Daily visual experiments, 24 FPS motion reels, behind-the-scenes footage, and 35mm film studies direct
+              from my camera.
+            </p>
+          </div>
+
+          <!-- Profile Card matching user's exact Instagram ID layout -->
+          <aside class="ig-profile-card">
+            <div class="ig-profile-top">
+              <div class="ig-avatar-wrapper">
+                <div class="ig-note-bubble" title="Note...">Note...</div>
+                <img src="assets/ig_covers/avatar_tanmay.jpg" alt="Tanmay (@io.tanmay)" class="ig-avatar-img"
+                  id="igAvatarImg">
+              </div>
+              <div class="ig-identity">
+                <div class="ig-handle-row">
+                  <h3 class="ig-handle" id="igHandle">io.tanmay</h3>
+                  <svg class="ig-gear-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="ig-name-row">
+                  <span class="ig-name" id="igProfileName">Tanmay 🐉</span>
+                  <span class="ig-pronouns">he/him</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats: 14 posts • 529 followers • 722 following -->
+            <div class="ig-stats-row">
+              <div class="ig-stat">
+                <span class="stat-num" id="igMediaCount">14</span>
+                <span class="stat-lbl">posts</span>
+              </div>
+              <div class="ig-stat">
+                <span class="stat-num" id="igFollowersCount">529</span>
+                <span class="stat-lbl">followers</span>
+              </div>
+              <div class="ig-stat">
+                <span class="stat-num" id="igFollowingCount">722</span>
+                <span class="stat-lbl">following</span>
+              </div>
+            </div>
+
+            <!-- Bio matching user screenshot -->
+            <div class="ig-bio-block">
+              <span class="ig-bio-title">Photographer</span>
+              <div class="ig-bio-lines">
+                <a href="https://instagram.com/by_tanmay_" target="_blank" rel="noopener noreferrer"
+                  class="ig-bio-link">📸 @by_tanmay_</a>
+                <a href="https://instagram.com/co0kedd_edits" target="_blank" rel="noopener noreferrer"
+                  class="ig-bio-link">✂️ @co0kedd_edits</a>
+                <span class="ig-bio-text">VIT'29</span>
+                <span class="ig-bio-text">SMX 🐉</span>
+                <a href="https://instagram.com/io.tanmay" target="_blank" rel="noopener noreferrer"
+                  class="ig-bio-threads">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c0 1.93-1.57 3.5-3.5 3.5S8.5 12.93 8.5 11 10.07 7.5 12 7.5s3.5 1.57 3.5 3.5z" />
+                  </svg>
+                  <span>io.tanmay</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Actions: Edit profile / Follow CTA -->
+            <div class="ig-card-actions">
+              <a href="https://instagram.com/io.tanmay" target="_blank" rel="noopener noreferrer" class="ig-follow-cta"
+                id="igFollowLink">
+                <span>FOLLOW @io.tanmay ON INSTAGRAM</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </aside>
+        </header>
+
+        <!-- POSTS GRID FILTER & CONTROLS -->
+        <div class="ig-filter-bar">
+          <div class="ig-filters" role="tablist" aria-label="Filter Instagram media types">
+            <button type="button" class="ig-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+              ALL POSTS <span class="filter-count" id="countAll">8</span>
+            </button>
+            <button type="button" class="ig-filter-btn" data-filter="VIDEO" role="tab" aria-selected="false">
+              REELS & MOTION <span class="filter-count" id="countReels">2</span>
+            </button>
+            <button type="button" class="ig-filter-btn" data-filter="CAROUSEL_ALBUM" role="tab" aria-selected="false">
+              CAROUSELS <span class="filter-count" id="countCarousels">2</span>
+            </button>
+            <button type="button" class="ig-filter-btn" data-filter="IMAGE" role="tab" aria-selected="false">
+              STILLS & PRINTS <span class="filter-count" id="countStills">4</span>
+            </button>
+          </div>
+
+          <div class="ig-meta-note mono">
+            <span>OFFICIAL API PROXY // STRICT PRIVACY COMPLIANT</span>
+          </div>
+        </div>
+
+        <!-- DYNAMIC INSTAGRAM MEDIA GRID -->
+        <div class="instagram-grid" id="instagramGrid" aria-live="polite">
+          <!-- Dynamic cards injected by script.js -->
+        </div>
+
+        <!-- Bottom Callout & Direct Follow Section -->
+        <div class="ig-footer-banner">
+          <div class="ig-banner-content">
+            <span class="mono banner-tag">DAILY ARCHIVE</span>
+            <h4>FOLLOW THE JOURNEY IN REAL TIME</h4>
+            <p>Every reel, road trip, camera experiment, and behind-the-scenes breakdown drops on Instagram first.</p>
+          </div>
+          <a href="https://instagram.com/io.tanmay" target="_blank" rel="noopener noreferrer" class="ig-banner-btn">
+            <span>FOLLOW @io.tanmay ON INSTAGRAM</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRE-INTERVIEW TASKS & ASSIGNMENTS SECTION -->
+    <section class="tasks-section section-pad" id="tasks" aria-labelledby="tasks-heading">
+      <div class="tasks-container">
+        
+        <header class="tasks-header">
+          <div class="tasks-header-meta">
+            <div class="tasks-eyebrow-row">
+              <span class="mono eyebrow">EVALUATION ARCHIVE // 03 — CANDIDACY &amp; CREATIVE CHALLENGES</span>
+              <div class="task-status-badge">
+                <span class="status-pulse-dot"></span>
+                <span class="status-text mono">SUBMISSION PORTAL ACTIVE</span>
+              </div>
+            </div>
+            <h2 id="tasks-heading" class="tasks-main-heading">
+              PRE-INTERVIEW<br>
+              <span class="text-stroke">TASKS &amp; BRIEFS.</span>
+            </h2>
+            <p class="tasks-header-subtitle">
+              Structured creative assignments, editing test cuts, photography briefs, and concept presentations completed for visual media roles and creative teams.
+            </p>
+          </div>
+
+          <div class="tasks-summary-card">
+            <div class="summary-top mono">
+              <span>ACTIVE PIPELINE</span>
+              <span class="pipeline-badge">VERIFIED SUBMISSIONS</span>
+            </div>
+            <div class="summary-stats-grid">
+              <div class="task-stat-col">
+                <span class="stat-big">03</span>
+                <span class="mono stat-lbl">ASSIGNMENTS</span>
+              </div>
+              <div class="task-stat-divider">•</div>
+              <div class="task-stat-col">
+                <span class="stat-big">100%</span>
+                <span class="mono stat-lbl">SUBMITTED</span>
+              </div>
+              <div class="task-stat-divider">•</div>
+              <div class="task-stat-col">
+                <span class="stat-big">4K</span>
+                <span class="mono stat-lbl">MASTER EXPORT</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Tasks Cards Grid -->
+        <div class="tasks-grid">
+          
+          <!-- Task 01: Video Editing / Reel Cut -->
+          <article class="task-card" tabindex="0">
+            <div class="task-card-header">
+              <div class="task-meta-tag mono">
+                <span class="task-num">TASK // 01</span>
+                <span class="task-tag-badge">VIDEOGRAPHY &amp; PACING</span>
+              </div>
+              <span class="task-date mono">AUG 2026</span>
+            </div>
+            <div class="task-visual-preview">
+              <img src="assets/ig_covers/DYCdoAwtKY7.jpg" alt="Video Editing Brief Cut" class="task-preview-img">
+              <div class="task-preview-overlay">
+                <span class="task-play-pill mono">▶ 24 FPS CUT</span>
+              </div>
+            </div>
+            <div class="task-content">
+              <div class="task-title-row">
+                <h3>Visual Rhythm &amp; Narrative Reel</h3>
+                <span class="task-deliverable mono">MP4 • 1080x1920</span>
+              </div>
+              <p class="task-desc">
+                Pre-interview creative brief: Edit raw multi-cam and B-roll clips into a punchy 30-second reel with seamless transitions, color grade, and sound design.
+              </p>
+              <div class="task-specs-row mono">
+                <span>PREMIERE PRO</span>
+                <span>COLOR GRADED</span>
+                <span>PACING</span>
+              </div>
+              <div class="task-actions-row">
+                <a href="https://www.instagram.com/reel/DYCdoAwtKY7/" target="_blank" rel="noopener noreferrer" class="task-cta-btn">
+                  <span>WATCH SUBMISSION</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Task 02: Photography & Framing Test -->
+          <article class="task-card" tabindex="0">
+            <div class="task-card-header">
+              <div class="task-meta-tag mono">
+                <span class="task-num">TASK // 02</span>
+                <span class="task-tag-badge">STILL PHOTOGRAPHY</span>
+              </div>
+              <span class="task-date mono">AUG 2026</span>
+            </div>
+            <div class="task-visual-preview">
+              <img src="assets/drive_photos/20260214_101223_1.jpg" alt="Product / Street Framing Test" class="task-preview-img">
+              <div class="task-preview-overlay">
+                <span class="task-play-pill mono">📷 5-SHOT SUITE</span>
+              </div>
+            </div>
+            <div class="task-content">
+              <div class="task-title-row">
+                <h3>Street Geometry &amp; Light Direction</h3>
+                <span class="task-deliverable mono">5 HI-RES PRINTS</span>
+              </div>
+              <p class="task-desc">
+                Pre-interview photography assignment: Capture architectural lines, high-contrast shadows, and authentic street moments without artificial staging.
+              </p>
+              <div class="task-specs-row mono">
+                <span>GALAXY S23</span>
+                <span>LIGHTROOM</span>
+                <span>35MM RATIO</span>
+              </div>
+              <div class="task-actions-row">
+                <a href="#work" class="task-cta-btn">
+                  <span>VIEW STILLS</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Task 03: Moodboard & Concept Deck -->
+          <article class="task-card" tabindex="0">
+            <div class="task-card-header">
+              <div class="task-meta-tag mono">
+                <span class="task-num">TASK // 03</span>
+                <span class="task-tag-badge">CREATIVE DIRECTION</span>
+              </div>
+              <span class="task-date mono">AUG 2026</span>
+            </div>
+            <div class="task-visual-preview">
+              <img src="assets/ig_covers/DYZ1gZKIZWy.jpg" alt="Moodboard & Concept Deck" class="task-preview-img">
+              <div class="task-preview-overlay">
+                <span class="task-play-pill mono">📑 CONCEPT DECK</span>
+              </div>
+            </div>
+            <div class="task-content">
+              <div class="task-title-row">
+                <h3>Brand Storytelling &amp; Visual Strategy</h3>
+                <span class="task-deliverable mono">PDF DECK • 12 PAGES</span>
+              </div>
+              <p class="task-desc">
+                Brand narrative challenge: Pitch a cohesive visual direction for an upcoming travel campaign, including storyboard breakdown, color palette, and audio mood.
+              </p>
+              <div class="task-specs-row mono">
+                <span>STORYBOARD</span>
+                <span>CINEMATOGRAPHY</span>
+                <span>MOODBOARD</span>
+              </div>
+              <div class="task-actions-row">
+                <a href="https://drive.google.com/drive/folders/1dggjrsGEBX6ELH27WRUIx1axtouS9WiO?usp=sharing" target="_blank" rel="noopener noreferrer" class="task-cta-btn">
+                  <span>OPEN DRIVE ASSETS</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT / PHILOSOPHY SECTION -->
+    <section class="about section-pad" id="about" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <div class="about-lead">
+          <p class="eyebrow">PHILOSOPHY & PROFILE // 02</p>
+          <h2 id="about-heading">THE HUMAN<br>BETWEEN TAKES.</h2>
+
+          <div class="about-body">
+            <p class="lead-paragraph">
+              I don't always go looking for a photograph. Sometimes I just find a frame that makes me stop.
+            </p>
+            <p>
+              I'm <strong>Tanmay Chavan</strong>, a 19-year-old engineering student at Vishwakarma Institute of
+              Technology in Pune, with roots in Nagpur. I'm naturally talkative, social, and curious about people and
+              the world around me—but behind the camera I slow down. I watch the light, the background, the timing, and
+              the small details until the frame feels right.
+            </p>
+            <p>
+              What began with noticing roads, skies, bikes, cars, buildings, and random moments turned into
+              photography—and then into videography and editing. I'm still figuring out my style, trying different
+              subjects, pacing, colours, movement, and stories. That unfinished part is what makes the journey exciting.
+            </p>
+          </div>
+
+          <!-- Accolades / Laurels Bar -->
+          <div class="accolades-shelf">
+            <span class="shelf-label mono">CURRENT CHAPTER</span>
+            <div class="laurels-list">
+              <div class="laurel-item">
+                <span class="laurel-branch">🙠</span>
+                <div class="laurel-text">
+                  <strong>19 / STILL LEARNING</strong>
+                  <span>Experimenting one frame at a time</span>
+                </div>
+                <span class="laurel-branch">🙡</span>
+              </div>
+              <div class="laurel-item">
+                <span class="laurel-branch">🙠</span>
+                <div class="laurel-text">
+                  <strong>VIT, PUNE / ENGINEERING</strong>
+                  <span>Creative work alongside college</span>
+                </div>
+                <span class="laurel-branch">🙡</span>
+              </div>
+              <div class="laurel-item">
+                <span class="laurel-branch">🙠</span>
+                <div class="laurel-text">
+                  <strong>TRAVEL & COMMERCIAL VISUALS</strong>
+                  <span>Directions I want to keep exploring</span>
+                </div>
+                <span class="laurel-branch">🙡</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director / Studio Visual Card -->
+        <div class="about-portrait-card">
+          <div class="portrait-frame">
+            <div class="portrait-sprocket top" aria-hidden="true"></div>
+            <img src="assets/profile_tanmay_headphone_portrait.jpg" alt="Tanmay Chavan — Portrait Study" loading="lazy"
+              class="portrait-img">
+            <div class="portrait-overlay">
+              <div class="portrait-meta mono">
+                <span>TANMAY CHAVAN</span>
+                <span>CREATOR &amp; DIRECTOR</span>
+              </div>
+              <div class="signature-svg">T. Chavan</div>
+            </div>
+            <div class="portrait-sprocket bottom" aria-hidden="true"></div>
+          </div>
+          <div class="camera-tag mono">PORTRAIT STUDY // 35MM CINEMATIC DIRECTION</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT / GEAR LOCKER SECTION -->
+    <section class="gear-locker section-pad" id="gear" aria-labelledby="gear-heading">
+      <div class="gear-header">
+        <div>
+          <p class="eyebrow">CURRENT SETUP // 03</p>
+          <h2 id="gear-heading">THE TOOLS<br><span class="text-stroke">I HAVE.</span></h2>
+        </div>
+        <p class="gear-intro mono">CREATIVITY STARTS WITH SEEING THE SHOT, NOT OWNING THE MOST EXPENSIVE CAMERA.</p>
+      </div>
+
+      <div class="gear-grid">
+        <div class="gear-card">
+          <div class="gear-card-header">
+            <span class="gear-num mono">01</span>
+            <span class="gear-type mono">PRIMARY CAMERA</span>
+          </div>
+          <h3>Samsung Galaxy S23</h3>
+          <ul class="gear-specs mono">
+            <li><span>Current everyday camera</span><b>Photo + video exploration</b></li>
+            <li><span>Used to notice the frame</span><b>Not just the specs</b></li>
+            <li><span>Always with me</span><b>Ready for unplanned moments</b></li>
+          </ul>
+        </div>
+
+        <div class="gear-card">
+          <div class="gear-card-header">
+            <span class="gear-num mono">02</span>
+            <span class="gear-type mono">WHAT I NOTICE</span>
+          </div>
+          <h3>Whatever Catches My Eye</h3>
+          <ul class="gear-specs mono">
+            <li><span>People / Streets</span><b>Everyday energy</b></li>
+            <li><span>Cars / Bikes</span><b>Movement and detail</b></li>
+            <li><span>Architecture / Nature</span><b>Light and structure</b></li>
+            <li><span>Travel / Landscapes</span><b>Atmosphere and place</b></li>
+            <li><span>Shadows / Textures</span><b>Small visual surprises</b></li>
+          </ul>
+        </div>
+
+        <div class="gear-card">
+          <div class="gear-card-header">
+            <span class="gear-num mono">03</span>
+            <span class="gear-type mono">EDITING TOOLS</span>
+          </div>
+          <h3>Turning Frames Into Feeling</h3>
+          <ul class="gear-specs mono">
+            <li><span>Adobe Premiere Pro</span><b>Pacing and storytelling</b></li>
+            <li><span>CapCut</span><b>Experiments and ideas</b></li>
+            <li><span>Adobe Lightroom</span><b>Colour and mood</b></li>
+            <li><span>Visual flow</span><b>Natural transitions</b></li>
+            <li><span>Purposeful editing</span><b>Less effect, more feeling</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCIPLINES & CRAFT SECTION -->
+    <section class="skills-section section-pad" id="skills" aria-labelledby="skills-heading">
+      <div class="skills-container">
+        <div class="skills-intro">
+          <p class="eyebrow" id="skills-heading">HOW I CREATE // 04</p>
+          <h2>LEARNING BY<br>MAKING THINGS.</h2>
+          <p>
+            I like slow, minimal, meaningful videos—the kind that let you stay with a frame. I’m learning how pacing,
+            colour, composition, and a few well-chosen transitions can make something feel more than complicated.
+          </p>
+
+          <div class="film-quote-card">
+            <div class="quote-mark">“</div>
+            <p>I’m not finished. I’m building my visual language one frame at a time.</p>
+            <span class="mono">— TANMAY CHAVAN</span>
+          </div>
+        </div>
+
+        <div class="skills-matrix">
+          <div class="discipline-card" tabindex="0">
+            <div class="discipline-top">
+              <span class="mono discipline-idx">01</span>
+              <h4>MOBILE CINEMATOGRAPHY</h4>
+              <span class="status-indicator">PRIMARY</span>
+            </div>
+            <p>Using the Samsung Galaxy S23 to find frames in spontaneous situations. Focusing on natural lighting,
+              geometry, reflections, and perspective rather than waiting for ideal conditions.</p>
+            <div class="discipline-tags mono">
+              <span>GALAXY S23</span><span>NATURAL LIGHT</span><span>STREET</span><span>TEXTURES</span>
+            </div>
+          </div>
+
+          <div class="discipline-card" tabindex="0">
+            <div class="discipline-top">
+              <span class="mono discipline-idx">02</span>
+              <h4>VISUAL PACING</h4>
+              <span class="status-indicator">ACTIVE FOCUS</span>
+            </div>
+            <p>Letting shots breathe. Resisting the urge to cut too quickly, giving viewers space to take in the
+              surroundings, the atmosphere, and the emotion of the place.</p>
+            <div class="discipline-tags mono">
+              <span>SLOW</span><span>MINIMAL</span><span>ATMOSPHERIC</span><span>INTENTIONAL</span>
+            </div>
+          </div>
+
+          <div class="discipline-card" tabindex="0">
+            <div class="discipline-top">
+              <span class="mono discipline-idx">03</span>
+              <h4>EDITING & VISUAL FLOW</h4>
+              <span class="status-indicator">LEARNING</span>
+            </div>
+            <p>Trying different pacing, colour grades, transitions, and storytelling approaches—always choosing what
+              helps the moment rather than adding effects for their own sake.</p>
+            <div class="discipline-tags mono">
+              <span>PREMIERE PRO</span><span>CAPCUT</span><span>LIGHTROOM</span><span>MOOD</span>
+            </div>
+          </div>
+
+          <div class="discipline-card" tabindex="0">
+            <div class="discipline-top">
+              <span class="mono discipline-idx">04</span>
+              <h4>WHAT'S NEXT</h4>
+              <span class="status-indicator">OPEN</span>
+            </div>
+            <p>I want to keep learning, experimenting, creating, and discovering my style—especially through travel
+              films and commercial visual work that keep their personality.</p>
+            <div class="discipline-tags mono">
+              <span>TRAVEL FILMS</span><span>COMMERCIAL</span><span>CULTURE</span><span>JOURNEY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & BOOKING SECTION -->
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-header">
+        <p class="eyebrow">CONTACT // 05</p>
+        <h2 id="contact-heading">LET'S TALK<br><span class="highlight-underline">ABOUT A FRAME.</span></h2>
+        <p class="contact-subhead">
+          Have an idea, a place worth exploring, or just want to connect? Send me a message. I’m building, learning, and
+          always happy to talk visuals, bikes, cars, travel, or a frame that caught your eye.
+        </p>
+      </div>
+
+      <!-- Interactive Shoot Builder Concierge -->
+      <div class="booking-concierge">
+        <div class="concierge-box">
+          <div class="concierge-header">
+            <span class="mono">LET'S START A CONVERSATION</span>
+            <span class="mono badge-live">SAY HELLO</span>
+          </div>
+
+          <!-- Step 1: Project Type -->
+          <div class="concierge-step">
+            <label class="step-label mono">01. WHAT SHOULD WE TALK ABOUT?</label>
+            <div class="chip-group" data-group="project-type">
+              <button type="button" class="chip is-selected" data-val="Photography Idea">Photography Idea</button>
+              <button type="button" class="chip" data-val="Video Idea">Video Idea</button>
+              <button type="button" class="chip" data-val="Travel Story">Travel Story</button>
+              <button type="button" class="chip" data-val="Commercial Visual">Commercial Visual</button>
+              <button type="button" class="chip" data-val="Just Saying Hello">Just Saying Hello</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Target Timeline -->
+          <div class="concierge-step">
+            <label class="step-label mono">02. WHEN?</label>
+            <div class="chip-group" data-group="timeline">
+              <button type="button" class="chip is-selected" data-val="Soon">Soon</button>
+              <button type="button" class="chip" data-val="This Month">This Month</button>
+              <button type="button" class="chip" data-val="Later On">Later On</button>
+              <button type="button" class="chip" data-val="Just Exploring">Just Exploring</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Location -->
+          <div class="concierge-step">
+            <label class="step-label mono">03. WHERE ARE YOU?</label>
+            <div class="chip-group" data-group="location">
+              <button type="button" class="chip is-selected" data-val="Pune">Pune</button>
+              <button type="button" class="chip" data-val="Nagpur">Nagpur</button>
+              <button type="button" class="chip" data-val="Elsewhere in India">Elsewhere in India</button>
+              <button type="button" class="chip" data-val="Somewhere Else">Somewhere Else</button>
+            </div>
+          </div>
+
+          <!-- Output Action Bar -->
+          <div class="concierge-action-bar">
+            <div class="concierge-summary mono" id="conciergeSummary">
+              <span>MESSAGE: <b>Photography Idea</b> // <b>Soon</b> // <b>Pune</b></span>
+            </div>
+
+            <div class="concierge-btns">
+              <a href="mailto:tchavan265@gmail.com?subject=Hello%20Tanmay&body=Hi%20Tanmay,%0A%0AI%20wanted%20to%20talk%20about:%20Photography%20Idea%0A%0A"
+                class="concierge-send-btn" id="generateEmailBtn">
+                <span>COMPOSE MESSAGE</span>
+                <span class="btn-arrow">↗</span>
+              </a>
+              <button type="button" class="copy-email-btn" id="copyEmailBtn" title="Copy email address">
+                <span id="copyEmailText">COPY EMAIL ADDRESS</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio Coordinates & Contact Details -->
+        <div class="contact-info-panel">
+          <div class="info-block">
+            <span class="mono info-title">BASED IN</span>
+            <address class="mono">
+              PUNE, MAHARASHTRA<br>
+              INDIA<br>
+              ROOTS IN NAGPUR<br>
+              INDIA
+            </address>
+          </div>
+
+          <div class="info-block">
+            <span class="mono info-title">CONTACT TANMAY</span>
+            <p class="mono">
+              <a href="mailto:tchavan265@gmail.com" class="highlight-link">TCHAVAN265@GMAIL.COM</a><br>
+              <a href="tel:+918668640565" class="highlight-link">+91 86686 40565</a>
+            </p>
+          </div>
+
+          <div class="info-block">
+            <span class="mono info-title">TIME ZONE STATUS</span>
+            <p class="mono">
+              <span id="studioClock">00:00 IST</span> (UTC+05:30)<br>
+              PUNE, INDIA / IST
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CINEMATIC LIGHTBOX MODAL -->
+  <dialog class="lightbox-modal" id="lightboxModal" aria-modal="true" aria-label="Shot inspection modal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <div class="lightbox-meta-top mono">
+          <span id="lbIndex">FRAME 001 // REEL 01</span>
+          <span class="lb-separator">•</span>
+          <span id="lbAspect">2.39:1 SCOPE</span>
+        </div>
+        <div class="lightbox-controls">
+          <!-- Aspect ratio preview toggle -->
+          <div class="ratio-switcher" aria-label="Aspect ratio simulator">
+            <button type="button" class="ratio-btn is-active" data-ratio="original">NATIVE</button>
+            <button type="button" class="ratio-btn" data-ratio="cinema">2.39:1</button>
+            <button type="button" class="ratio-btn" data-ratio="classic">4:3</button>
+          </div>
+          <button class="lightbox-close" id="lightboxCloseBtn" type="button" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+
+      <div class="lightbox-body">
+        <div class="lightbox-media-wrapper" id="lbMediaWrapper">
+          <img src="" alt="" id="lbImage" class="lightbox-img">
+          <div class="lightbox-sprocket-edge left"></div>
+          <div class="lightbox-sprocket-edge right"></div>
+        </div>
+
+        <div class="lightbox-sidebar">
+          <div class="lb-sidebar-header">
+            <span class="mono lb-category" id="lbCategory">EDITORIAL</span>
+            <h3 id="lbTitle">Nocturne in Motion</h3>
+            <span class="lb-year mono" id="lbYear">2026</span>
+          </div>
+
+          <div class="lb-sidebar-section">
+            <span class="mono section-heading">DIRECTOR'S LOG</span>
+            <p id="lbDesc" class="lb-description">Shot breakdown log...</p>
+          </div>
+
+          <div class="lb-sidebar-section">
+            <span class="mono section-heading">TECHNICAL EXIF DATA</span>
+            <ul class="lb-specs mono">
+              <li><span>CAMERA & GLASS</span><b id="lbCamera">-</b></li>
+              <li><span>EMULSION / STOCK</span><b id="lbFilm">-</b></li>
+              <li><span>LOCATION</span><b id="lbLocation">-</b></li>
+            </ul>
+          </div>
+
+          <div class="lb-sidebar-section">
+            <span class="mono section-heading">PHOTOMETRIC COLOR GRADE PALETTE</span>
+            <div class="palette-swatches" id="lbPalette">
+              <!-- Swatches generated dynamically -->
+            </div>
+            <span class="mono palette-hint">CLICK SWATCH TO COPY HEX CODE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lightbox-footer">
+        <button type="button" class="lb-nav-btn" id="lbPrevBtn">← PREV FRAME</button>
+        <span class="mono lb-key-hint">USE [←] [→] KEYS TO NAVIGATE • [ESC] TO CLOSE</span>
+        <button type="button" class="lb-nav-btn" id="lbNextBtn">NEXT FRAME →</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- SHOWREEL VIDEO MODAL -->
+  <dialog class="showreel-modal" id="showreelModal" aria-modal="true" aria-label="2026 Showreel video player">
+    <div class="lightbox-backdrop" id="showreelBackdrop"></div>
+    <div class="showreel-container">
+      <div class="showreel-header">
+        <div class="mono reel-meta">
+          <span class="rec-dot"></span>
+          <span>FRAME // 2026 DIRECTORS REEL (DCI 4K MASTER)</span>
+        </div>
+        <button class="lightbox-close" id="showreelCloseBtn" type="button" aria-label="Close showreel">✕</button>
+      </div>
+
+      <div class="showreel-player-canvas">
+        <div class="video-mockup">
+          <img src="assets/drive_photos/17812038516661_2.jpg" alt="Showreel cinematic frame" class="reel-preview-frame">
+          <div class="reel-overlay-controls">
+            <div class="play-pulse-circle">
+              <span class="big-play-triangle">▶</span>
+            </div>
+            <p class="reel-title-overlay">TANMAY CHAVAN // REEL IN PROGRESS</p>
+            <p class="reel-sub mono">ORIGINAL SCORE BY FRAME SOUND LABS • 01:45 • ACES COLOR</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="showreel-footer mono">
+        <span>AUDIO: STEREO MASTER 48KHZ 24-BIT</span>
+        <span>RATIO: 2.39:1 ANAMORPHIC SCOPE</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- INSTAGRAM POST LIGHTBOX & EMBED MODAL -->
+  <dialog class="ig-post-modal" id="igPostModal" aria-modal="true" aria-label="Instagram Post and Reel Viewer">
+    <div class="lightbox-backdrop" id="igPostBackdrop"></div>
+    <div class="ig-modal-container">
+      <div class="ig-modal-header">
+        <div class="mono ig-modal-tag-row">
+          <span class="rec-dot"></span>
+          <span id="igModalTypeTag">REEL // @IO.TANMAY</span>
+          <span class="ig-modal-sep">•</span>
+          <span id="igModalDate">RECENT</span>
+        </div>
+        <button class="lightbox-close" id="igPostCloseBtn" type="button" aria-label="Close post viewer">✕</button>
+      </div>
+
+      <div class="ig-modal-body">
+        <!-- Interactive Instagram Embed Player -->
+        <div class="ig-modal-player-col">
+          <div class="ig-iframe-wrapper" id="igIframeWrapper">
+            <iframe id="igModalIframe" src="" title="Instagram Post Embed" frameborder="0" scrolling="no"
+              allowtransparency="true" allowfullscreen="true"></iframe>
+          </div>
+        </div>
+
+        <!-- Meta Sidebar -->
+        <div class="ig-modal-info-col">
+          <div class="ig-modal-profile-header">
+            <img src="assets/drive_photos/20260306_190702.jpg" alt="io.tanmay" class="ig-modal-author-avatar">
+            <div class="ig-modal-author-text">
+              <div class="ig-modal-handle-row">
+                <span class="ig-modal-handle" id="igModalHandle">@io.tanmay</span>
+                <span class="ig-verified-badge">✓</span>
+              </div>
+              <span class="mono ig-modal-author-sub" id="igModalAuthorCollab">TANMAY CHAVAN</span>
+            </div>
+          </div>
+
+          <div class="ig-modal-section">
+            <span class="mono section-heading">POST TITLE &amp; LOG</span>
+            <h4 class="ig-modal-title" id="igModalTitle">Cinematic Reel</h4>
+            <p class="ig-modal-caption" id="igModalCaption">Caption description...</p>
+          </div>
+
+          <div class="ig-modal-section">
+            <span class="mono section-heading">AUDIO &amp; SOUNDTRACK</span>
+            <div class="ig-modal-audio-badge mono">
+              <span>🎵</span>
+              <span id="igModalAudio">Original Audio · io.tanmay</span>
+            </div>
+          </div>
+
+          <div class="ig-modal-section">
+            <span class="mono section-heading">COMMUNITY ENGAGEMENT</span>
+            <div class="ig-modal-stats mono">
+              <span id="igModalLikes">♥ 400+ LIKES</span>
+              <span id="igModalComments">💬 20+ COMMENTS</span>
+            </div>
+          </div>
+
+          <div class="ig-modal-actions">
+            <a href="https://instagram.com/io.tanmay" target="_blank" rel="noopener noreferrer"
+              class="ig-modal-primary-btn" id="igModalDirectLink">
+              <span>OPEN ON INSTAGRAM</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ig-modal-footer mono">
+        <button type="button" class="lb-nav-btn" id="igModalPrevBtn">← PREV POST</button>
+        <span class="mono lb-key-hint">[←] [→] PREV / NEXT • [ESC] CLOSE</span>
+        <button type="button" class="lb-nav-btn" id="igModalNextBtn">NEXT POST →</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer section-pad">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="wordmark" href="#top" aria-label="FRAME home">FR<span class="aperture-glyph">A</span>ME</a>
+        <p class="mono footer-tagline">TANMAY CHAVAN — PHOTOGRAPHY, VIDEOGRAPHY & EDITING</p>
+      </div>
+
+      <div class="footer-nav mono">
+        <a href="#work">SELECTED WORK</a>
+        <a href="#instagram">LIVE INSTAGRAM (@IO.TANMAY)</a>
+        <a href="#tasks">PRE-INTERVIEW TASKS</a>
+        <a href="#about">ABOUT TANMAY</a>
+        <a href="#gear">MY SETUP</a>
+        <a href="#skills">HOW I CREATE</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom mono">
+      <span>© 2026 TANMAY CHAVAN. BUILDING ONE FRAME AT A TIME.</span>
+      <div class="footer-socials">
+        <a href="https://instagram.com/io.tanmay" target="_blank" rel="noopener">@IO.TANMAY</a>
+        <a href="https://instagram.com/by_tanmay_" target="_blank" rel="noopener">@BY_TANMAY_</a>
+        <a href="https://instagram.com/co0kedd_edits" target="_blank" rel="noopener">@CO0KEDD_EDITS</a>
+        <a href="#top" class="back-to-top">TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

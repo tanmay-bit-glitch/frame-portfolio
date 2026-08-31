@@ -1,0 +1,282 @@
+{
+  "profile": {
+    "username": "io.tanmay",
+    "name": "Tanmay 🐉",
+    "pronouns": "he/him",
+    "biography": "Photographer\n📸 @by_tanmay_\n✂️ @co0kedd_edits\nVIT'29\nSMX 🐉\n🔗 io.tanmay",
+    "profile_picture_url": "assets/ig_covers/avatar_tanmay.jpg",
+    "posts_count": 14,
+    "followers_count": 529,
+    "following_count": 722,
+    "profile_url": "https://instagram.com/io.tanmay",
+    "is_live_api": false
+  },
+  "stories": [
+    {
+      "id": "story_active_01",
+      "caption": "Golden hour twilight silhouette overlooking the city • Samsung Galaxy S23 capture.",
+      "media_type": "IMAGE",
+      "media_url": "assets/drive_photos/20260306_190702.jpg",
+      "timestamp": "2026-08-31T01:15:00Z",
+      "permalink": "https://instagram.com/stories/io.tanmay/"
+    },
+    {
+      "id": "story_active_02",
+      "caption": "Night florist market • Spectrum of vivid colors under warm tungsten lamps.",
+      "media_type": "IMAGE",
+      "media_url": "assets/drive_photos/20260805_190030_2.jpg",
+      "timestamp": "2026-08-31T01:45:00Z",
+      "permalink": "https://instagram.com/stories/io.tanmay/"
+    },
+    {
+      "id": "story_active_03",
+      "caption": "Rolling shutter night pan • High-speed superbike streak on Pune asphalt.",
+      "media_type": "IMAGE",
+      "media_url": "assets/drive_photos/17812038516661_2.jpg",
+      "timestamp": "2026-08-31T02:10:00Z",
+      "permalink": "https://instagram.com/stories/io.tanmay/"
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl_bts",
+      "title": "BTS",
+      "cover_url": "assets/drive_photos/IMG_20260829_165902633.jpg",
+      "items": [
+        {
+          "id": "bts_01",
+          "caption": "Patience and framing through foliage. Leopard study in natural habitat.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/IMG_20260829_165902633.jpg",
+          "timestamp": "2026-08-29T16:59:00Z"
+        },
+        {
+          "id": "bts_02",
+          "caption": "Night panning shutter speed tests. High contrast urban light trails.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/17812038516661_2.jpg",
+          "timestamp": "2026-08-31T01:57:00Z"
+        }
+      ]
+    },
+    {
+      "id": "hl_shoots",
+      "title": "SHOOTS",
+      "cover_url": "assets/drive_photos/20260406_183233_3.jpg",
+      "items": [
+        {
+          "id": "shoots_01",
+          "caption": "Custom livery Shelby GT500 • Automotive track day capture.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260406_183233_3.jpg",
+          "timestamp": "2026-04-06T18:32:00Z"
+        },
+        {
+          "id": "shoots_02",
+          "caption": "Live performance stage spotlighting lead guitarist under dramatic cone.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260412_214957_2.jpg",
+          "timestamp": "2026-04-12T21:49:00Z"
+        },
+        {
+          "id": "shoots_03",
+          "caption": "Extreme vertical motorcycle wheelie stunt on festival ground.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260621_1009200_1.jpg",
+          "timestamp": "2026-06-21T10:09:00Z"
+        }
+      ]
+    },
+    {
+      "id": "hl_travel",
+      "title": "TRAVEL",
+      "cover_url": "assets/drive_photos/Screenshot_20260513_022247_Instagram.jpg",
+      "items": [
+        {
+          "id": "travel_01",
+          "caption": "The Taj Hotel Mumbai • Low-angle perspective looking at colonial heritage.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/Screenshot_20260513_022247_Instagram.jpg",
+          "timestamp": "2026-05-13T02:22:00Z"
+        },
+        {
+          "id": "travel_02",
+          "caption": "Korigad Fort ridge • Standing atop the Sahyadris at golden hour.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260306_190702.jpg",
+          "timestamp": "2026-03-06T19:07:00Z"
+        }
+      ]
+    },
+    {
+      "id": "hl_portraits",
+      "title": "PORTRAITS",
+      "cover_url": "assets/drive_photos/20260214_101223_1.jpg",
+      "items": [
+        {
+          "id": "portrait_01",
+          "caption": "Elder portrait in traditional cap • Character and wisdom captured in silver gelatin tones.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260214_101223_1.jpg",
+          "timestamp": "2026-02-14T10:12:00Z"
+        },
+        {
+          "id": "portrait_02",
+          "caption": "Innocence and unprompted laughter • Sweet childhood portrait.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260326_1753081.jpg",
+          "timestamp": "2026-03-26T17:53:00Z"
+        },
+        {
+          "id": "portrait_03",
+          "caption": "Family bonding and joyous smiles at the temple jali.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260629_125939_1.jpg",
+          "timestamp": "2026-06-29T12:59:00Z"
+        }
+      ]
+    },
+    {
+      "id": "hl_gear",
+      "title": "STILLS & LIFE",
+      "cover_url": "assets/drive_photos/20260717_125925_1.jpg",
+      "items": [
+        {
+          "id": "gear_01",
+          "caption": "Sunlit feline portrait • Natural highlights on fur and whiskers.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260717_125925_1.jpg",
+          "timestamp": "2026-07-17T12:59:00Z"
+        },
+        {
+          "id": "gear_02",
+          "caption": "Night flower market stall • Fresh petals illuminated in evening haze.",
+          "media_type": "IMAGE",
+          "media_url": "assets/drive_photos/20260805_190030_2.jpg",
+          "timestamp": "2026-08-05T19:00:00Z"
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_ig_DYCdoAwtKY7",
+      "shortcode": "DYCdoAwtKY7",
+      "title": "Sai Abhyankkar Edit // Cinematic Reel",
+      "caption": "🥰.....#saiabhyankkar❣️ #edit #viralreels #postviral",
+      "author": "co0kedd_edits & io.tanmay",
+      "media_type": "VIDEO",
+      "media_url": "https://www.instagram.com/reel/DYCdoAwtKY7/",
+      "thumbnail_url": "assets/ig_covers/DYCdoAwtKY7.jpg",
+      "embed_url": "https://www.instagram.com/reel/DYCdoAwtKY7/embed/captioned/",
+      "permalink": "https://www.instagram.com/reel/DYCdoAwtKY7/",
+      "timestamp": "2026-08-26T14:30:00Z",
+      "like_count": 412,
+      "comments_count": 24,
+      "tag": "REEL // EDIT",
+      "audio": "Sai Abhyankkar · Trending Audio"
+    },
+    {
+      "id": "post_ig_DWwrc79DBWN",
+      "shortcode": "DWwrc79DBWN",
+      "title": "At The End We Come Towards Him // Ganpati Bappa",
+      "caption": "After everything happens either good or bad, at the end we come towards him..........@io.tanmay ...#viralpost #photooftheday #ganpati #ganpatibappamorya",
+      "author": "by_tanmay_ & io.tanmay",
+      "media_type": "IMAGE",
+      "media_url": "https://www.instagram.com/p/DWwrc79DBWN/",
+      "thumbnail_url": "assets/ig_covers/DWwrc79DBWN.jpg",
+      "embed_url": "https://www.instagram.com/p/DWwrc79DBWN/embed/captioned/",
+      "permalink": "https://www.instagram.com/p/DWwrc79DBWN/",
+      "timestamp": "2026-08-20T18:00:00Z",
+      "like_count": 538,
+      "comments_count": 39,
+      "tag": "STILL // DEVOTIONAL",
+      "audio": "Devotional Ambiance"
+    },
+    {
+      "id": "post_ig_DYZ1gZKIZWy",
+      "shortcode": "DYZ1gZKIZWy",
+      "title": "Bombay — The City of Dreams",
+      "caption": "Bombay-The City of Dreams........@vineet_04t @io.tanmay @atharv__.24 @san.ika_16 @its_saloni_core ....#fyp #viralreels #mumbaikar #edit #mumbai",
+      "author": "co0kedd_edits & io.tanmay",
+      "media_type": "VIDEO",
+      "media_url": "https://www.instagram.com/reel/DYZ1gZKIZWy/",
+      "thumbnail_url": "assets/ig_covers/DYZ1gZKIZWy.jpg",
+      "embed_url": "https://www.instagram.com/reel/DYZ1gZKIZWy/embed/captioned/",
+      "permalink": "https://www.instagram.com/reel/DYZ1gZKIZWy/",
+      "timestamp": "2026-08-15T11:20:00Z",
+      "like_count": 624,
+      "comments_count": 19,
+      "tag": "REEL // MUMBAI",
+      "audio": "Bombay Theme · Original Mix"
+    },
+    {
+      "id": "post_ig_DcMQt_6MD_U",
+      "shortcode": "DcMQt-6MD_U",
+      "title": "Korigad Fort 🏔️ // Safar",
+      "caption": "“Views were good, company was better 🫶”.....Korigad Fort 🏔️ | Trekking, cousins, crazy laughs & unforgettable memories ❤️‍🔥From the climb to the views, every step was worth it! 🌿✨#Korigad #KorigadFort #Trekking #cousintrip #maharashtra",
+      "author": "io.tanmay",
+      "media_type": "VIDEO",
+      "media_url": "https://www.instagram.com/reel/DcMQt-6MD_U/",
+      "thumbnail_url": "assets/ig_covers/DcMQt-6MD_U.jpg",
+      "embed_url": "https://www.instagram.com/reel/DcMQt-6MD_U/embed/captioned/",
+      "permalink": "https://www.instagram.com/reel/DcMQt-6MD_U/",
+      "timestamp": "2026-08-10T09:45:00Z",
+      "like_count": 719,
+      "comments_count": 35,
+      "tag": "REEL // TREK",
+      "audio": "Bayaan, Sherazam · Safar"
+    },
+    {
+      "id": "post_ig_DaTQf3tTpDx",
+      "shortcode": "DaTQf3tTpDx",
+      "title": "Can't Wait For Him To Arrive 🥹",
+      "caption": "Can't wait for him to arrive 🥹.... ...@haram_khor_ video credits.....#ganpatibappamorya #ganpati #viralreels #edit",
+      "author": "io.tanmay & co0kedd_edits",
+      "media_type": "VIDEO",
+      "media_url": "https://www.instagram.com/reel/DaTQf3tTpDx/",
+      "thumbnail_url": "assets/ig_covers/DaTQf3tTpDx.jpg",
+      "embed_url": "https://www.instagram.com/reel/DaTQf3tTpDx/embed/captioned/",
+      "permalink": "https://www.instagram.com/reel/DaTQf3tTpDx/",
+      "timestamp": "2026-08-04T16:15:00Z",
+      "like_count": 842,
+      "comments_count": 43,
+      "tag": "REEL // GANPATI",
+      "audio": "Aagman Beats · Tanmay Edit"
+    },
+    {
+      "id": "post_ig_DavkCQ0gsPQ",
+      "shortcode": "DavkCQ0gsPQ",
+      "title": "POV: First Aagman of 2026",
+      "caption": "POV:it's the first aagman of 2026..........#ganpatibappamorya #viralreels #edit #aagman",
+      "author": "io.tanmay & co0kedd_edits",
+      "media_type": "VIDEO",
+      "media_url": "https://www.instagram.com/reel/DavkCQ0gsPQ/",
+      "thumbnail_url": "assets/ig_covers/DavkCQ0gsPQ.jpg",
+      "embed_url": "https://www.instagram.com/reel/DavkCQ0gsPQ/embed/captioned/",
+      "permalink": "https://www.instagram.com/reel/DavkCQ0gsPQ/",
+      "timestamp": "2026-07-28T20:00:00Z",
+      "like_count": 590,
+      "comments_count": 18,
+      "tag": "REEL // AAGMAN 2026",
+      "audio": "Dhol Tasha Rhythm · Live"
+    },
+    {
+      "id": "post_ig_DZpBLeFMxH3",
+      "shortcode": "DZpBLeFMxH3",
+      "title": "First Year Already // To All My Friends ✌️",
+      "caption": "its first year already this is to all my friends ✌️.......@chopadepayal_27 @sanchita19__ @flash.y07 @rucha_d09 @bhakti_ugale27 @asmita.1728 @shreyaa__d @prajwal_dhage_17 @dhanashreekirpal7 w love 🫶✨️✨️....#college #viralreels #ppl",
+      "author": "io.tanmay",
+      "media_type": "VIDEO",
+      "media_url": "https://www.instagram.com/reel/DZpBLeFMxH3/",
+      "thumbnail_url": "assets/ig_covers/DZpBLeFMxH3.jpg",
+      "embed_url": "https://www.instagram.com/reel/DZpBLeFMxH3/embed/captioned/",
+      "permalink": "https://www.instagram.com/reel/DZpBLeFMxH3/",
+      "timestamp": "2026-07-20T17:30:00Z",
+      "like_count": 488,
+      "comments_count": 14,
+      "tag": "REEL // COLLEGE FRIENDS",
+      "audio": "Original Audio · Memories"
+    }
+  ]
+}
