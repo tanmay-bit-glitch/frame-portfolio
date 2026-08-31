@@ -849,10 +849,6 @@
             <span>${typeLabel}</span>
           </div>
           <div class="ig-hover-overlay">
-            <div class="ig-hover-stats">
-              <span class="ig-hover-stat-item">♥ ${post.like_count || '120+'}</span>
-              <span class="ig-hover-stat-item">💬 ${post.comments_count || '18'}</span>
-            </div>
             <a href="${post.permalink || 'https://instagram.com/io.tanmay'}" target="_blank" rel="noopener noreferrer" class="ig-action-cta" title="Open directly in Instagram app/tab">
               <span>INSTAGRAM</span>
               <span>↗</span>
@@ -937,8 +933,6 @@
     if (igModalTitle) igModalTitle.textContent = post.title || (post.caption ? post.caption.slice(0, 40) + '...' : 'Instagram Post');
     if (igModalCaption) igModalCaption.textContent = post.caption || '';
     if (igModalAudio) igModalAudio.textContent = post.audio || 'Original Audio · io.tanmay';
-    if (igModalLikes) igModalLikes.textContent = `♥ ${post.like_count || '400+'} LIKES`;
-    if (igModalComments) igModalComments.textContent = `💬 ${post.comments_count || '20+'} COMMENTS`;
     if (igModalDirectLink) igModalDirectLink.href = post.permalink || 'https://instagram.com/io.tanmay';
 
     // Embed URL
