@@ -13,7 +13,9 @@ const USER_ID = process.env.INSTAGRAM_USER_ID || '';
 // Load fallback JSON (bundled with deployment)
 function getFallbackData() {
   try {
-    const fallbackPath = path.join(process.cwd(), 'data', 'instagram-fallback.json');
+    const p1 = path.join(process.cwd(), 'public', 'data', 'instagram-fallback.json');
+    const p2 = path.join(process.cwd(), 'data', 'instagram-fallback.json');
+    const fallbackPath = fs.existsSync(p1) ? p1 : p2;
     if (fs.existsSync(fallbackPath)) {
       return JSON.parse(fs.readFileSync(fallbackPath, 'utf8'));
     }

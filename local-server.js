@@ -285,11 +285,15 @@ const server = http.createServer(async (req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`\n======================================================`);
-  console.log(`🎬 FRAME — Portfolio Server with Instagram Integration`);
-  console.log(`🌐 Server running at: http://localhost:${PORT}/`);
-  console.log(`📸 Target Instagram Account: @io.tanmay`);
-  console.log(`🔐 Meta Graph API Status: ${ACCESS_TOKEN ? 'LIVE TOKEN CONFIGURED' : 'LOCAL FALLBACK MODE (Configure .env for live)'}`);
-  console.log(`======================================================\n`);
-});
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`\n======================================================`);
+    console.log(`🎬 FRAME — Portfolio Server with Instagram Integration`);
+    console.log(`🌐 Server running at: http://localhost:${PORT}/`);
+    console.log(`📸 Target Instagram Account: @io.tanmay`);
+    console.log(`🔐 Meta Graph API Status: ${ACCESS_TOKEN ? 'LIVE TOKEN CONFIGURED' : 'LOCAL FALLBACK MODE (Configure .env for live)'}`);
+    console.log(`======================================================\n`);
+  });
+}
+
+module.exports = server;

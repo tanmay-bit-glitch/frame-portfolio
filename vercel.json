@@ -1,6 +1,5 @@
 {
-  "version": 2,
-  "outputDirectory": ".",
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/api/instagram/profile", "destination": "/api/instagram/profile.js" },
     { "source": "/api/instagram/posts",   "destination": "/api/instagram/posts.js"   },
