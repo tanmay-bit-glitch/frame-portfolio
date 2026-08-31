@@ -1560,8 +1560,8 @@ body:hover .custom-cursor {
    ========================================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 80px;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 64px;
   align-items: center;
 }
 
@@ -1640,6 +1640,8 @@ body:hover .custom-cursor {
 /* Portrait Card with Film Sprockets */
 .about-portrait-card {
   position: relative;
+  max-width: 380px;
+  margin: 0 auto;
 }
 
 .portrait-frame {
@@ -1652,7 +1654,7 @@ body:hover .custom-cursor {
 }
 
 .portrait-sprocket {
-  height: 16px;
+  height: 14px;
   background: repeating-linear-gradient(90deg,
       var(--border-bright) 0, var(--border-bright) 12px,
       transparent 12px, transparent 24px);
@@ -1663,14 +1665,14 @@ body:hover .custom-cursor {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 30%;
-  filter: contrast(1.08) brightness(0.98) saturate(1.05);
+  object-position: center 15%;
+  filter: contrast(1.06) brightness(0.98) saturate(1.03);
   transition: transform var(--dur-slow) var(--ease-cinema), filter var(--dur-slow);
 }
 
 .portrait-frame:hover .portrait-img {
-  transform: scale(1.04);
-  filter: contrast(1.14) brightness(1.02) saturate(1.1);
+  transform: scale(1.03);
+  filter: contrast(1.1) brightness(1.02) saturate(1.06);
 }
 
 .portrait-overlay {
