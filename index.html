@@ -33,6 +33,12 @@
 </head>
 
 <body class="loading-state">
+  <!-- Top Optical Laser Progress Rail -->
+  <div class="top-laser-progress" id="topLaserProgress" aria-hidden="true">
+    <div class="laser-beam-fill" id="laserBeamFill"></div>
+    <div class="laser-reticle-spark" id="laserReticleSpark"></div>
+  </div>
+
   <!-- Custom Viewfinder Cursor -->
   <div class="custom-cursor" id="customCursor" aria-hidden="true">
     <div class="cursor-dot"></div>
@@ -1687,6 +1693,73 @@
       </div>
     </div>
   </footer>
+
+  <!-- INNOVATIVE OPTIC REEL SCROLLBAR HUD -->
+  <aside class="optic-scroll-hud" id="opticScrollHud" aria-label="Cinematic scroll & section waypoint navigation">
+    <div class="optic-hud-inner">
+      <!-- Quick Top Warp -->
+      <button class="optic-warp-btn warp-top" id="hudWarpTop" type="button" aria-label="Warp to top" title="Warp to top">
+        <span>▲</span>
+      </button>
+
+      <!-- Optical Track with Calibration Ticks & Waypoint Nodes -->
+      <div class="optic-rail-track" id="opticRailTrack">
+        <div class="optic-ticks-scale" aria-hidden="true"></div>
+        <div class="optic-active-beam" id="opticActiveBeam"></div>
+
+        <!-- Section Waypoint Nodes -->
+        <nav class="optic-waypoints" aria-label="Page sections">
+          <a href="#top" class="optic-node is-active" data-section="top" data-label="00 // HOME" title="00: Home / Intro">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">00 // HOME</span>
+          </a>
+          <a href="#work" class="optic-node" data-section="work" data-label="01 // SELECTED WORK" title="01: Selected Work">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">01 // SELECTED WORK</span>
+          </a>
+          <a href="#instagram" class="optic-node" data-section="instagram" data-label="02 // SOCIAL FEED" title="02: Live Feed">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">02 // SOCIAL FEED</span>
+          </a>
+          <a href="#vclick" class="optic-node" data-section="vclick" data-label="03 // VCLICK TASKS" title="03: VClick Tasks">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">03 // VCLICK TASKS</span>
+          </a>
+          <a href="#about" class="optic-node" data-section="about" data-label="04 // ABOUT" title="04: About Tanmay">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">04 // ABOUT</span>
+          </a>
+          <a href="#gear" class="optic-node" data-section="gear" data-label="05 // MY GEAR" title="05: Gear & Kit">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">05 // MY GEAR</span>
+          </a>
+          <a href="#skills" class="optic-node" data-section="skills" data-label="06 // CRAFT" title="06: Creative Philosophy">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">06 // CRAFT</span>
+          </a>
+          <a href="#contact" class="optic-node" data-section="contact" data-label="07 // CONTACT" title="07: Get In Touch">
+            <span class="node-dot"></span>
+            <span class="node-tooltip mono">07 // CONTACT</span>
+          </a>
+        </nav>
+
+        <!-- Gliding Aperture Shutter Reticle (Draggable HUD Thumb) -->
+        <div class="optic-shutter-thumb" id="opticShutterThumb" tabindex="0" role="slider" aria-label="Page scroll position" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="shutter-crosshair">⌜⌟</div>
+          <div class="shutter-core-glow"></div>
+          <div class="shutter-telemetry mono" id="shutterTelemetry">
+            <span class="telemetry-percent" id="telemetryPercent">00%</span>
+            <span class="telemetry-section" id="telemetrySection">HOME</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Bottom Warp -->
+      <button class="optic-warp-btn warp-bottom" id="hudWarpBottom" type="button" aria-label="Warp to contact" title="Warp to contact">
+        <span>▼</span>
+      </button>
+    </div>
+  </aside>
 </body>
 
 </html>

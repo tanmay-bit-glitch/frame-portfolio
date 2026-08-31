@@ -1306,6 +1306,194 @@
     }
   });
 
+  /* ==========================================================================
+     INNOVATIVE OPTIC SCROLLBAR HUD & LASER PROGRESS ENGINE
+     ========================================================================== */
+  const opticScrollHud = document.getElementById('opticScrollHud');
+  const laserBeamFill = document.getElementById('laserBeamFill');
+  const opticActiveBeam = document.getElementById('opticActiveBeam');
+  const opticShutterThumb = document.getElementById('opticShutterThumb');
+  const opticRailTrack = document.getElementById('opticRailTrack');
+  const telemetryPercent = document.getElementById('telemetryPercent');
+  const telemetrySection = document.getElementById('telemetrySection');
+  const opticNodes = [...document.querySelectorAll('.optic-node')];
+  const hudWarpTop = document.getElementById('hudWarpTop');
+  const hudWarpBottom = document.getElementById('hudWarpBottom');
+
+  const pageSections = [
+    { id: 'top', label: 'HOME', elem: document.getElementById('top') || document.body },
+    { id: 'work', label: 'WORK', elem: document.getElementById('work') },
+    { id: 'instagram', label: 'FEED', elem: document.getElementById('instagram') },
+    { id: 'vclick', label: 'VCLICK', elem: document.getElementById('vclick') },
+    { id: 'about', label: 'ABOUT', elem: document.getElementById('about') },
+    { id: 'gear', label: 'GEAR', elem: document.getElementById('gear') },
+    { id: 'skills', label: 'CRAFT', elem: document.getElementById('skills') },
+    { id: 'contact', label: 'CONTACT', elem: document.getElementById('contact') }
+  ];
+
+  let scrollTimeout = null;
+  let isDraggingScrollHud = false;
+
+  function updateScrollTelemetry() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+    const docHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    ) - window.innerHeight;
+
+    const progressRatio = docHeight > 0 ? Math.min(1, Math.max(0, scrollTop / docHeight)) : 0;
+    const progressPercent = Math.round(progressRatio * 100);
+
+    // Update Top Laser Progress
+    if (laserBeamFill) {
+      laserBeamFill.style.width = `${progressPercent}%`;
+    }
+
+    // Update Optic Rail Active Beam and Shutter Thumb
+    if (opticActiveBeam) {
+      opticActiveBeam.style.height = `${progressRatio * 100}%`;
+    }
+
+    if (opticShutterThumb) {
+      opticShutterThumb.style.top = `${progressRatio * 100}%`;
+      opticShutterThumb.setAttribute('aria-valuenow', progressPercent);
+    }
+
+    // Update Telemetry Badge
+    if (telemetryPercent) {
+      telemetryPercent.textContent = `${String(progressPercent).padStart(2, '0')}%`;
+    }
+
+    // Determine current active section
+    const viewportMiddle = scrollTop + (window.innerHeight * 0.35);
+    let activeSec = pageSections[0];
+
+    for (let i = pageSections.length - 1; i >= 0; i--) {
+      const sec = pageSections[i];
+      if (sec.elem && sec.elem.offsetTop <= viewportMiddle) {
+        activeSec = sec;
+        break;
+      }
+    }
+
+    if (telemetrySection && activeSec) {
+      telemetrySection.textContent = activeSec.label;
+    }
+
+    // Update Waypoint Nodes active class
+    if (activeSec) {
+      opticNodes.forEach(node => {
+        const isCurrent = node.dataset.section === activeSec.id;
+        node.classList.toggle('is-active', isCurrent);
+      });
+    }
+
+    // Visual scroll flare state
+    if (opticScrollHud) {
+      opticScrollHud.classList.add('is-scrolling');
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (!isDraggingScrollHud) {
+          opticScrollHud.classList.remove('is-scrolling');
+        }
+      }, 900);
+    }
+  }
+
+  // Bind Scroll Listener with passive performance
+  window.addEventListener('scroll', updateScrollTelemetry, { passive: true });
+  window.addEventListener('resize', updateScrollTelemetry, { passive: true });
+  updateScrollTelemetry();
+
+  // Warp Buttons
+  hudWarpTop?.addEventListener('click', () => {
+    playSound('click');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  hudWarpBottom?.addEventListener('click', () => {
+    playSound('click');
+    const contactSec = document.getElementById('contact');
+    if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
+    else window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+
+  // Waypoint Node Click Smooth Scroll & Audio Feedback
+  opticNodes.forEach(node => {
+    node.addEventListener('click', (e) => {
+      e.preventDefault();
+      const secId = node.dataset.section;
+      const target = secId === 'top' ? document.body : document.getElementById(secId);
+      if (target) {
+        playSound('click');
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Dragging / Scrubbing on the Optical Rail Track
+  if (opticRailTrack && opticShutterThumb) {
+    function scrubToPoint(clientY) {
+      const rect = opticRailTrack.getBoundingClientRect();
+      const relativeY = Math.min(rect.height, Math.max(0, clientY - rect.top));
+      const ratio = relativeY / rect.height;
+      const docHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight
+      ) - window.innerHeight;
+
+      window.scrollTo({
+        top: ratio * docHeight,
+        behavior: 'auto'
+      });
+    }
+
+    opticRailTrack.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.optic-node') || e.target.closest('.optic-warp-btn')) return;
+      isDraggingScrollHud = true;
+      opticShutterThumb.classList.add('is-dragging');
+      opticScrollHud?.classList.add('is-scrolling');
+      scrubToPoint(e.clientY);
+      playSound('click');
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDraggingScrollHud) return;
+      e.preventDefault();
+      scrubToPoint(e.clientY);
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isDraggingScrollHud) {
+        isDraggingScrollHud = false;
+        opticShutterThumb.classList.remove('is-dragging');
+        opticScrollHud?.classList.remove('is-scrolling');
+      }
+    });
+
+    // Touch Scrubbing for tablets
+    opticRailTrack.addEventListener('touchstart', (e) => {
+      if (e.target.closest('.optic-node') || e.target.closest('.optic-warp-btn')) return;
+      isDraggingScrollHud = true;
+      opticShutterThumb.classList.add('is-dragging');
+      opticScrollHud?.classList.add('is-scrolling');
+      scrubToPoint(e.touches[0].clientY);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDraggingScrollHud) return;
+      scrubToPoint(e.touches[0].clientY);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      if (isDraggingScrollHud) {
+        isDraggingScrollHud = false;
+        opticShutterThumb.classList.remove('is-dragging');
+        opticScrollHud?.classList.remove('is-scrolling');
+      }
+    });
+  }
+
   // Initialize Instagram Feed
   loadInstagramFeed();
 
