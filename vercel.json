@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/api/instagram/profile", "destination": "/api/instagram/profile.js" },
+    { "source": "/api/instagram/posts",   "destination": "/api/instagram/posts.js"   },
+    { "source": "/api/instagram/stories", "destination": "/api/instagram/stories.js" },
+    { "source": "/api/instagram/all",     "destination": "/api/instagram/all.js"     }
+  ]
+}
