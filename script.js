@@ -1324,6 +1324,7 @@
     { id: 'top', label: 'HOME', elem: document.getElementById('top') || document.body },
     { id: 'work', label: 'WORK', elem: document.getElementById('work') },
     { id: 'instagram', label: 'FEED', elem: document.getElementById('instagram') },
+    { id: 'experience', label: 'CAMPUS', elem: document.getElementById('experience') },
     { id: 'about', label: 'ABOUT', elem: document.getElementById('about') },
     { id: 'gear', label: 'GEAR', elem: document.getElementById('gear') },
     { id: 'skills', label: 'CRAFT', elem: document.getElementById('skills') },
