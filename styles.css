@@ -4223,217 +4223,22 @@ body:hover .custom-cursor {
   border-radius: 4px;
 }
 
-/* Featured Card Layout */
+/* Campus Featured Card Layout */
+.campus-featured-card {
+  border-left: 3px solid var(--accent);
+}
+
 .campus-featured-card .campus-card-body {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 36px;
-  padding: 32px;
-}
-
-/* Media Column & Cinema Frame */
-.campus-media-col {
+  padding: 32px 36px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.campus-media-frame {
-  background: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
-}
-
-.media-frame-rebate {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 14px;
-  font-size: 9.5px;
-  letter-spacing: 0.1em;
-  background: rgba(20, 20, 18, 0.95);
-  color: var(--text-muted);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.media-frame-rebate.bottom {
-  border-bottom: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.media-frame-rebate span:first-child {
-  color: var(--accent);
-}
-
-/* Aftermovie Poster Visual */
-.aftermovie-poster-card {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #110d0c 0%, #20110e 50%, #0c0908 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.poster-visual-layer {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.poster-glow-orb {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 72, 32, 0.35) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(28px);
-  pointer-events: none;
-}
-
-.poster-grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-}
-
-.poster-badge-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 2;
-}
-
-.poster-fest-tag {
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  font-weight: 700;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 4px 10px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.poster-type-tag {
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  color: var(--accent);
-  background: rgba(255, 72, 32, 0.18);
-  border: 1px solid rgba(255, 72, 32, 0.4);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.poster-center-play {
-  align-self: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.play-ring-outer {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 1px dashed rgba(255, 72, 32, 0.5);
-  animation: rotateTimecode 12s linear infinite;
-}
-
-.play-ring-inner {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px var(--accent-glow);
-  transition: transform var(--dur-fast) var(--ease-spring);
-}
-
-.campus-featured-card:hover .play-ring-inner {
-  transform: scale(1.15);
-  background: #ff5e38;
-}
-
-.poster-bottom-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 9.5px;
-  z-index: 2;
-  color: var(--text-muted);
-}
-
-.soundtrack-pill,
-.editor-pill {
-  background: rgba(0, 0, 0, 0.65);
-  padding: 3px 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Primary Action CTA Button */
-.campus-primary-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 13px 24px;
-  background: var(--accent);
-  color: #ffffff;
-  border-radius: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: 0 8px 24px var(--accent-glow);
-  transition: all var(--dur-fast) var(--ease-cinema);
-}
-
-.campus-primary-btn:hover {
-  background: #ff5722;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(255, 72, 32, 0.6);
-  color: #ffffff;
-}
-
-.btn-play-icon {
-  font-size: 10px;
-}
-
-/* Right Editorial Content Column */
-.campus-content-col {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
+  gap: 24px;
 }
 
 .campus-title-block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .campus-team-kicker {
@@ -4451,17 +4256,18 @@ body:hover .custom-cursor {
 
 .campus-lead-desc {
   font-size: 14.5px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--text-muted);
   margin: 0;
+  max-width: 900px;
 }
 
 /* Major Contribution Highlight Box */
 .major-contribution-box {
   background: rgba(255, 72, 32, 0.05);
   border: 1px solid rgba(255, 72, 32, 0.28);
-  border-radius: 10px;
-  padding: 18px 20px;
+  border-radius: 12px;
+  padding: 22px 26px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -4489,62 +4295,47 @@ body:hover .custom-cursor {
 }
 
 .contribution-body {
-  font-size: 13.5px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.65;
   color: var(--text);
   margin: 0;
 }
 
-.contribution-specs-row {
+/* Action Button Row */
+.campus-action-row {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 72, 32, 0.15);
-  font-size: 9.5px;
-  color: var(--accent);
+  align-items: center;
+  padding-top: 6px;
 }
 
-.contribution-specs-row span {
-  padding: 2px 7px;
-  background: rgba(255, 72, 32, 0.1);
-  border-radius: 3px;
+.campus-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 8px 24px var(--accent-glow);
+  transition: all var(--dur-fast) var(--ease-cinema);
 }
 
-/* Tag Pills */
-.campus-tags-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.campus-primary-btn:hover {
+  background: #ff5722;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 72, 32, 0.6);
+  color: #ffffff;
 }
 
-.tags-label {
+.btn-play-icon {
   font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--text-faint);
-}
-
-.campus-tags-list {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.campus-tag-pill {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  padding: 4px 10px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text-muted);
-  transition: all var(--dur-fast);
-}
-
-.campus-tag-pill:hover {
-  border-color: var(--border-bright);
-  color: var(--text);
-  background: var(--bg-elevated);
 }
 
 /* Companion Card: SWD */
@@ -4553,7 +4344,7 @@ body:hover .custom-cursor {
 }
 
 .companion-card-body {
-  padding: 28px 32px;
+  padding: 32px 36px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -4562,11 +4353,11 @@ body:hover .custom-cursor {
 .companion-title-block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .companion-title-block h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text);
   margin: 0;
@@ -4576,17 +4367,18 @@ body:hover .custom-cursor {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  padding: 12px 16px;
+  padding: 14px 20px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
+  width: fit-content;
 }
 
 .companion-meta-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10.5px;
+  font-size: 11px;
 }
 
 .companion-meta-item .meta-label {
@@ -4605,32 +4397,21 @@ body:hover .custom-cursor {
     gap: 32px;
   }
 
-  .campus-featured-card .campus-card-body {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 24px;
-  }
-
+  .campus-featured-card .campus-card-body,
   .companion-card-body {
-    padding: 22px;
+    padding: 24px 20px;
   }
 }
 
 @media (max-width: 640px) {
-  .poster-visual-layer {
-    padding: 12px;
+  .campus-primary-btn {
+    width: 100%;
   }
 
-  .poster-badge-row {
+  .companion-status-row {
+    width: 100%;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .poster-bottom-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    gap: 12px;
   }
 }
 
