@@ -419,42 +419,6 @@
       });
   }
 
-  /* ==========================================================================
-     FULL-PAGE AMBIENT SPREADING BACKGROUND (PHASE 4)
-     ========================================================================== */
-  const ambientViewport = document.getElementById('galleryAmbientViewport');
-  const layerA = document.getElementById('ambientLayerA');
-  const layerB = document.getElementById('ambientLayerB');
-  let activeAmbientLayer = 'A';
-  let currentAmbientPhotoId = null;
-
-  function showAmbientPhoto(photo) {
-    if (!ambientViewport || !layerA || !layerB || !photo) return;
-    if (currentAmbientPhotoId === photo.id) return;
-    currentAmbientPhotoId = photo.id;
-
-    const imgUrl = (photo.srcset && (photo.srcset['1280'] || photo.srcset['640'])) || photo.placeholder;
-    const nextLayer = activeAmbientLayer === 'A' ? layerB : layerA;
-    const prevLayer = activeAmbientLayer === 'A' ? layerA : layerB;
-
-    nextLayer.style.backgroundImage = 'url(' + imgUrl + ')';
-    nextLayer.classList.remove('is-fading');
-    nextLayer.classList.add('is-active');
-
-    prevLayer.classList.remove('is-active');
-    prevLayer.classList.add('is-fading');
-
-    ambientViewport.classList.add('is-active');
-    activeAmbientLayer = activeAmbientLayer === 'A' ? 'B' : 'A';
-  }
-
-  function hideAmbientPhoto() {
-    if (!ambientViewport) return;
-    if (activeFocusedCard) return; // Keep ambient background alive while a card is focused
-    ambientViewport.classList.remove('is-active');
-    currentAmbientPhotoId = null;
-  }
-
   function getColumnCount() {
     const w = window.innerWidth;
     if (w < 640) return 1;
@@ -582,14 +546,12 @@
 
         // Full-page animated blurred background spread on hover
         card.addEventListener('mouseenter', () => {
-          showAmbientPhoto(photo);
           card.classList.add('is-hovered');
         });
 
         card.addEventListener('mouseleave', () => {
           card.classList.remove('is-hovered');
-          hideAmbientPhoto();
-        });
+          });
 
         // In-place Click to Zoom / Focus event
         card.addEventListener('click', (e) => {
@@ -713,13 +675,6 @@
       focusBackdrop.classList.add('is-active');
     }
 
-    // Keep ambient spreading photo active
-    if (photo) {
-      showAmbientPhoto(photo);
-    } else if (allPhotos && allPhotos[idx]) {
-      showAmbientPhoto(allPhotos[idx]);
-    }
-
     // Gentle scroll adjustment if card is out of comfortable viewing bounds
     const rect = card.getBoundingClientRect();
     if (rect.top < 70 || rect.bottom > window.innerHeight - 30) {
@@ -741,7 +696,6 @@
     if (focusBackdrop) {
       focusBackdrop.classList.remove('is-active');
     }
-    hideAmbientPhoto();
     playSound('click');
   }
 

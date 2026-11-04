@@ -24,3 +24,4 @@ function updatePhotosData(filePath) {
 
 updatePhotosData('index.html');
 updatePhotosData('preview-gallery.html');
+

@@ -48,23 +48,16 @@ async function main() {
   capture('preview-bottom.html', '02-desktop-gallery-bottom-alignment.png', 1440, 1200, 800);
   fs.unlinkSync('preview-bottom.html');
 
-  // 3. Hover Ambient Background Spreading Across Whole Page
-  // We simulate hovering Frame 1 (Shelby GT500)
+  // 3. Clean Hover State (Frame 1 Shelby GT500 hovered - crisp elevation, overlay, subtle surround dimming, NO blur)
   const hoverHtml = previewHtml.replace(
     '</head>',
     `<style>
       .gallery-card { opacity: 1 !important; transform: none !important; }
-      #galleryAmbientViewport { opacity: 1 !important; }
-      #ambientLayerA {
-        background-image: url('assets/photos/mustang-shelby-gt500-cyberpunk-1280.webp') !important;
-        opacity: 1 !important;
-        transform: scale(1.15) !important;
-      }
       #frame-1 {
         border-color: rgba(224, 93, 44, 0.85) !important;
         box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85), 0 0 25px rgba(224, 93, 44, 0.3) !important;
         z-index: 15 !important;
-        transform: translateY(-4px) scale(1.02) !important;
+        transform: translateY(-4px) scale(1.015) !important;
       }
       #frame-1 .card-img {
         transform: scale(1.045) !important;
@@ -72,11 +65,9 @@ async function main() {
       #frame-1 .card-overlay {
         opacity: 1 !important;
       }
-      .gallery-masonry:has(.gallery-card:hover) .gallery-card:not(:hover),
       .gallery-masonry .gallery-card:not(#frame-1) {
-        opacity: 0.35 !important;
-        filter: saturate(0.8) brightness(0.8) !important;
-        transform: scale(0.985) !important;
+        opacity: 0.55 !important;
+        transform: scale(0.99) !important;
       }
     </style>
     </head>`
@@ -92,22 +83,15 @@ async function main() {
     </script>
     </body>`
   );
-  fs.writeFileSync('preview-hover-ambient.html', hoverHtml, 'utf8');
-  capture('preview-hover-ambient.html', '03-hover-ambient-spread.png', 1440, 1100, 700);
-  fs.unlinkSync('preview-hover-ambient.html');
+  fs.writeFileSync('preview-hover-clean.html', hoverHtml, 'utf8');
+  capture('preview-hover-clean.html', '03-hover-clean-elevation.png', 1440, 1100, 700);
+  fs.unlinkSync('preview-hover-clean.html');
 
-  // 4. In-Place Click Zoom / Focused State
-  // Frame 2 (Stance Culture // Slammed Tuner) focused
+  // 4. In-Place Click Zoom / Focused State (Frame 2 Stance Culture focused - zoomed in place, clean backdrop, NO blur)
   const focusedHtml = previewHtml.replace(
     '</head>',
     `<style>
       .gallery-card { opacity: 1 !important; transform: none !important; }
-      #galleryAmbientViewport { opacity: 1 !important; }
-      #ambientLayerA {
-        background-image: url('assets/photos/slammed-tuner-and-cafe-racer-1280.webp') !important;
-        opacity: 1 !important;
-        transform: scale(1.16) !important;
-      }
       #galleryFocusBackdrop { opacity: 1 !important; }
       #frame-2 {
         z-index: 120 !important;
@@ -122,9 +106,8 @@ async function main() {
         opacity: 1 !important;
       }
       .gallery-column .gallery-card:not(#frame-2) {
-        opacity: 0.18 !important;
-        filter: blur(6px) brightness(0.5) saturate(0.5) !important;
-        transform: scale(0.97) !important;
+        opacity: 0.28 !important;
+        transform: scale(0.98) !important;
       }
     </style>
     </head>`
@@ -144,9 +127,9 @@ async function main() {
     </script>
     </body>`
   );
-  fs.writeFileSync('preview-focused-zoom.html', focusedHtml, 'utf8');
-  capture('preview-focused-zoom.html', '04-inplace-focused-zoom.png', 1440, 1100, 700);
-  fs.unlinkSync('preview-focused-zoom.html');
+  fs.writeFileSync('preview-focused-clean.html', focusedHtml, 'utf8');
+  capture('preview-focused-clean.html', '04-inplace-focused-clean.png', 1440, 1100, 700);
+  fs.unlinkSync('preview-focused-clean.html');
 
   // 5. Tablet 768px View
   capture('preview-gallery.html', '05-tablet-768.png', 768, 1024, 600);

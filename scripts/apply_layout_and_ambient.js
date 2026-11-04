@@ -365,3 +365,4 @@ if (startIdx !== -1 && endIdx !== -1) {
 } else {
   console.error('Could not find markers in styles.css:', { startIdx, endIdx });
 }
+

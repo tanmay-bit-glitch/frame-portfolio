@@ -1385,53 +1385,6 @@ body:hover .custom-cursor {
    CURATED GALLERY: COLUMN SCALE ALIGNMENT, FULL-BLEED & AMBIENT SPREAD (PHASE 4)
    ========================================================================== */
 
-/* Full-Page Ambient Spreading Background on Hover */
-.gallery-ambient-viewport {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 650ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.gallery-ambient-viewport.is-active {
-  opacity: 1;
-}
-
-.ambient-spread-layer {
-  position: absolute;
-  inset: -18vw -18vh;
-  width: 136vw;
-  height: 136vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  filter: blur(60px) saturate(1.5) brightness(0.38);
-  opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1400ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
-
-.ambient-spread-layer.is-active {
-  opacity: 1;
-  transform: scale(1.15);
-}
-
-.ambient-spread-layer.is-fading {
-  opacity: 0;
-  transform: scale(1.08);
-}
-
-.ambient-viewport-vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(10, 11, 16, 0.2) 0%, rgba(5, 6, 9, 0.88) 100%);
-}
-
 /* Aligned Column Flex Layout */
 .gallery-masonry,
 .gallery-grid {
@@ -1519,13 +1472,12 @@ body:hover .custom-cursor {
   outline-offset: 3px;
 }
 
-/* Hover Spotlight: Dim surrounding cards when any card is hovered */
+/* Hover Spotlight: Gently dim surrounding cards when any card is hovered (clean opacity, zero blur) */
 .gallery-masonry:has(.gallery-card:hover) .gallery-card:not(:hover):not(.is-focused),
 .gallery-grid:has(.gallery-card:hover) .gallery-card:not(:hover):not(.is-focused),
 .gallery-masonry.is-card-hovered .gallery-card:not(.is-hovered):not(.is-focused) {
-  opacity: 0.38;
-  filter: saturate(0.8) brightness(0.8);
-  transform: scale(0.985);
+  opacity: 0.55;
+  transform: scale(0.99);
 }
 
 /* Card Media Wrapper - Natural aspect ratio with column scale adjustment so columns align flush at the bottom */
@@ -1674,14 +1626,13 @@ body:hover .custom-cursor {
   pointer-events: auto !important;
 }
 
-/* When a card is focused, all other cards in all columns dim and blur */
+/* When a card is focused, surrounding cards dim cleanly with zero blur */
 .gallery-masonry.has-focused-card .gallery-card:not(.is-focused),
 .gallery-grid.has-focused-card .gallery-card:not(.is-focused) {
-  opacity: 0.18 !important;
-  filter: blur(6px) brightness(0.5) saturate(0.5) !important;
-  transform: scale(0.97) !important;
+  opacity: 0.28 !important;
+  transform: scale(0.98) !important;
   pointer-events: none !important;
-  transition: all 450ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: opacity 350ms cubic-bezier(0.16, 1, 0.3, 1), transform 350ms cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* Fixed focus backdrop overlay */
@@ -1689,12 +1640,10 @@ body:hover .custom-cursor {
   position: fixed;
   inset: 0;
   background: rgba(4, 5, 8, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   z-index: 85;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gallery-focus-backdrop.is-active {
