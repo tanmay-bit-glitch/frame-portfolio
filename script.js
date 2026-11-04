@@ -294,7 +294,7 @@
   const menuButton = document.querySelector('.menu-trigger');
   const closeButton = document.querySelector('.menu-close');
   const menuLinks = [...document.querySelectorAll('.menu-links a')];
-  let lastFocusedElement = null;
+  let lastMenuFocusedElement = null;
 
   function openMenu() {
     lastFocusedElement = document.activeElement;
@@ -317,7 +317,7 @@
         const target = document.querySelector(targetSelector);
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       } else {
-        lastFocusedElement?.focus();
+        lastMenuFocusedElement?.focus();
       }
     }, delay);
   }
@@ -462,7 +462,7 @@
 
   let currentProjectIndex = 0;
 
-  let lastFocusedElement = null;
+  let lastLbFocusedElement = null;
 
   function openLightbox(index) {
     lastFocusedElement = document.activeElement;

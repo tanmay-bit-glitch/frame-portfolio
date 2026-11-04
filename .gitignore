@@ -17,3 +17,7 @@ Thumbs.db
 .vercel
 .env*
 
+
+# Raw Media & Curation Source (Local Only)
+raw_photos/
+rejects/

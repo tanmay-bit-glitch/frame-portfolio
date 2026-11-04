@@ -4998,3 +4998,58 @@ body:hover .custom-cursor {
 .direct-email-btn svg {
   flex-shrink: 0;
 }
+
+/* ==========================================================================
+   INSTAGRAM FOLLOW STRIP
+   ========================================================================== */
+
+.instagram-follow-strip {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-surface) 50%, var(--bg) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.follow-strip-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.follow-strip-content {
+  max-width: 720px;
+}
+
+.follow-strip-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.follow-strip-heading {
+  font-size: clamp(32px, 5.5vw, 64px);
+  margin-bottom: 16px;
+}
+
+.follow-strip-desc {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.follow-strip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 36px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
