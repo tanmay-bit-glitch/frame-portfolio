@@ -4,6 +4,45 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Phase 4 Curation Refinement] — Final 30 Curated Frames & 5 New User Photos Integrated
+*Date: 2026-11-05*
+
+### Added & Updated
+1. **User-Directed Curation & Removal:**
+   - Honored Tanmay's directive: *"REMOVE ALL THE IMAGES AFTER 22 EXCEPT 35 37 39 57 48"*.
+   - Retained frames 1 to 22.
+   - Retained frames 35, 37, 39, 48, 57 from the extended batch.
+   - Moved all other excluded candidate files into `rejects/curation_batch2/` to ensure no original photo is deleted.
+
+2. **Integration of 5 New Uploaded Photos (Matched to Original S23 Files):**
+   - **Shotgun 650 // Twin Detail** (`05_royal_enfield_shotgun_650_twin.jpg`): Replaced wide crowd photo with macro detail of Royal Enfield Shotgun 650 side cover badge and spring.
+   - **Stargazer // Pointing to the Cosmos** (`20_stargazer_pointing_cosmos.jpg`): Replaced motion-blurred stargazer with 30s exposure frame showing person pointing directly up at brilliant night constellations.
+   - **Golden Gaze // Solar Flare in Iris** (`17_golden_gaze_eyes_macro.jpg`): Added high-contrast intimate golden hour eye portrait (People).
+   - **Sunlit Sanctuary // Golden Hour Classroom** (`27_classroom_golden_sunlight.jpg`): Added warm sunlight streaming across college wooden lecture benches (Details).
+   - **Street Sentinel // Sunlit Alley Cat** (`28_sunlit_street_cat_portrait.jpg`): Added crisp feline portrait in afternoon sun against weathered wall (Wildlife).
+   - Total portfolio photo count brought to **exactly 30 frames**, matching Master Task Phase 2 Rule 6.
+
+3. **Responsive WebP Generation & Synchronization:**
+   - Generated responsive WebP variants (640w, 1280w, 1920w) with real Samsung Galaxy S23 EXIF and base64 blur placeholders.
+   - Re-indexed and numbered all 30 full-resolution originals (`01_` through `30_`) in [`curated_photos_review/`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/) and generated [`review_catalog.html`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/review_catalog.html).
+   - Updated [`data/photos.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/photos.json) and [`index.html`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/index.html) with exact category counts:
+     - `ALL [30]`
+     - `MACHINES [09]`
+     - `STREET [07]`
+     - `PEOPLE [04]`
+     - `NIGHT [03]`
+     - `WILDLIFE [03]`
+     - `HERITAGE [02]`
+     - `CULTURE [01]`
+     - `DETAILS [01]`
+
+4. **Multi-Viewport Visual Verification:**
+   - Captured automated screenshots across 375px, 768px, and 1440px:
+     - Gallery Grid (30 Frames): [`phase4-gallery-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-375.png), [`phase4-gallery-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-768.png), [`phase4-gallery-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-1440.png)
+     - Interactive Review Catalog: [`review-catalog-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/review-catalog-1440.png)
+
+---
+
 ## [Phase 4 Update] — Full Archive Expansion to 61 Curated Frames & User Upload Ingestion
 *Date: 2026-11-04*
 

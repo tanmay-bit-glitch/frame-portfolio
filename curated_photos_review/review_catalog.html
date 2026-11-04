@@ -2,1099 +2,518 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FRAME // Full Curated Portfolio Review (61 Frames)</title>
+  <title>FRAME // Curated Portfolio Review (Final 30 Frames)</title>
   <style>
-    :root {
-      --bg: #070706;
-      --card-bg: #0e0e0c;
-      --border: rgba(255,255,255,0.08);
-      --text: #f5f2ea;
-      --muted: #8e8b83;
-      --accent: #ff4820;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      padding: 30px 20px;
-    }
-    header {
-      max-width: 1400px;
-      margin: 0 auto 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; }
-    h1 span { color: var(--accent); }
-    .subtitle { color: var(--muted); font-size: 14px; margin-top: 6px; }
-    .badge {
-      display: inline-block;
-      padding: 6px 12px;
-      background: rgba(255,72,32,0.15);
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-size: 12px;
-      font-family: monospace;
-      border-radius: 4px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 24px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .img-wrap {
-      position: relative;
-      background: #000;
-      width: 100%;
-      height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .img-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      cursor: zoom-in;
-    }
-    .card-info {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-    }
-    .tag-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      font-family: monospace;
-      color: var(--accent);
-    }
-    .title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-    }
-    .meta {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .filename {
-      font-family: monospace;
-      font-size: 11px;
-      color: #aaa;
-      background: rgba(255,255,255,0.04);
-      padding: 4px 8px;
-      border-radius: 4px;
-      margin-top: auto;
-      word-break: break-all;
-    }
+    body { background: #07090e; color: #e6e8ee; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 40px 24px; line-height: 1.5; }
+    header { max-width: 1400px; margin: 0 auto 36px; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
+    h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+    h1 span { color: #ff3b30; }
+    .subtitle { font-size: 14px; color: #88909d; margin-top: 4px; }
+    .badge-count { background: rgba(255,59,48,0.12); color: #ff3b30; border: 1px solid rgba(255,59,48,0.25); font-family: monospace; font-size: 13px; padding: 6px 14px; border-radius: 4px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 24px; max-width: 1400px; margin: 0 auto; }
+    .card { background: #0c0f17; border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.16); }
+    .img-wrap { width: 100%; aspect-ratio: 4/5; background: #040508; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+    .img-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .card-meta { padding: 16px 18px 18px; }
+    .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .frame-num { font-family: monospace; font-size: 11px; color: #ff3b30; font-weight: 600; letter-spacing: 0.05em; }
+    .category-tag { font-family: monospace; font-size: 10px; color: #a0a6b5; text-transform: uppercase; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 3px; letter-spacing: 0.06em; }
+    .title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .specs { font-size: 11px; color: #727a8a; font-family: monospace; margin-bottom: 4px; }
+    .filename { font-size: 10px; color: #4e5564; font-family: monospace; word-break: break-all; margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 8px; }
   </style>
 </head>
 <body>
   <header>
     <div>
-      <h1>FRAME // <span>FULL PORTFOLIO REVIEW</span></h1>
-      <p class="subtitle">Complete archive of 61 curated frames with authentic Samsung Galaxy S23 EXIF metadata.</p>
+      <h1>FRAME <span>//</span> CURATED PORTFOLIO REVIEW</h1>
+      <p class="subtitle">Complete archive of final 30 curated frames with authentic Samsung Galaxy S23 EXIF metadata.</p>
     </div>
-    <span class="badge">TOTAL FRAMES: 61</span>
+    <div class="badge-count">TOTAL FRAMES: 30</div>
   </header>
 
   <div class="grid">
     
-      <div class="card">
+      <div class="card" id="frame-1">
         <div class="img-wrap">
           <img src="01_mustang_shelby_gt500_cyberpunk.jpg" alt="Neon Serpent // Shelby GT500" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 01</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 01</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Neon Serpent // Shelby GT500</div>
-          <div class="meta">samsung Galaxy S23 • 7.0mm • f/2.4</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026-04-06</div>
-          <div class="filename">01_mustang_shelby_gt500_cyberpunk.jpg</div>
+          <h2 class="title">Neon Serpent // Shelby GT500</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2252x4000 (0.563) • Date: 2026-04-06</p>
+          <p class="filename">01_mustang_shelby_gt500_cyberpunk.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-2">
         <div class="img-wrap">
           <img src="02_slammed_tuner_and_cafe_racer.jpg" alt="Street Zillas // Tuner & Cafe Racer" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 02</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 02</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Street Zillas // Tuner & Cafe Racer</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026-04-06</div>
-          <div class="filename">02_slammed_tuner_and_cafe_racer.jpg</div>
+          <h2 class="title">Street Zillas // Tuner & Cafe Racer</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2252x4000 (0.563) • Date: 2026-04-06</p>
+          <p class="filename">02_slammed_tuner_and_cafe_racer.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-3">
         <div class="img-wrap">
           <img src="03_stunt_rider_rolling_endo.jpg" alt="Defying Gravity // Stoppie in Motion" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 03</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 03</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Defying Gravity // Stoppie in Motion</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1855x3295 (0.56) • Date: 2026-06-21</div>
-          <div class="filename">03_stunt_rider_rolling_endo.jpg</div>
+          <h2 class="title">Defying Gravity // Stoppie in Motion</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 1974x2632 (0.75) • Date: 2026-06-21</p>
+          <p class="filename">03_stunt_rider_rolling_endo.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-4">
         <div class="img-wrap">
           <img src="04_aprilia_rs457_superbike.jpg" alt="Factory Racing // Aprilia RS 457" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 04</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 04</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Factory Racing // Aprilia RS 457</div>
-          <div class="meta">samsung Galaxy S23 • 7.0mm • f/2.4</div>
-          <div class="meta">Dimensions: 2250x3999 (0.56) • Date: 2026-10-14</div>
-          <div class="filename">04_aprilia_rs457_superbike.jpg</div>
+          <h2 class="title">Factory Racing // Aprilia RS 457</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2250x3999 (0.563) • Date: 2026-10-14</p>
+          <p class="filename">04_aprilia_rs457_superbike.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-5">
         <div class="img-wrap">
-          <img src="05_royal_enfield_cruiser_meet.jpg" alt="The Twin Rumble // Shotgun 650 Meet" loading="lazy">
+          <img src="05_royal_enfield_shotgun_650_twin.jpg" alt="Shotgun 650 // Twin Detail" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 05</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 05</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">The Twin Rumble // Shotgun 650 Meet</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026-10-14</div>
-          <div class="filename">05_royal_enfield_cruiser_meet.jpg</div>
+          <h2 class="title">Shotgun 650 // Twin Detail</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2033x3613 (0.563) • Date: 2026-10-14</p>
+          <p class="filename">05_royal_enfield_shotgun_650_twin.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-6">
         <div class="img-wrap">
           <img src="06_pulsar_ns400z_midnight_beam.jpg" alt="Bajaj Pulsar NS400Z // Midnight Beam" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 06</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 06</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Bajaj Pulsar NS400Z // Midnight Beam</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026-05-29</div>
-          <div class="filename">06_pulsar_ns400z_midnight_beam.jpg</div>
+          <h2 class="title">Bajaj Pulsar NS400Z // Midnight Beam</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2252x4000 (0.563) • Date: 2026-05-29</p>
+          <p class="filename">06_pulsar_ns400z_midnight_beam.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-7">
         <div class="img-wrap">
           <img src="07_south_mumbai_victorian_heritage.jpg" alt="Colonial Monoliths // Fort Heritage Corridor" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 07</span>
-            <span>STREET</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 07</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Colonial Monoliths // Fort Heritage Corridor</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x1268 (1.78) • Date: 2026-05-10</div>
-          <div class="filename">07_south_mumbai_victorian_heritage.jpg</div>
+          <h2 class="title">Colonial Monoliths // Fort Heritage Corridor</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2252x1268 (1.776) • Date: 2026-06-24</p>
+          <p class="filename">07_south_mumbai_victorian_heritage.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-8">
         <div class="img-wrap">
           <img src="08_rail_lines_suspension_bridge.jpg" alt="Steel Arteries // Cable-Stayed Horizon" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 08</span>
-            <span>STREET</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 08</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Steel Arteries // Cable-Stayed Horizon</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2250x3999 (0.56) • Date: 2026-06-24</div>
-          <div class="filename">08_rail_lines_suspension_bridge.jpg</div>
+          <h2 class="title">Steel Arteries // Cable-Stayed Horizon</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2250x3999 (0.563) • Date: 2026-06-24</p>
+          <p class="filename">08_rail_lines_suspension_bridge.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-9">
         <div class="img-wrap">
           <img src="09_night_flower_market_glow.jpg" alt="Midnight Bloom // The Florist Bazaar" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 09</span>
-            <span>STREET</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 09</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Midnight Bloom // The Florist Bazaar</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026-08-05</div>
-          <div class="filename">09_night_flower_market_glow.jpg</div>
+          <h2 class="title">Midnight Bloom // The Florist Bazaar</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2252x4000 (0.563) • Date: 2026-08-05</p>
+          <p class="filename">09_night_flower_market_glow.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-10">
         <div class="img-wrap">
           <img src="10_pune_chowk_summer_transit.jpg" alt="Pulse of Pune // Midday Chowk" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 10</span>
-            <span>STREET</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 10</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Pulse of Pune // Midday Chowk</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 4391x7804 (0.56) • Date: 2026-06-05</div>
-          <div class="filename">10_pune_chowk_summer_transit.jpg</div>
+          <h2 class="title">Pulse of Pune // Midday Chowk</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 4391x7804 (0.563) • Date: 2026-05-15</p>
+          <p class="filename">10_pune_chowk_summer_transit.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-11">
         <div class="img-wrap">
           <img src="11_urban_canyon_monsoon_sky.jpg" alt="Skyward Breach // Urban Monsoon Sky" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 11</span>
-            <span>STREET</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 11</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Skyward Breach // Urban Monsoon Sky</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2250x4000 (0.56) • Date: 2026-07-28</div>
-          <div class="filename">11_urban_canyon_monsoon_sky.jpg</div>
+          <h2 class="title">Skyward Breach // Urban Monsoon Sky</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2598x4618 (0.563) • Date: 2026-06-05</p>
+          <p class="filename">11_urban_canyon_monsoon_sky.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-12">
         <div class="img-wrap">
           <img src="12_ancient_hemadpanthi_temple_steps.jpg" alt="Echoes in Basalt // Hemadpanthi Sanctum Portal" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 12</span>
-            <span>HERITAGE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 12</span>
+            <span class="category-tag">Heritage</span>
           </div>
-          <div class="title">Echoes in Basalt // Hemadpanthi Sanctum Portal</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3000x4000 (0.75) • Date: 2026-03-24</div>
-          <div class="filename">12_ancient_hemadpanthi_temple_steps.jpg</div>
+          <h2 class="title">Echoes in Basalt // Hemadpanthi Sanctum Portal</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2993x3989 (0.75) • Date: 2026-07-17</p>
+          <p class="filename">12_ancient_hemadpanthi_temple_steps.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-13">
         <div class="img-wrap">
           <img src="13_stone_temple_shikhara_facade.jpg" alt="Monument of Faith // Medieval Stone Sanctuary" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 13</span>
-            <span>HERITAGE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 13</span>
+            <span class="category-tag">Heritage</span>
           </div>
-          <div class="title">Monument of Faith // Medieval Stone Sanctuary</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3621x2037 (1.78) • Date: 2026-03-24</div>
-          <div class="filename">13_stone_temple_shikhara_facade.jpg</div>
+          <h2 class="title">Monument of Faith // Medieval Stone Sanctuary</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2993x3989 (0.75) • Date: 2026-07-17</p>
+          <p class="filename">13_stone_temple_shikhara_facade.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-14">
         <div class="img-wrap">
           <img src="14_dagdusheth_ganpati_darbar.jpg" alt="Golden Darbar // Shreemant Dagdusheth Celebration" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 14</span>
-            <span>CULTURE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 14</span>
+            <span class="category-tag">Culture</span>
           </div>
-          <div class="title">Golden Darbar // Shreemant Dagdusheth Celebration</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1692x3008 (0.56) • Date: 2026-09-16</div>
-          <div class="filename">14_dagdusheth_ganpati_darbar.jpg</div>
+          <h2 class="title">Golden Darbar // Shreemant Dagdusheth Celebration</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 3999x3000 (1.333) • Date: 2026-09-15</p>
+          <p class="filename">14_dagdusheth_ganpati_darbar.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-15">
         <div class="img-wrap">
           <img src="15_father_daughter_candid_smile.jpg" alt="Pure Radiance // Father & Daughter" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 15</span>
-            <span>PEOPLE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 15</span>
+            <span class="category-tag">People</span>
           </div>
-          <div class="title">Pure Radiance // Father & Daughter</div>
-          <div class="meta">samsung Galaxy S23 • 7.0mm • f/2.4</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026-06-29</div>
-          <div class="filename">15_father_daughter_candid_smile.jpg</div>
+          <h2 class="title">Pure Radiance // Father & Daughter</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2251x3002 (0.75) • Date: 2026-06-29</p>
+          <p class="filename">15_father_daughter_candid_smile.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-16">
         <div class="img-wrap">
           <img src="16_elder_in_gandhi_topi_monochrome.jpg" alt="The Silent Patriarch // Old Pune Ghats" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 16</span>
-            <span>PEOPLE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 16</span>
+            <span class="category-tag">People</span>
           </div>
-          <div class="title">The Silent Patriarch // Old Pune Ghats</div>
-          <div class="meta">samsung Galaxy S23 • 7.0mm • f/2.4</div>
-          <div class="meta">Dimensions: 3986x2242 (1.78) • Date: 2026-02-14</div>
-          <div class="filename">16_elder_in_gandhi_topi_monochrome.jpg</div>
+          <h2 class="title">The Silent Patriarch // Old Pune Ghats</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2252x4000 (0.563) • Date: 2026-06-29</p>
+          <p class="filename">16_elder_in_gandhi_topi_monochrome.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-17">
         <div class="img-wrap">
-          <img src="17_rock_guitarist_stage_spotlight.jpg" alt="Riff Under Spotlight // Live Stage Energy" loading="lazy">
+          <img src="17_golden_gaze_eyes_macro.jpg" alt="Golden Gaze // Solar Flare in Iris" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 17</span>
-            <span>NIGHT</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 17</span>
+            <span class="category-tag">People</span>
           </div>
-          <div class="title">Riff Under Spotlight // Live Stage Energy</div>
-          <div class="meta">samsung Galaxy S23 • 7.0mm • f/2.4</div>
-          <div class="meta">Dimensions: 2252x3004 (0.75) • Date: 2026-04-12</div>
-          <div class="filename">17_rock_guitarist_stage_spotlight.jpg</div>
+          <h2 class="title">Golden Gaze // Solar Flare in Iris</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2115x1057 (2.001) • Date: 2026-05-30</p>
+          <p class="filename">17_golden_gaze_eyes_macro.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-18">
         <div class="img-wrap">
-          <img src="18_stargazer_30s_night_sky.jpg" alt="Infinite Canvas // 30-Second Star Trail Gaze" loading="lazy">
+          <img src="18_auditorium_spotlight_beam.jpg" alt="Stage Presence // Campus Auditorium Spotlight" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 18</span>
-            <span>NIGHT</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 18</span>
+            <span class="category-tag">People</span>
           </div>
-          <div class="title">Infinite Canvas // 30-Second Star Trail Gaze</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3712x6596 (0.56) • Date: 2026-09-27</div>
-          <div class="filename">18_stargazer_30s_night_sky.jpg</div>
+          <h2 class="title">Stage Presence // Campus Auditorium Spotlight</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2993x3989 (0.75) • Date: 2026-04-18</p>
+          <p class="filename">18_auditorium_spotlight_beam.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-19">
         <div class="img-wrap">
-          <img src="19_city_overlook_sunset_silhouette.jpg" alt="Twilight Horizon // Overlook Above the City" loading="lazy">
+          <img src="19_rock_guitarist_stage_spotlight.jpg" alt="Riff Under Spotlight // Live Stage Energy" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 19</span>
-            <span>NIGHT</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 19</span>
+            <span class="category-tag">Night</span>
           </div>
-          <div class="title">Twilight Horizon // Overlook Above the City</div>
-          <div class="meta">samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3003x2252 (1.33) • Date: 2026-03-06</div>
-          <div class="filename">19_city_overlook_sunset_silhouette.jpg</div>
+          <h2 class="title">Riff Under Spotlight // Live Stage Energy</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2252x3004 (0.75) • Date: 2026-04-12</p>
+          <p class="filename">19_rock_guitarist_stage_spotlight.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-20">
         <div class="img-wrap">
-          <img src="20_indian_leopard_through_wire.jpg" alt="Gaze Through the Mesh // Indian Leopard" loading="lazy">
+          <img src="20_stargazer_pointing_cosmos.jpg" alt="Stargazer // Pointing to the Cosmos" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 20</span>
-            <span>WILDLIFE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 20</span>
+            <span class="category-tag">Night</span>
           </div>
-          <div class="title">Gaze Through the Mesh // Indian Leopard</div>
-          <div class="meta">Nothing Nothing Phone (4a) • 12.2mm • f/2.9</div>
-          <div class="meta">Dimensions: 3064x4085 (0.75) • Date: 2026-08-29</div>
-          <div class="filename">20_indian_leopard_through_wire.jpg</div>
+          <h2 class="title">Stargazer // Pointing to the Cosmos</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 2598x4618 (0.563) • Date: 2026-09-27</p>
+          <p class="filename">20_stargazer_pointing_cosmos.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-21">
         <div class="img-wrap">
-          <img src="21_birds_silk_cotton_sunset.jpg" alt="Dusk Duet // Silk-Cotton Crimson Sunset" loading="lazy">
+          <img src="21_city_overlook_sunset_silhouette.jpg" alt="Twilight Horizon // Overlook Above the City" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 21</span>
-            <span>WILDLIFE</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 21</span>
+            <span class="category-tag">Night</span>
           </div>
-          <div class="title">Dusk Duet // Silk-Cotton Crimson Sunset</div>
-          <div class="meta">samsung Galaxy S23 • 7.0mm • f/2.4</div>
-          <div class="meta">Dimensions: 2999x1687 (1.78) • Date: 2026-02-18</div>
-          <div class="filename">21_birds_silk_cotton_sunset.jpg</div>
+          <h2 class="title">Twilight Horizon // Overlook Above the City</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 3003x2252 (1.333) • Date: 2026-06-29</p>
+          <p class="filename">21_city_overlook_sunset_silhouette.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-22">
         <div class="img-wrap">
           <img src="22_audi_sport_rally_spec.jpg" alt="Audi Sport No. 9 // Rally Spec" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 22</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 22</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Audi Sport No. 9 // Rally Spec</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">22_audi_sport_rally_spec.jpg</div>
+          <h2 class="title">Audi Sport No. 9 // Rally Spec</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 1994x3542 (0.563) • Date: 2026-04-06</p>
+          <p class="filename">22_audi_sport_rally_spec.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-23">
         <div class="img-wrap">
-          <img src="23_polo_gt_tiffany_carbon.jpg" alt="Tiffany Stance // Polo GT Carbon" loading="lazy">
+          <img src="23_lone_rider_highway_silhouette.jpg" alt="Lone Rider // Midnight Horizon" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 23</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 23</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Tiffany Stance // Polo GT Carbon</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2210x3925 (0.56) • Date: 2026</div>
-          <div class="filename">23_polo_gt_tiffany_carbon.jpg</div>
+          <h2 class="title">Lone Rider // Midnight Horizon</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 4000x2252 (1.776) • Date: 2026-04-18</p>
+          <p class="filename">23_lone_rider_highway_silhouette.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-24">
         <div class="img-wrap">
-          <img src="24_midnight_drift_silvia_stance.jpg" alt="Shadow Drift // Street Stance Coupe" loading="lazy">
+          <img src="24_superbike_cockpit_clipons.jpg" alt="Command Center // Superbike Cockpit" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 24</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 24</span>
+            <span class="category-tag">Machines</span>
           </div>
-          <div class="title">Shadow Drift // Street Stance Coupe</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1983x3522 (0.56) • Date: 2026</div>
-          <div class="filename">24_midnight_drift_silvia_stance.jpg</div>
+          <h2 class="title">Command Center // Superbike Cockpit</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2252x4000 (0.563) • Date: 2026-10-14</p>
+          <p class="filename">24_superbike_cockpit_clipons.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-25">
         <div class="img-wrap">
-          <img src="25_track_camber_stance_tuner.jpg" alt="Negative Camber // Track Tuner" loading="lazy">
+          <img src="25_midnight_flyover_cables.jpg" alt="Overpass Solitude // Midnight Cable Span" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 25</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 25</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Negative Camber // Track Tuner</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">25_track_camber_stance_tuner.jpg</div>
+          <h2 class="title">Overpass Solitude // Midnight Cable Span</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 3427x1927 (1.778) • Date: 2026-06-24</p>
+          <p class="filename">25_midnight_flyover_cables.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-26">
         <div class="img-wrap">
-          <img src="26_sunset_supercar_apex.jpg" alt="Golden Apex // Sunset Supercar" loading="lazy">
+          <img src="26_morning_bazaar_old_pune.jpg" alt="Morning Awakening // Old Pune Alleyway" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 26</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 26</span>
+            <span class="category-tag">Street</span>
           </div>
-          <div class="title">Golden Apex // Sunset Supercar</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2016x3581 (0.56) • Date: 2026</div>
-          <div class="filename">26_sunset_supercar_apex.jpg</div>
+          <h2 class="title">Morning Awakening // Old Pune Alleyway</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 1985x3527 (0.563) • Date: 2026-06-29</p>
+          <p class="filename">26_morning_bazaar_old_pune.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-27">
         <div class="img-wrap">
-          <img src="27_dusk_paddock_gather.jpg" alt="Dusk Paddock // Car Meet Glow" loading="lazy">
+          <img src="27_classroom_golden_sunlight.jpg" alt="Sunlit Sanctuary // Golden Hour Classroom" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 27</span>
-            <span>MACHINES</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 27</span>
+            <span class="category-tag">Details</span>
           </div>
-          <div class="title">Dusk Paddock // Car Meet Glow</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2153x3822 (0.56) • Date: 2026</div>
-          <div class="filename">27_dusk_paddock_gather.jpg</div>
+          <h2 class="title">Sunlit Sanctuary // Golden Hour Classroom</h2>
+          <p class="specs">samsung Galaxy S23 • 5.4mm • f/1.8</p>
+          <p class="specs">Dimensions: 901x1600 (0.563) • Date: 2026-03-12</p>
+          <p class="filename">27_classroom_golden_sunlight.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-28">
         <div class="img-wrap">
-          <img src="28_midnight_highway_overpass.jpg" alt="Midnight Overpass // Urban Arteries" loading="lazy">
+          <img src="28_sunlit_street_cat_portrait.jpg" alt="Street Sentinel // Sunlit Alley Cat" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 28</span>
-            <span>NIGHT</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 28</span>
+            <span class="category-tag">Wildlife</span>
           </div>
-          <div class="title">Midnight Overpass // Urban Arteries</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3757x2113 (1.78) • Date: 2026</div>
-          <div class="filename">28_midnight_highway_overpass.jpg</div>
+          <h2 class="title">Street Sentinel // Sunlit Alley Cat</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2993x3989 (0.75) • Date: 2026-07-17</p>
+          <p class="filename">28_sunlit_street_cat_portrait.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-29">
         <div class="img-wrap">
-          <img src="29_sunset_over_monsoon_ridge.jpg" alt="Amber Horizon // Pune Ridge Sunset" loading="lazy">
+          <img src="29_indian_leopard_through_wire.jpg" alt="Gaze Through the Mesh // Indian Leopard" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 29</span>
-            <span>NIGHT</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 29</span>
+            <span class="category-tag">Wildlife</span>
           </div>
-          <div class="title">Amber Horizon // Pune Ridge Sunset</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1854x3293 (0.56) • Date: 2026</div>
-          <div class="filename">29_sunset_over_monsoon_ridge.jpg</div>
+          <h2 class="title">Gaze Through the Mesh // Indian Leopard</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 3064x4085 (0.75) • Date: 2026-03-06</p>
+          <p class="filename">29_indian_leopard_through_wire.jpg</p>
         </div>
       </div>
     
-      <div class="card">
+      <div class="card" id="frame-30">
         <div class="img-wrap">
-          <img src="30_misty_ghats_morning_trail.jpg" alt="Misty Awakening // Sahyadri Morning Trail" loading="lazy">
+          <img src="30_birds_silk_cotton_sunset.jpg" alt="Dusk Duet // Silk-Cotton Crimson Sunset" loading="lazy">
         </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 30</span>
-            <span>STREET</span>
+        <div class="card-meta">
+          <div class="top-row">
+            <span class="frame-num">FRAME 30</span>
+            <span class="category-tag">Wildlife</span>
           </div>
-          <div class="title">Misty Awakening // Sahyadri Morning Trail</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1687x3000 (0.56) • Date: 2026</div>
-          <div class="filename">30_misty_ghats_morning_trail.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="31_sinhagad_dawn_silhouette.jpg" alt="Fortress in Mist // Sahyadri Dawn Ridge" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 31</span>
-            <span>HERITAGE</span>
-          </div>
-          <div class="title">Fortress in Mist // Sahyadri Dawn Ridge</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3421x1927 (1.78) • Date: 2026</div>
-          <div class="filename">31_sinhagad_dawn_silhouette.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="32_midnight_motorcycle_rider_streets.jpg" alt="Night Patrol // Two Wheels in the Dark" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 32</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Night Patrol // Two Wheels in the Dark</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1843x3277 (0.56) • Date: 2026</div>
-          <div class="filename">32_midnight_motorcycle_rider_streets.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="33_twin_projectors_night_cockpit.jpg" alt="Twin Projectors // Midnight Cockpit" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 33</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Twin Projectors // Midnight Cockpit</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1993x3542 (0.56) • Date: 2026</div>
-          <div class="filename">33_twin_projectors_night_cockpit.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="34_deserted_city_avenue_1am.jpg" alt="Silent Asphalt // 1 AM City Avenue" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 34</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Silent Asphalt // 1 AM City Avenue</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">34_deserted_city_avenue_1am.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="35_morning_bazaar_old_pune.jpg" alt="Morning Awakening // Old Pune Alleyway" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 35</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Morning Awakening // Old Pune Alleyway</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1985x3527 (0.56) • Date: 2026</div>
-          <div class="filename">35_morning_bazaar_old_pune.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="36_midnight_rolling_speed_beam.jpg" alt="Velocity in Darkness // Midnight Rolling Shot" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 36</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Velocity in Darkness // Midnight Rolling Shot</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3994x2247 (1.78) • Date: 2026</div>
-          <div class="filename">36_midnight_rolling_speed_beam.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="37_lone_rider_highway_silhouette.jpg" alt="Lone Rider // Midnight Horizon" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 37</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Lone Rider // Midnight Horizon</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 4000x2252 (1.78) • Date: 2026</div>
-          <div class="filename">37_lone_rider_highway_silhouette.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="38_wet_asphalt_light_reflections.jpg" alt="Reflections in Rain // Midnight Wet Tarmac" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 38</span>
-            <span>NIGHT</span>
-          </div>
-          <div class="title">Reflections in Rain // Midnight Wet Tarmac</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">38_wet_asphalt_light_reflections.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="39_midnight_flyover_cables.jpg" alt="Overpass Solitude // Midnight Cable Span" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 39</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Overpass Solitude // Midnight Cable Span</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3427x1927 (1.78) • Date: 2026</div>
-          <div class="filename">39_midnight_flyover_cables.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="40_midnight_corner_streetlamp.jpg" alt="The Solitary Lamp // Midnight Corner" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 40</span>
-            <span>NIGHT</span>
-          </div>
-          <div class="title">The Solitary Lamp // Midnight Corner</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">40_midnight_corner_streetlamp.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="41_golden_hour_urban_glow.jpg" alt="Warm Radiance // Golden Hour Over Pune" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 41</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Warm Radiance // Golden Hour Over Pune</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">41_golden_hour_urban_glow.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="42_candid_transit_glance.jpg" alt="Fleeting Glance // Pune Street Candid" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 42</span>
-            <span>PEOPLE</span>
-          </div>
-          <div class="title">Fleeting Glance // Pune Street Candid</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1944x3455 (0.56) • Date: 2026</div>
-          <div class="filename">42_candid_transit_glance.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="43_shadow_geometry_monsoon_street.jpg" alt="Geometry of Light // Midday Shadows" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 43</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Geometry of Light // Midday Shadows</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1776x3156 (0.56) • Date: 2026</div>
-          <div class="filename">43_shadow_geometry_monsoon_street.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="44_neon_shutter_night_store.jpg" alt="Electric Glow // Night Storefront" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 44</span>
-            <span>NIGHT</span>
-          </div>
-          <div class="title">Electric Glow // Night Storefront</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2250x4000 (0.56) • Date: 2026</div>
-          <div class="filename">44_neon_shutter_night_store.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="45_monsoon_dusk_rooftops.jpg" alt="Crimson Breach // Monsoon Dusk Rooftops" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 45</span>
-            <span>NIGHT</span>
-          </div>
-          <div class="title">Crimson Breach // Monsoon Dusk Rooftops</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1864x3316 (0.56) • Date: 2026</div>
-          <div class="filename">45_monsoon_dusk_rooftops.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="46_evening_downpour_traffic.jpg" alt="Monsoon Rhythm // Evening Downpour" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 46</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Monsoon Rhythm // Evening Downpour</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2251x3003 (0.75) • Date: 2026</div>
-          <div class="filename">46_evening_downpour_traffic.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="47_campus_fest_energy.jpg" alt="Fest Collective // Campus Amphitheatre Energy" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 47</span>
-            <span>PEOPLE</span>
-          </div>
-          <div class="title">Fest Collective // Campus Amphitheatre Energy</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2201x3912 (0.56) • Date: 2026</div>
-          <div class="filename">47_campus_fest_energy.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="48_auditorium_spotlight_beam.jpg" alt="Stage Presence // Campus Auditorium Spotlight" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 48</span>
-            <span>PEOPLE</span>
-          </div>
-          <div class="title">Stage Presence // Campus Auditorium Spotlight</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2993x3989 (0.75) • Date: 2026</div>
-          <div class="filename">48_auditorium_spotlight_beam.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="49_monsoon_cloud_shelf_pune.jpg" alt="Storm Front Rising // Sahyadri Monsoon Shelf" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 49</span>
-            <span>NIGHT</span>
-          </div>
-          <div class="title">Storm Front Rising // Sahyadri Monsoon Shelf</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">49_monsoon_cloud_shelf_pune.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="50_post_shower_pavement_mirror.jpg" alt="Rain Mirror // Monsoon Street Reflections" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 50</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Rain Mirror // Monsoon Street Reflections</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">50_post_shower_pavement_mirror.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="51_tiranga_independence_street.jpg" alt="Tricolor Flutter // August 15 Street Pride" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 51</span>
-            <span>CULTURE</span>
-          </div>
-          <div class="title">Tricolor Flutter // August 15 Street Pride</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2250x4000 (0.56) • Date: 2026</div>
-          <div class="filename">51_tiranga_independence_street.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="52_dhol_tasha_procession_energy.jpg" alt="Beat of the Dhol // Ganeshotsav Procession" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 52</span>
-            <span>CULTURE</span>
-          </div>
-          <div class="title">Beat of the Dhol // Ganeshotsav Procession</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3999x3000 (1.33) • Date: 2026</div>
-          <div class="filename">52_dhol_tasha_procession_energy.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="53_morning_valley_highway_run.jpg" alt="Dawn Run // Sahyadri Valley Highway" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 53</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Dawn Run // Sahyadri Valley Highway</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2246x3990 (0.56) • Date: 2026</div>
-          <div class="filename">53_morning_valley_highway_run.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="54_track_paddock_superbike_lineup.jpg" alt="Paddock Lineup // Track Day Superbikes" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 54</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Paddock Lineup // Track Day Superbikes</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3000x4000 (0.75) • Date: 2026</div>
-          <div class="filename">54_track_paddock_superbike_lineup.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="55_thruxton_cb350_iron_detail.jpg" alt="Classic Iron // Thruxton & CB350 Heritage" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 55</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Classic Iron // Thruxton & CB350 Heritage</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">55_thruxton_cb350_iron_detail.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="56_precision_mechanics_exhaust_geometry.jpg" alt="Sculpted Titanium // Performance Exhaust Geometry" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 56</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Sculpted Titanium // Performance Exhaust Geometry</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1548x2749 (0.56) • Date: 2026</div>
-          <div class="filename">56_precision_mechanics_exhaust_geometry.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="57_superbike_cockpit_clipons.jpg" alt="Command Center // Superbike Cockpit" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 57</span>
-            <span>MACHINES</span>
-          </div>
-          <div class="title">Command Center // Superbike Cockpit</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2252x4000 (0.56) • Date: 2026</div>
-          <div class="filename">57_superbike_cockpit_clipons.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="58_autumn_dusk_solitary_highway.jpg" alt="Dusk Departure // Sahyadri Horizon Highway" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 58</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Dusk Departure // Sahyadri Horizon Highway</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 2295x4079 (0.56) • Date: 2026</div>
-          <div class="filename">58_autumn_dusk_solitary_highway.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="59_candid_golden_portrait.jpg" alt="Golden Gaze // Natural Light Portrait" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 59</span>
-            <span>PEOPLE</span>
-          </div>
-          <div class="title">Golden Gaze // Natural Light Portrait</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1897x3371 (0.56) • Date: 2026</div>
-          <div class="filename">59_candid_golden_portrait.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="60_ancient_stone_shikhara_sanctum.jpg" alt="Basalt Sanctum // Ancient Stone Shikhara" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 60</span>
-            <span>HERITAGE</span>
-          </div>
-          <div class="title">Basalt Sanctum // Ancient Stone Shikhara</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 3621x2037 (1.78) • Date: 2026</div>
-          <div class="filename">60_ancient_stone_shikhara_sanctum.jpg</div>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="img-wrap">
-          <img src="61_night_market_fruit_stalls.jpg" alt="Neon Harvest // Midnight Fruit Bazaar" loading="lazy">
-        </div>
-        <div class="card-info">
-          <div class="tag-row">
-            <span>FRAME 61</span>
-            <span>STREET</span>
-          </div>
-          <div class="title">Neon Harvest // Midnight Fruit Bazaar</div>
-          <div class="meta">Samsung Galaxy S23 • 5.4mm • f/1.8</div>
-          <div class="meta">Dimensions: 1693x3006 (0.56) • Date: 2026</div>
-          <div class="filename">61_night_market_fruit_stalls.jpg</div>
+          <h2 class="title">Dusk Duet // Silk-Cotton Crimson Sunset</h2>
+          <p class="specs">samsung Galaxy S23 • 7.0mm • f/2.4</p>
+          <p class="specs">Dimensions: 2999x1687 (1.778) • Date: 2026-03-26</p>
+          <p class="filename">30_birds_silk_cotton_sunset.jpg</p>
         </div>
       </div>
     

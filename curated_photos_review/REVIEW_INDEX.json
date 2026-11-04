@@ -4,7 +4,7 @@
     "filename": "01_mustang_shelby_gt500_cyberpunk.jpg",
     "title": "Neon Serpent // Shelby GT500",
     "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
+    "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
     "date": "2026-04-06"
   },
@@ -13,7 +13,7 @@
     "filename": "02_slammed_tuner_and_cafe_racer.jpg",
     "title": "Street Zillas // Tuner & Cafe Racer",
     "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
+    "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-04-06"
   },
@@ -22,7 +22,7 @@
     "filename": "03_stunt_rider_rolling_endo.jpg",
     "title": "Defying Gravity // Stoppie in Motion",
     "category": "Machines",
-    "aspectRatio": "1855x3295 (0.56)",
+    "aspectRatio": "1974x2632 (0.75)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-06-21"
   },
@@ -31,17 +31,17 @@
     "filename": "04_aprilia_rs457_superbike.jpg",
     "title": "Factory Racing // Aprilia RS 457",
     "category": "Machines",
-    "aspectRatio": "2250x3999 (0.56)",
+    "aspectRatio": "2250x3999 (0.563)",
     "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
     "date": "2026-10-14"
   },
   {
     "num": 5,
-    "filename": "05_royal_enfield_cruiser_meet.jpg",
-    "title": "The Twin Rumble // Shotgun 650 Meet",
+    "filename": "05_royal_enfield_shotgun_650_twin.jpg",
+    "title": "Shotgun 650 // Twin Detail",
     "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "aspectRatio": "2033x3613 (0.563)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
     "date": "2026-10-14"
   },
   {
@@ -49,7 +49,7 @@
     "filename": "06_pulsar_ns400z_midnight_beam.jpg",
     "title": "Bajaj Pulsar NS400Z // Midnight Beam",
     "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
+    "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-05-29"
   },
@@ -58,16 +58,16 @@
     "filename": "07_south_mumbai_victorian_heritage.jpg",
     "title": "Colonial Monoliths // Fort Heritage Corridor",
     "category": "Street",
-    "aspectRatio": "2252x1268 (1.78)",
+    "aspectRatio": "2252x1268 (1.776)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-05-10"
+    "date": "2026-06-24"
   },
   {
     "num": 8,
     "filename": "08_rail_lines_suspension_bridge.jpg",
     "title": "Steel Arteries // Cable-Stayed Horizon",
     "category": "Street",
-    "aspectRatio": "2250x3999 (0.56)",
+    "aspectRatio": "2250x3999 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-06-24"
   },
@@ -76,7 +76,7 @@
     "filename": "09_night_flower_market_glow.jpg",
     "title": "Midnight Bloom // The Florist Bazaar",
     "category": "Street",
-    "aspectRatio": "2252x4000 (0.56)",
+    "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-08-05"
   },
@@ -85,53 +85,53 @@
     "filename": "10_pune_chowk_summer_transit.jpg",
     "title": "Pulse of Pune // Midday Chowk",
     "category": "Street",
-    "aspectRatio": "4391x7804 (0.56)",
+    "aspectRatio": "4391x7804 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-06-05"
+    "date": "2026-05-15"
   },
   {
     "num": 11,
     "filename": "11_urban_canyon_monsoon_sky.jpg",
     "title": "Skyward Breach // Urban Monsoon Sky",
     "category": "Street",
-    "aspectRatio": "2250x4000 (0.56)",
+    "aspectRatio": "2598x4618 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-07-28"
+    "date": "2026-06-05"
   },
   {
     "num": 12,
     "filename": "12_ancient_hemadpanthi_temple_steps.jpg",
     "title": "Echoes in Basalt // Hemadpanthi Sanctum Portal",
     "category": "Heritage",
-    "aspectRatio": "3000x4000 (0.75)",
+    "aspectRatio": "2993x3989 (0.75)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-03-24"
+    "date": "2026-07-17"
   },
   {
     "num": 13,
     "filename": "13_stone_temple_shikhara_facade.jpg",
     "title": "Monument of Faith // Medieval Stone Sanctuary",
     "category": "Heritage",
-    "aspectRatio": "3621x2037 (1.78)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-03-24"
+    "aspectRatio": "2993x3989 (0.75)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-07-17"
   },
   {
     "num": 14,
     "filename": "14_dagdusheth_ganpati_darbar.jpg",
     "title": "Golden Darbar // Shreemant Dagdusheth Celebration",
     "category": "Culture",
-    "aspectRatio": "1692x3008 (0.56)",
+    "aspectRatio": "3999x3000 (1.333)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-09-16"
+    "date": "2026-09-15"
   },
   {
     "num": 15,
     "filename": "15_father_daughter_candid_smile.jpg",
     "title": "Pure Radiance // Father & Daughter",
     "category": "People",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "aspectRatio": "2251x3002 (0.75)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-06-29"
   },
   {
@@ -139,13 +139,31 @@
     "filename": "16_elder_in_gandhi_topi_monochrome.jpg",
     "title": "The Silent Patriarch // Old Pune Ghats",
     "category": "People",
-    "aspectRatio": "3986x2242 (1.78)",
-    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
-    "date": "2026-02-14"
+    "aspectRatio": "2252x4000 (0.563)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-06-29"
   },
   {
     "num": 17,
-    "filename": "17_rock_guitarist_stage_spotlight.jpg",
+    "filename": "17_golden_gaze_eyes_macro.jpg",
+    "title": "Golden Gaze // Solar Flare in Iris",
+    "category": "People",
+    "aspectRatio": "2115x1057 (2.001)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-05-30"
+  },
+  {
+    "num": 18,
+    "filename": "18_auditorium_spotlight_beam.jpg",
+    "title": "Stage Presence // Campus Auditorium Spotlight",
+    "category": "People",
+    "aspectRatio": "2993x3989 (0.75)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-04-18"
+  },
+  {
+    "num": 19,
+    "filename": "19_rock_guitarist_stage_spotlight.jpg",
     "title": "Riff Under Spotlight // Live Stage Energy",
     "category": "Night",
     "aspectRatio": "2252x3004 (0.75)",
@@ -153,399 +171,102 @@
     "date": "2026-04-12"
   },
   {
-    "num": 18,
-    "filename": "18_stargazer_30s_night_sky.jpg",
-    "title": "Infinite Canvas // 30-Second Star Trail Gaze",
+    "num": 20,
+    "filename": "20_stargazer_pointing_cosmos.jpg",
+    "title": "Stargazer // Pointing to the Cosmos",
     "category": "Night",
-    "aspectRatio": "3712x6596 (0.56)",
+    "aspectRatio": "2598x4618 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-09-27"
   },
   {
-    "num": 19,
-    "filename": "19_city_overlook_sunset_silhouette.jpg",
+    "num": 21,
+    "filename": "21_city_overlook_sunset_silhouette.jpg",
     "title": "Twilight Horizon // Overlook Above the City",
     "category": "Night",
-    "aspectRatio": "3003x2252 (1.33)",
+    "aspectRatio": "3003x2252 (1.333)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-03-06"
-  },
-  {
-    "num": 20,
-    "filename": "20_indian_leopard_through_wire.jpg",
-    "title": "Gaze Through the Mesh // Indian Leopard",
-    "category": "Wildlife",
-    "aspectRatio": "3064x4085 (0.75)",
-    "camera": "Nothing Nothing Phone (4a) • 12.2mm • f/2.9",
-    "date": "2026-08-29"
-  },
-  {
-    "num": 21,
-    "filename": "21_birds_silk_cotton_sunset.jpg",
-    "title": "Dusk Duet // Silk-Cotton Crimson Sunset",
-    "category": "Wildlife",
-    "aspectRatio": "2999x1687 (1.78)",
-    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
-    "date": "2026-02-18"
+    "date": "2026-06-29"
   },
   {
     "num": 22,
     "filename": "22_audi_sport_rally_spec.jpg",
     "title": "Audi Sport No. 9 // Rally Spec",
     "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "aspectRatio": "1994x3542 (0.563)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-04-06"
   },
   {
     "num": 23,
-    "filename": "23_polo_gt_tiffany_carbon.jpg",
-    "title": "Tiffany Stance // Polo GT Carbon",
+    "filename": "23_lone_rider_highway_silhouette.jpg",
+    "title": "Lone Rider // Midnight Horizon",
     "category": "Machines",
-    "aspectRatio": "2210x3925 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "aspectRatio": "4000x2252 (1.776)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-04-18"
   },
   {
     "num": 24,
-    "filename": "24_midnight_drift_silvia_stance.jpg",
-    "title": "Shadow Drift // Street Stance Coupe",
+    "filename": "24_superbike_cockpit_clipons.jpg",
+    "title": "Command Center // Superbike Cockpit",
     "category": "Machines",
-    "aspectRatio": "1983x3522 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "aspectRatio": "2252x4000 (0.563)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-10-14"
   },
   {
     "num": 25,
-    "filename": "25_track_camber_stance_tuner.jpg",
-    "title": "Negative Camber // Track Tuner",
-    "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "filename": "25_midnight_flyover_cables.jpg",
+    "title": "Overpass Solitude // Midnight Cable Span",
+    "category": "Street",
+    "aspectRatio": "3427x1927 (1.778)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-06-24"
   },
   {
     "num": 26,
-    "filename": "26_sunset_supercar_apex.jpg",
-    "title": "Golden Apex // Sunset Supercar",
-    "category": "Machines",
-    "aspectRatio": "2016x3581 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "filename": "26_morning_bazaar_old_pune.jpg",
+    "title": "Morning Awakening // Old Pune Alleyway",
+    "category": "Street",
+    "aspectRatio": "1985x3527 (0.563)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-06-29"
   },
   {
     "num": 27,
-    "filename": "27_dusk_paddock_gather.jpg",
-    "title": "Dusk Paddock // Car Meet Glow",
-    "category": "Machines",
-    "aspectRatio": "2153x3822 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "filename": "27_classroom_golden_sunlight.jpg",
+    "title": "Sunlit Sanctuary // Golden Hour Classroom",
+    "category": "Details",
+    "aspectRatio": "901x1600 (0.563)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-03-12"
   },
   {
     "num": 28,
-    "filename": "28_midnight_highway_overpass.jpg",
-    "title": "Midnight Overpass // Urban Arteries",
-    "category": "Night",
-    "aspectRatio": "3757x2113 (1.78)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "filename": "28_sunlit_street_cat_portrait.jpg",
+    "title": "Street Sentinel // Sunlit Alley Cat",
+    "category": "Wildlife",
+    "aspectRatio": "2993x3989 (0.75)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-07-17"
   },
   {
     "num": 29,
-    "filename": "29_sunset_over_monsoon_ridge.jpg",
-    "title": "Amber Horizon // Pune Ridge Sunset",
-    "category": "Night",
-    "aspectRatio": "1854x3293 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "filename": "29_indian_leopard_through_wire.jpg",
+    "title": "Gaze Through the Mesh // Indian Leopard",
+    "category": "Wildlife",
+    "aspectRatio": "3064x4085 (0.75)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-03-06"
   },
   {
     "num": 30,
-    "filename": "30_misty_ghats_morning_trail.jpg",
-    "title": "Misty Awakening // Sahyadri Morning Trail",
-    "category": "Street",
-    "aspectRatio": "1687x3000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 31,
-    "filename": "31_sinhagad_dawn_silhouette.jpg",
-    "title": "Fortress in Mist // Sahyadri Dawn Ridge",
-    "category": "Heritage",
-    "aspectRatio": "3421x1927 (1.78)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 32,
-    "filename": "32_midnight_motorcycle_rider_streets.jpg",
-    "title": "Night Patrol // Two Wheels in the Dark",
-    "category": "Machines",
-    "aspectRatio": "1843x3277 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 33,
-    "filename": "33_twin_projectors_night_cockpit.jpg",
-    "title": "Twin Projectors // Midnight Cockpit",
-    "category": "Machines",
-    "aspectRatio": "1993x3542 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 34,
-    "filename": "34_deserted_city_avenue_1am.jpg",
-    "title": "Silent Asphalt // 1 AM City Avenue",
-    "category": "Street",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 35,
-    "filename": "35_morning_bazaar_old_pune.jpg",
-    "title": "Morning Awakening // Old Pune Alleyway",
-    "category": "Street",
-    "aspectRatio": "1985x3527 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 36,
-    "filename": "36_midnight_rolling_speed_beam.jpg",
-    "title": "Velocity in Darkness // Midnight Rolling Shot",
-    "category": "Machines",
-    "aspectRatio": "3994x2247 (1.78)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 37,
-    "filename": "37_lone_rider_highway_silhouette.jpg",
-    "title": "Lone Rider // Midnight Horizon",
-    "category": "Machines",
-    "aspectRatio": "4000x2252 (1.78)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 38,
-    "filename": "38_wet_asphalt_light_reflections.jpg",
-    "title": "Reflections in Rain // Midnight Wet Tarmac",
-    "category": "Night",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 39,
-    "filename": "39_midnight_flyover_cables.jpg",
-    "title": "Overpass Solitude // Midnight Cable Span",
-    "category": "Street",
-    "aspectRatio": "3427x1927 (1.78)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 40,
-    "filename": "40_midnight_corner_streetlamp.jpg",
-    "title": "The Solitary Lamp // Midnight Corner",
-    "category": "Night",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 41,
-    "filename": "41_golden_hour_urban_glow.jpg",
-    "title": "Warm Radiance // Golden Hour Over Pune",
-    "category": "Street",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 42,
-    "filename": "42_candid_transit_glance.jpg",
-    "title": "Fleeting Glance // Pune Street Candid",
-    "category": "People",
-    "aspectRatio": "1944x3455 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 43,
-    "filename": "43_shadow_geometry_monsoon_street.jpg",
-    "title": "Geometry of Light // Midday Shadows",
-    "category": "Street",
-    "aspectRatio": "1776x3156 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 44,
-    "filename": "44_neon_shutter_night_store.jpg",
-    "title": "Electric Glow // Night Storefront",
-    "category": "Night",
-    "aspectRatio": "2250x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 45,
-    "filename": "45_monsoon_dusk_rooftops.jpg",
-    "title": "Crimson Breach // Monsoon Dusk Rooftops",
-    "category": "Night",
-    "aspectRatio": "1864x3316 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 46,
-    "filename": "46_evening_downpour_traffic.jpg",
-    "title": "Monsoon Rhythm // Evening Downpour",
-    "category": "Street",
-    "aspectRatio": "2251x3003 (0.75)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 47,
-    "filename": "47_campus_fest_energy.jpg",
-    "title": "Fest Collective // Campus Amphitheatre Energy",
-    "category": "People",
-    "aspectRatio": "2201x3912 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 48,
-    "filename": "48_auditorium_spotlight_beam.jpg",
-    "title": "Stage Presence // Campus Auditorium Spotlight",
-    "category": "People",
-    "aspectRatio": "2993x3989 (0.75)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 49,
-    "filename": "49_monsoon_cloud_shelf_pune.jpg",
-    "title": "Storm Front Rising // Sahyadri Monsoon Shelf",
-    "category": "Night",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 50,
-    "filename": "50_post_shower_pavement_mirror.jpg",
-    "title": "Rain Mirror // Monsoon Street Reflections",
-    "category": "Street",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 51,
-    "filename": "51_tiranga_independence_street.jpg",
-    "title": "Tricolor Flutter // August 15 Street Pride",
-    "category": "Culture",
-    "aspectRatio": "2250x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 52,
-    "filename": "52_dhol_tasha_procession_energy.jpg",
-    "title": "Beat of the Dhol // Ganeshotsav Procession",
-    "category": "Culture",
-    "aspectRatio": "3999x3000 (1.33)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 53,
-    "filename": "53_morning_valley_highway_run.jpg",
-    "title": "Dawn Run // Sahyadri Valley Highway",
-    "category": "Street",
-    "aspectRatio": "2246x3990 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 54,
-    "filename": "54_track_paddock_superbike_lineup.jpg",
-    "title": "Paddock Lineup // Track Day Superbikes",
-    "category": "Machines",
-    "aspectRatio": "3000x4000 (0.75)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 55,
-    "filename": "55_thruxton_cb350_iron_detail.jpg",
-    "title": "Classic Iron // Thruxton & CB350 Heritage",
-    "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 56,
-    "filename": "56_precision_mechanics_exhaust_geometry.jpg",
-    "title": "Sculpted Titanium // Performance Exhaust Geometry",
-    "category": "Machines",
-    "aspectRatio": "1548x2749 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 57,
-    "filename": "57_superbike_cockpit_clipons.jpg",
-    "title": "Command Center // Superbike Cockpit",
-    "category": "Machines",
-    "aspectRatio": "2252x4000 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 58,
-    "filename": "58_autumn_dusk_solitary_highway.jpg",
-    "title": "Dusk Departure // Sahyadri Horizon Highway",
-    "category": "Street",
-    "aspectRatio": "2295x4079 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 59,
-    "filename": "59_candid_golden_portrait.jpg",
-    "title": "Golden Gaze // Natural Light Portrait",
-    "category": "People",
-    "aspectRatio": "1897x3371 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 60,
-    "filename": "60_ancient_stone_shikhara_sanctum.jpg",
-    "title": "Basalt Sanctum // Ancient Stone Shikhara",
-    "category": "Heritage",
-    "aspectRatio": "3621x2037 (1.78)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
-  },
-  {
-    "num": 61,
-    "filename": "61_night_market_fruit_stalls.jpg",
-    "title": "Neon Harvest // Midnight Fruit Bazaar",
-    "category": "Street",
-    "aspectRatio": "1693x3006 (0.56)",
-    "camera": "Samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026"
+    "filename": "30_birds_silk_cotton_sunset.jpg",
+    "title": "Dusk Duet // Silk-Cotton Crimson Sunset",
+    "category": "Wildlife",
+    "aspectRatio": "2999x1687 (1.778)",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-03-26"
   }
 ]

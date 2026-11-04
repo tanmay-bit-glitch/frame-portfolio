@@ -403,3 +403,4 @@ run().catch(err => {
   console.error('Error integrating photos:', err);
   process.exit(1);
 });
+

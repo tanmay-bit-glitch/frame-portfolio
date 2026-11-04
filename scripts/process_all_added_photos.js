@@ -398,3 +398,4 @@ const newPhotosToAdd = [
 console.log('Total new photos to process and incorporate:', newPhotosToAdd.length);
 fs.writeFileSync('scripts/new_photos_list.json', JSON.stringify(newPhotosToAdd, null, 2));
 console.log('Saved scripts/new_photos_list.json');
+
