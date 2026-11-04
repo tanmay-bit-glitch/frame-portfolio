@@ -4,6 +4,60 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Phase 3] — Dynamic Masonry Scroll Gallery & Filtered Lightbox
+*Date: 2026-11-04*
+
+### Added & Updated
+1. **Dynamic Gallery from `/data/photos.json`:**
+   - Removed 500 lines of obsolete hardcoded project HTML from `index.html`.
+   - Gallery cards are constructed dynamically from [`/data/photos.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/photos.json) (with inline fallback for offline/zero-latency contexts).
+   - Rendered with true aspect ratios (`style="aspect-ratio: W / H"`), explicit `width` and `height` attributes, and zero Cumulative Layout Shift (CLS).
+
+2. **Responsive Masonry Layout (Pure CSS, 0 Heavy Libraries):**
+   - 3 columns on desktop (viewport $\ge$ 1024px).
+   - 2 columns on tablet (viewport 640px – 1023px).
+   - 1 column on mobile (viewport < 640px).
+
+3. **Scroll Reveal with `IntersectionObserver`:**
+   - Cards begin at `opacity: 0` and `transform: translateY(32px)`.
+   - Triggered at 15% visibility threshold with ~80ms stagger between adjacent cards.
+   - Smooth 700ms `cubic-bezier(0.16, 1, 0.3, 1)` easing, unobserved once revealed.
+   - Animate strictly hardware-accelerated composite properties (`transform` and `opacity`).
+
+4. **Progressive Blur-Up Image Loading:**
+   - Inline blurred 20px WebP data URI rendered immediately behind image.
+   - Cross-fades to high-resolution WebP upon `load` event.
+   - First 3 frames marked `loading="eager"`, subsequent marked `loading="lazy"` with `decoding="async"` and responsive `srcset` (640w, 1280w, 1920w) and `sizes`.
+
+5. **Desktop Hover Captions & Frame Indexing:**
+   - Cinematic gradient overlay reveals on card hover / `:focus-visible`.
+   - Displays frame number (`01 / 30`), category tag, image title, and authentic camera EXIF specs (`f/1.8 • 1/2100s • ISO 25`).
+   - Adapted with elegant touch-friendly lower gradient on mobile devices (`@media (hover: none)`).
+
+6. **Interactive Category Filtering:**
+   - Filter toolbar with 7 authentic categories + All (`ALL [30]`, `MACHINES [04]`, `STREET [04]`, `PEOPLE [04]`, `NIGHT [04]`, `LANDSCAPES & TRAVEL [05]`, `WILDLIFE [04]`, `DETAILS [05]`).
+   - Dynamic counter status updates in real-time (`SHOWING: 04 / 30 FRAMES (MACHINES)`).
+   - Dynamic frame indices re-number to reflect active set (`01 / 04`).
+
+7. **Lightbox Synchronized with Filtered Set:**
+   - Lightbox modal tracks `activeFilteredPhotos`.
+   - Left/Right keyboard arrows (`ArrowLeft`, `ArrowRight`) and navigation buttons cycle strictly within the active filtered subset.
+   - Displays real S23 camera metadata, lens model, focal length, aperture, shutter speed, ISO, and curatorial reason.
+   - Focus management: traps focus inside modal while open, restores focus to the invoking card upon close (`Escape` or close button).
+
+8. **Accessibility & Reduced Motion:**
+   - Fully accessible via keyboard (`Tab`, `Enter`, `Space`, `ArrowLeft`, `ArrowRight`, `Escape`).
+   - `@media (prefers-reduced-motion: reduce)` disables all translates, delays, and opacity transitions, providing immediate rendering.
+
+9. **Verification Evidence:**
+   - Captured automated screenshots across 3 viewport widths:
+     - 375px (Mobile): [`curation/screenshots/gallery-work-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/gallery-work-375.png)
+     - 768px (Tablet): [`curation/screenshots/gallery-work-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/gallery-work-768.png)
+     - 1440px (Desktop): [`curation/screenshots/gallery-work-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/gallery-work-1440.png)
+   - Executed automated browser assertion suite in Chrome headless verifying 30 initial cards, filter counts, and lightbox cycling.
+
+---
+
 ## [Phase 2] — Photo Curation & WebP Optimization
 *Date: 2026-11-04*
 

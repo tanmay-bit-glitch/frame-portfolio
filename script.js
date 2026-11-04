@@ -343,115 +343,19 @@
   }
 
   /* ==========================================================================
-     7. SELECTED WORK: CAROUSEL, FILTERS & DRAG-SCROLL
+     7. CURATED GALLERY: DYNAMIC MASONRY, PROGRESSIVE BLUR & SCROLL REVEAL (PHASE 3)
      ========================================================================== */
-  const filmstrip = document.getElementById('filmstrip');
+  const galleryGrid = document.getElementById('galleryGrid');
   const filterTabs = document.querySelectorAll('.filter-tab');
-  const projectFrames = [...document.querySelectorAll('.project-frame')];
-  const stripPrevBtn = document.getElementById('stripPrevBtn');
-  const stripNextBtn = document.getElementById('stripNextBtn');
-  const stripIndicator = document.getElementById('stripIndicator');
-  const viewStripBtn = document.getElementById('viewStripBtn');
-  const viewGridBtn = document.getElementById('viewGridBtn');
+  const galleryCountStatus = document.getElementById('galleryCountStatus');
 
-  // Filtering
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      filterTabs.forEach(t => {
-        t.classList.remove('is-active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('is-active');
-      tab.setAttribute('aria-selected', 'true');
+  let allPhotos = [];
+  let activeFilteredPhotos = [];
+  let galleryObserver = null;
+  let currentFilteredIndex = 0;
+  let lastLbFocusedElement = null;
 
-      const filter = tab.dataset.filter;
-      let visibleCount = 0;
-
-      projectFrames.forEach(frame => {
-        const match = filter === 'all' || frame.dataset.category === filter;
-        frame.classList.toggle('is-hidden', !match);
-        if (match) visibleCount++;
-      });
-
-      updateIndicator();
-      playSound('click');
-    });
-  });
-
-  // View Switcher (Filmstrip vs Grid)
-  if (viewStripBtn && viewGridBtn && filmstrip) {
-    viewStripBtn.addEventListener('click', () => {
-      viewStripBtn.classList.add('is-active');
-      viewGridBtn.classList.remove('is-active');
-      filmstrip.classList.remove('is-grid-layout');
-      playSound('click');
-    });
-
-    viewGridBtn.addEventListener('click', () => {
-      viewGridBtn.classList.add('is-active');
-      viewStripBtn.classList.remove('is-active');
-      filmstrip.classList.add('is-grid-layout');
-      playSound('click');
-    });
-  }
-
-  // Prev / Next Navigation Arrows
-  if (stripPrevBtn && stripNextBtn && filmstrip) {
-    stripPrevBtn.addEventListener('click', () => {
-      filmstrip.scrollBy({ left: -360, behavior: 'smooth' });
-      playSound('click');
-    });
-    stripNextBtn.addEventListener('click', () => {
-      filmstrip.scrollBy({ left: 360, behavior: 'smooth' });
-      playSound('click');
-    });
-
-    filmstrip.addEventListener('scroll', () => {
-      updateIndicator();
-    });
-  }
-
-  function updateIndicator() {
-    if (!filmstrip || !stripIndicator) return;
-    const visibleFrames = projectFrames.filter(f => !f.classList.contains('is-hidden'));
-    const total = visibleFrames.length;
-    if (total === 0) {
-      stripIndicator.textContent = '00 / 00';
-      return;
-    }
-    const scrollLeft = filmstrip.scrollLeft;
-    const itemWidth = 360;
-    const currentIndex = Math.min(total, Math.max(1, Math.round(scrollLeft / itemWidth) + 1));
-    stripIndicator.textContent = `${String(currentIndex).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
-  }
-
-  // Mouse Drag to Scroll for Filmstrip
-  let isDown = false;
-  let startX;
-  let scrollLeftPos;
-
-  if (filmstrip) {
-    filmstrip.addEventListener('mousedown', (e) => {
-      if (filmstrip.classList.contains('is-grid-layout')) return;
-      isDown = true;
-      startX = e.pageX - filmstrip.offsetLeft;
-      scrollLeftPos = filmstrip.scrollLeft;
-    });
-
-    filmstrip.addEventListener('mouseleave', () => { isDown = false; });
-    filmstrip.addEventListener('mouseup', () => { isDown = false; });
-    filmstrip.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - filmstrip.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      filmstrip.scrollLeft = scrollLeftPos - walk;
-    });
-  }
-
-  /* ==========================================================================
-     8. CINEMATIC LIGHTBOX MODAL & SHOT INSPECTOR
-     ========================================================================== */
+  // Lightbox elements
   const lightboxModal = document.getElementById('lightboxModal');
   const lbBackdrop = document.getElementById('lightboxBackdrop');
   const lbCloseBtn = document.getElementById('lightboxCloseBtn');
@@ -460,123 +364,325 @@
   const lbMediaWrapper = document.getElementById('lbMediaWrapper');
   const ratioBtns = document.querySelectorAll('.ratio-btn');
 
-  let currentProjectIndex = 0;
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
 
-  let lastLbFocusedElement = null;
+  function initGallery() {
+    // 1. Try reading embedded JSON first for instant zero-fetch initialization
+    const embeddedScript = document.getElementById('photosData');
+    if (embeddedScript && embeddedScript.textContent.trim()) {
+      try {
+        allPhotos = JSON.parse(embeddedScript.textContent.trim());
+        renderGalleryWithFilter('all');
+        setupFilterListeners();
+        setupLightboxListeners();
+        return;
+      } catch (err) {
+        console.warn('Failed to parse embedded photosData, falling back to fetch:', err);
+      }
+    }
 
+    // 2. Fallback to fetch('data/photos.json')
+    fetch('data/photos.json')
+      .then(res => res.json())
+      .then(data => {
+        allPhotos = data;
+        renderGalleryWithFilter('all');
+        setupFilterListeners();
+        setupLightboxListeners();
+      })
+      .catch(err => {
+        console.error('Failed to load photos.json:', err);
+      });
+  }
+
+  function renderGalleryWithFilter(filter = 'all') {
+    if (!galleryGrid) return;
+
+    if (filter === 'all') {
+      activeFilteredPhotos = [...allPhotos];
+    } else {
+      activeFilteredPhotos = allPhotos.filter(p => p.category === filter);
+    }
+
+    // Update status counter
+    if (galleryCountStatus) {
+      const activeName = filter === 'all' ? 'ALL' : filter.toUpperCase();
+      galleryCountStatus.innerHTML = `<span>SHOWING: ${String(activeFilteredPhotos.length).padStart(2, '0')} / ${String(allPhotos.length).padStart(2, '0')} FRAMES (${activeName})</span>`;
+    }
+
+    // Disconnect any existing observer
+    if (galleryObserver) {
+      galleryObserver.disconnect();
+    }
+
+    galleryGrid.innerHTML = '';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Build cards
+    activeFilteredPhotos.forEach((photo, idx) => {
+      const card = document.createElement('article');
+      card.className = 'gallery-card';
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-haspopup', 'dialog');
+      card.setAttribute('aria-label', `View ${photo.title} (${photo.category})`);
+      card.dataset.index = idx;
+      card.dataset.slug = photo.slug;
+      card.dataset.category = photo.category;
+
+      const numStr = `${String(idx + 1).padStart(2, '0')} / ${String(activeFilteredPhotos.length).padStart(2, '0')}`;
+      const exifStr = [photo.exif.aperture, photo.exif.shutterSpeed, photo.exif.iso ? `ISO ${photo.exif.iso}` : ''].filter(Boolean).join(' • ');
+
+      card.innerHTML = `
+        <div class="card-media-wrapper" style="aspect-ratio: ${photo.width} / ${photo.height};">
+          <img src="${photo.placeholder}" alt="" aria-hidden="true" class="card-placeholder">
+          <img
+            src="${photo.srcset['1280'] || photo.srcset['640']}"
+            srcset="${photo.srcset['640']} 640w, ${photo.srcset['1280']} 1280w, ${photo.srcset['1920']} 1920w"
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+            alt="${escapeHtml(photo.alt)}"
+            width="${photo.width}"
+            height="${photo.height}"
+            loading="${idx < 3 ? 'eager' : 'lazy'}"
+            decoding="async"
+            class="card-img"
+          >
+          <div class="card-overlay" aria-hidden="true">
+            <div class="card-meta-top">
+              <span class="card-num">${numStr}</span>
+              <span class="card-category">${escapeHtml(photo.category)}</span>
+            </div>
+            <div class="card-meta-bottom">
+              <h3 class="card-title">${escapeHtml(photo.title)}</h3>
+              <p class="card-exif">${escapeHtml(exifStr)}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Handle progressive image loading transition
+      const realImg = card.querySelector('.card-img');
+      const placeholder = card.querySelector('.card-placeholder');
+
+      const onImageLoaded = () => {
+        realImg.classList.add('is-loaded');
+        if (placeholder) {
+          placeholder.classList.add('is-hidden');
+        }
+      };
+
+      if (realImg.complete) {
+        onImageLoaded();
+      } else {
+        realImg.addEventListener('load', onImageLoaded);
+      }
+
+      // Lightbox open event
+      card.addEventListener('click', () => openLightbox(idx));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(idx);
+        }
+      });
+
+      galleryGrid.appendChild(card);
+    });
+
+    // Scroll Reveal with IntersectionObserver
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.gallery-card').forEach(c => c.classList.add('is-revealed'));
+    } else {
+      let queueCounter = 0;
+      galleryObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const card = entry.target;
+            const staggerDelay = (queueCounter % 3) * 80;
+            queueCounter++;
+            setTimeout(() => {
+              card.classList.add('is-revealed');
+            }, staggerDelay);
+            observer.unobserve(card);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.gallery-card').forEach(card => {
+        galleryObserver.observe(card);
+      });
+    }
+  }
+
+  function setupFilterListeners() {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const filter = tab.dataset.filter;
+        renderGalleryWithFilter(filter);
+        playSound('click');
+      });
+    });
+  }
+
+  /* ==========================================================================
+     8. CINEMATIC LIGHTBOX MODAL (FOLLOWS FILTERED SET & REAL EXIF)
+     ========================================================================== */
   function openLightbox(index) {
-    lastFocusedElement = document.activeElement;
-    currentProjectIndex = index;
-    renderLightboxProject();
-    lightboxModal.showModal();
+    if (!activeFilteredPhotos || activeFilteredPhotos.length === 0) return;
+    lastLbFocusedElement = document.activeElement;
+    currentFilteredIndex = index;
+    renderLightboxPhoto();
+    if (typeof lightboxModal.showModal === 'function') {
+      lightboxModal.showModal();
+    } else {
+      lightboxModal.setAttribute('open', '');
+    }
     lbCloseBtn?.focus();
     playSound('shutter');
   }
 
   function closeLightbox() {
-    lightboxModal.close();
-    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-      lastFocusedElement.focus();
+    if (!lightboxModal) return;
+    if (typeof lightboxModal.close === 'function') {
+      lightboxModal.close();
+    } else {
+      lightboxModal.removeAttribute('open');
+    }
+    if (lastLbFocusedElement && typeof lastLbFocusedElement.focus === 'function') {
+      lastLbFocusedElement.focus();
     }
     playSound('click');
   }
 
-  function closeLightbox() {
-    lightboxModal.close();
-    playSound('click');
+  function renderLightboxPhoto() {
+    const photo = activeFilteredPhotos[currentFilteredIndex];
+    if (!photo) return;
+
+    const lbIndexEl = document.getElementById('lbIndex');
+    if (lbIndexEl) {
+      lbIndexEl.textContent = `FRAME ${String(currentFilteredIndex + 1).padStart(2, '0')} // ${String(activeFilteredPhotos.length).padStart(2, '0')}`;
+    }
+
+    const lbAspectEl = document.getElementById('lbAspect');
+    if (lbAspectEl) {
+      lbAspectEl.textContent = photo.orientation === 'portrait' ? 'PORTRAIT 3:4' : 'LANDSCAPE 4:3';
+    }
+
+    const lbImage = document.getElementById('lbImage');
+    if (lbImage) {
+      lbImage.src = photo.srcset['1920'] || photo.srcset['1280'];
+      lbImage.srcset = `${photo.srcset['640']} 640w, ${photo.srcset['1280']} 1280w, ${photo.srcset['1920']} 1920w`;
+      lbImage.sizes = '(max-width: 900px) 100vw, 85vw';
+      lbImage.alt = photo.alt;
+      lbImage.width = photo.width;
+      lbImage.height = photo.height;
+    }
+
+    const lbCategoryEl = document.getElementById('lbCategory');
+    if (lbCategoryEl) lbCategoryEl.textContent = photo.category.toUpperCase();
+
+    const lbTitleEl = document.getElementById('lbTitle');
+    if (lbTitleEl) lbTitleEl.textContent = photo.title;
+
+    const lbYearEl = document.getElementById('lbYear');
+    if (lbYearEl) {
+      lbYearEl.textContent = photo.dateTaken ? photo.dateTaken.slice(0, 4) : '2026';
+    }
+
+    const lbDescEl = document.getElementById('lbDesc');
+    if (lbDescEl) {
+      lbDescEl.textContent = photo.curationWhy || photo.alt;
+    }
+
+    const lbCameraEl = document.getElementById('lbCamera');
+    if (lbCameraEl) {
+      lbCameraEl.textContent = `${photo.exif.make || 'Samsung'} ${photo.exif.model || 'Galaxy S23'}`;
+    }
+
+    const lbLocationEl = document.getElementById('lbLocation');
+    if (lbLocationEl) {
+      const parts = [
+        photo.exif.lens,
+        photo.exif.focalLength,
+        photo.exif.aperture,
+        photo.exif.shutterSpeed,
+        photo.exif.iso ? `ISO ${photo.exif.iso}` : ''
+      ].filter(Boolean);
+      lbLocationEl.textContent = parts.join(' • ');
+    }
   }
 
-  function renderLightboxProject() {
-    const frame = projectFrames[currentProjectIndex];
-    if (!frame) return;
+  function setupLightboxListeners() {
+    lbCloseBtn?.addEventListener('click', closeLightbox);
+    lbBackdrop?.addEventListener('click', closeLightbox);
 
-    const data = frame.dataset;
-    document.getElementById('lbIndex').textContent = `FRAME 00${currentProjectIndex + 1} // REEL 0${currentProjectIndex + 1}`;
-    const lbAspectEl = document.getElementById('lbAspect'); if (lbAspectEl) lbAspectEl.textContent = data.aspect || '';
-    document.getElementById('lbImage').src = data.img;
-    document.getElementById('lbImage').alt = data.title;
-    document.getElementById('lbCategory').textContent = data.type || 'EDITORIAL';
-    document.getElementById('lbTitle').textContent = data.title;
-    document.getElementById('lbYear').textContent = data.year;
-    document.getElementById('lbDesc').textContent = data.desc;
-    document.getElementById('lbCamera').textContent = data.camera;
-    const lbFilmEl = document.getElementById('lbFilm'); if (lbFilmEl) lbFilmEl.textContent = data.film;
-    document.getElementById('lbLocation').textContent = data.location;
-
-    // Color Swatches
-    const paletteEl = document.getElementById('lbPalette');
-    paletteEl.innerHTML = '';
-    const colors = (data.colors || '#0b1013,#28444a,#8ca39f,#e6532d,#f1d9b5').split(',');
-    colors.forEach(hex => {
-      const chip = document.createElement('div');
-      chip.className = 'color-swatch-chip';
-      chip.style.backgroundColor = hex.trim();
-      chip.setAttribute('title', `Copy ${hex.trim()}`);
-      chip.addEventListener('click', () => {
-        navigator.clipboard?.writeText(hex.trim());
-        const originalTitle = chip.getAttribute('title');
-        chip.setAttribute('title', 'COPIED! ✓');
+    if (lbPrevBtn && lbNextBtn) {
+      lbPrevBtn.addEventListener('click', () => {
+        if (!activeFilteredPhotos.length) return;
+        currentFilteredIndex = (currentFilteredIndex - 1 + activeFilteredPhotos.length) % activeFilteredPhotos.length;
+        renderLightboxPhoto();
         playSound('click');
-        setTimeout(() => chip.setAttribute('title', originalTitle), 1500);
       });
-      paletteEl.appendChild(chip);
-    });
-  }
 
-  projectFrames.forEach((frame, idx) => {
-    frame.addEventListener('click', () => openLightbox(idx));
-    frame.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      lbNextBtn.addEventListener('click', () => {
+        if (!activeFilteredPhotos.length) return;
+        currentFilteredIndex = (currentFilteredIndex + 1) % activeFilteredPhotos.length;
+        renderLightboxPhoto();
+        playSound('click');
+      });
+    }
+
+    // Keyboard navigation: Left/Right arrows cycle filtered set, Escape closes
+    document.addEventListener('keydown', (e) => {
+      if (!lightboxModal || !lightboxModal.open) return;
+      if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        openLightbox(idx);
+        lbPrevBtn?.click();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        lbNextBtn?.click();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        closeLightbox();
       }
     });
-  });
 
-  if (lbCloseBtn && lbBackdrop) {
-    lbCloseBtn.addEventListener('click', closeLightbox);
-    lbBackdrop.addEventListener('click', closeLightbox);
-  }
-
-  if (lbPrevBtn && lbNextBtn) {
-    lbPrevBtn.addEventListener('click', () => {
-      currentProjectIndex = (currentProjectIndex - 1 + projectFrames.length) % projectFrames.length;
-      renderLightboxProject();
-      playSound('click');
-    });
-
-    lbNextBtn.addEventListener('click', () => {
-      currentProjectIndex = (currentProjectIndex + 1) % projectFrames.length;
-      renderLightboxProject();
-      playSound('click');
+    // Aspect ratio simulator buttons inside lightbox
+    ratioBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        ratioBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const ratio = btn.dataset.ratio;
+        if (lbMediaWrapper) {
+          lbMediaWrapper.className = 'lightbox-media-wrapper';
+          if (ratio === 'cinema') lbMediaWrapper.classList.add('ratio-cinema');
+          else if (ratio === 'classic') lbMediaWrapper.classList.add('ratio-classic');
+        }
+        playSound('click');
+      });
     });
   }
 
-  // Keyboard navigation and accessibility for Lightbox
-  document.addEventListener('keydown', (e) => {
-    if (!lightboxModal.open) return;
-    if (e.key === 'ArrowLeft') {
-      lbPrevBtn?.click();
-    } else if (e.key === 'ArrowRight') {
-      lbNextBtn?.click();
-    } else if (e.key === 'Escape') {
-      e.preventDefault();
-      closeLightbox();
-    }
-  });
-
-  // Aspect ratio simulator inside lightbox
-  ratioBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      ratioBtns.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      const ratio = btn.dataset.ratio;
-      lbMediaWrapper.className = 'lightbox-media-wrapper';
-      if (ratio === 'cinema') lbMediaWrapper.classList.add('ratio-cinema');
-      else if (ratio === 'classic') lbMediaWrapper.classList.add('ratio-classic');
-      playSound('click');
-    });
-  });
+  // Fire gallery initialization
+  initGallery();
 
   /* ==========================================================================
      9. SHOWREEL VIDEO MODAL
