@@ -4,6 +4,23 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Phase 2 Review & Correction] — Dedicated Photo Review Folder & Attractive Visual Titling
+*Date: 2026-11-04*
+
+### Critical Corrections & Visual Inspection
+1. **Visual Grounding Audit:**
+   - Performed complete visual inspection of all shortlisted frames directly in context.
+   - Identified and eliminated previous hallucinated titles (e.g. photos of Ford Mustang Shelby GT500 and Audi Sport race cars previously mislabeled as fort valleys/mountain ridgelines; cats mislabeled as stunt bike swingarms; street intersections mislabeled as flower bazaars).
+2. **Dedicated Review Folder (`curated_photos_review/`):**
+   - Created standalone folder [`curated_photos_review/`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/) containing 30 full-resolution original frames (~120 MB total).
+   - Renamed every photo with a clean, numbered, descriptive filename matching its actual subject (e.g., `01_mustang_shelby_gt500_cyberpunk.jpg`, `02_audi_sport_rally_spec.jpg`, `06_stunt_rider_rolling_endo.jpg`, etc.).
+3. **Attractive Cinematic Titles:**
+   - Formulated authentic, evocative display titles that accurately reflect Tanmay's real craft across automotive culture, street photography, candid portraiture, sacred heritage, and wildlife.
+4. **Visual Review Catalog:**
+   - Generated [`review_catalog.html`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/review_catalog.html) and `REVIEW_INDEX.json` in the review folder for seamless visual confirmation in any browser.
+
+---
+
 ## [Phase 3] — Dynamic Masonry Scroll Gallery & Filtered Lightbox
 *Date: 2026-11-04*
 
