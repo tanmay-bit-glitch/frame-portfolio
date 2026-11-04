@@ -1847,8 +1847,12 @@
 
     if (!video || !wrapper) return;
 
-    // Default muted per user requirements
+    // Continuous autoplay playback per user requirements
     video.muted = true;
+    video.loop = true;
+    video.play().catch(err => {
+      console.log('Video autoplay waiting for interaction:', err);
+    });
 
     function updatePlayState() {
       if (video.paused) {
@@ -1924,18 +1928,11 @@
       });
     }
 
-    // Auto-pause when scrolled out of view to save CPU/battery
-    if ('IntersectionObserver' in window) {
-      const videoObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting && !video.paused) {
-            video.pause();
-            updatePlayState();
-          }
-        });
-      }, { threshold: 0.25 });
-      videoObserver.observe(video);
-    }
+    // Continuous loop: re-trigger on ended
+    video.addEventListener('ended', () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    });
   }
 
   // Initialize hero video player on DOMContentLoaded

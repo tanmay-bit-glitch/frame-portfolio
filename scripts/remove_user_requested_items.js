@@ -62,3 +62,4 @@ styles = styles.replace(
 
 fs.writeFileSync('styles.css', styles, 'utf8');
 console.log('Updated styles.css with Instagram footer clipping!');
+
