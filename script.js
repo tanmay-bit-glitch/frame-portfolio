@@ -1946,3 +1946,39 @@
   }
 
 })();
+  /* ==========================================================================
+     REELS FILTER FUNCTIONALITY (MATCHING GALLERY FORMAT)
+     ========================================================================== */
+  function initReelsFilter() {
+    const reelTabs = document.querySelectorAll('.reels-filter-toolbar .filter-tab');
+    const motionCards = document.querySelectorAll('.motion-card');
+    if (!reelTabs.length || !motionCards.length) return;
+
+    reelTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        reelTabs.forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const filter = tab.dataset.reelFilter;
+        motionCards.forEach(card => {
+          if (filter === 'all' || card.dataset.type === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        playSound('click');
+      });
+    });
+  }
+
+  // Initialize reels filter on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReelsFilter);
+  } else {
+    initReelsFilter();
+  }

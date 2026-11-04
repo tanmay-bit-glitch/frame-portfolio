@@ -97,3 +97,4 @@ script = script.replace(/\s*\/\/ Keep ambient spreading photo active[\s\S]*?show
 
 fs.writeFileSync('script.js', script, 'utf8');
 console.log('Cleaned script.js successfully.');
+

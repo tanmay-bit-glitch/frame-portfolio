@@ -1277,7 +1277,7 @@
     </section>
 
     
-    <!-- REELS & VIDEO SHOWCASE SECTION (PHASE 4) -->
+    <!-- REELS & VIDEO SHOWCASE SECTION (MATCHING GALLERY FORMAT) -->
     <section class="reels-section section-pad" id="reels" aria-labelledby="reels-heading">
       <div class="reels-container">
         <div class="section-header-split">
@@ -1290,17 +1290,17 @@
           </p>
         </div>
 
-        <!-- Featured 16:9 Podcast Embed -->
-        <div class="podcast-feature-card">
-          <div class="podcast-feature-header">
-            <div class="feature-tag mono">
-              <span class="rec-dot"></span>
-              <span>FEATURED PRODUCTION // PODCAST EDIT</span>
-            </div>
-            <h3 class="podcast-feature-title">Vishwaconclave Official Podcast</h3>
-            <p class="podcast-feature-meta mono">ROLE: VIDEO &amp; AUDIO EDITOR • TOOLS: PREMIERE PRO, SOUND DESIGN • CLIENT: VISHWACONCLAVE</p>
-          </div>
-          <div class="podcast-video-wrapper">
+        <!-- Reels Filter Toolbar (Matching Gallery Format) -->
+        <div class="filter-toolbar reels-filter-toolbar" role="tablist" aria-label="Reels filter">
+          <button class="filter-tab is-active" type="button" role="tab" aria-selected="true" data-reel-filter="all">ALL [04]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-reel-filter="aftermovie">AFTERMOVIES [02]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-reel-filter="reel">CLUB REELS [01]</button>
+          <button class="filter-tab" type="button" role="tab" aria-selected="false" data-reel-filter="podcast">PODCAST [01]</button>
+        </div>
+
+        <!-- Featured Podcast (16:9 Cinema Card - Gallery Language) -->
+        <article class="gallery-card motion-card reels-featured-podcast" data-type="podcast">
+          <div class="card-media-wrapper">
             <iframe
               src="https://www.youtube-nocookie.com/embed/kZRQnZmLlC4"
               title="Vishwaconclave Official Podcast edited by Tanmay Chavan"
@@ -1309,25 +1309,25 @@
               loading="lazy">
             </iframe>
           </div>
-          <div class="podcast-feature-footer">
-            <span class="lesson-badge mono">LESSON: Multi-cam rhythm balancing speech clarity with ambient tone</span>
-            <a href="https://youtu.be/kZRQnZmLlC4" target="_blank" rel="noopener noreferrer" class="btn-video-fallback mono">
+          <div class="motion-card-bar">
+            <div class="card-meta-top">
+              <span class="card-num">PODCAST 01</span>
+              <span class="card-category">VISHWACONCLAVE // MULTI-CAM</span>
+            </div>
+            <h3 class="card-title">Vishwaconclave Official Podcast</h3>
+            <p class="card-exif">ROLE: VIDEO &amp; AUDIO EDITOR • TOOLS: PREMIERE PRO, SOUND DESIGN</p>
+            <a href="https://youtu.be/kZRQnZmLlC4" target="_blank" rel="noopener noreferrer" class="motion-direct-link">
               <span>WATCH ON YOUTUBE ↗</span>
             </a>
           </div>
-        </div>
+        </article>
 
-        <!-- Vertical Reels Grid (9:16 Responsive Embeds) -->
-        <div class="reels-vertical-grid">
+        <!-- 3-Column Vertical Reels Grid (Gallery Language) -->
+        <div class="reels-gallery-grid">
 
           <!-- Reel 1: SESA Aftermovie -->
-          <div class="reel-card">
-            <div class="reel-card-meta">
-              <span class="mono reel-tag">AFTERMOVIE // SESA</span>
-              <h4 class="reel-card-title">SESA Department Aftermovie</h4>
-              <p class="reel-card-role mono">ROLE: AFTERMOVIE EDITOR &amp; MULTIMEDIA HEAD</p>
-            </div>
-            <div class="reel-embed-frame">
+          <article class="gallery-card motion-card" data-type="aftermovie">
+            <div class="card-media-wrapper">
               <iframe
                 src="https://www.instagram.com/p/DfBzMGPtoJJ/embed/"
                 title="SESA Department Aftermovie edited by Tanmay Chavan"
@@ -1338,21 +1338,22 @@
                 loading="lazy">
               </iframe>
             </div>
-            <div class="reel-card-footer">
-              <a href="https://www.instagram.com/p/DfBzMGPtoJJ/" target="_blank" rel="noopener noreferrer" class="btn-reel-link mono">
-                <span>VIEW REEL ON INSTAGRAM ↗</span>
+            <div class="motion-card-bar">
+              <div class="card-meta-top">
+                <span class="card-num">REEL 01</span>
+                <span class="card-category">AFTERMOVIE // SESA</span>
+              </div>
+              <h3 class="card-title">SESA Department Aftermovie</h3>
+              <p class="card-exif">ROLE: AFTERMOVIE EDITOR &amp; MULTIMEDIA HEAD</p>
+              <a href="https://www.instagram.com/p/DfBzMGPtoJJ/" target="_blank" rel="noopener noreferrer" class="motion-direct-link">
+                <span>WATCH ON INSTAGRAM ↗</span>
               </a>
             </div>
-          </div>
+          </article>
 
           <!-- Reel 2: SWD Club Reel -->
-          <div class="reel-card">
-            <div class="reel-card-meta">
-              <span class="mono reel-tag">MOTION REEL // SWD</span>
-              <h4 class="reel-card-title">SWD Club Motion Reel</h4>
-              <p class="reel-card-role mono">ROLE: REEL EDITOR • TOOLS: PREMIERE PRO</p>
-            </div>
-            <div class="reel-embed-frame">
+          <article class="gallery-card motion-card" data-type="reel">
+            <div class="card-media-wrapper">
               <iframe
                 src="https://www.instagram.com/p/DeH4FCFsSzH/embed/"
                 title="SWD Club Reel edited by Tanmay Chavan"
@@ -1363,21 +1364,22 @@
                 loading="lazy">
               </iframe>
             </div>
-            <div class="reel-card-footer">
-              <a href="https://www.instagram.com/p/DeH4FCFsSzH/" target="_blank" rel="noopener noreferrer" class="btn-reel-link mono">
-                <span>VIEW REEL ON INSTAGRAM ↗</span>
+            <div class="motion-card-bar">
+              <div class="card-meta-top">
+                <span class="card-num">REEL 02</span>
+                <span class="card-category">MOTION // SWD CLUB</span>
+              </div>
+              <h3 class="card-title">SWD Club Motion Reel</h3>
+              <p class="card-exif">ROLE: REEL EDITOR • TOOLS: PREMIERE PRO</p>
+              <a href="https://www.instagram.com/p/DeH4FCFsSzH/" target="_blank" rel="noopener noreferrer" class="motion-direct-link">
+                <span>WATCH ON INSTAGRAM ↗</span>
               </a>
             </div>
-          </div>
+          </article>
 
           <!-- Reel 3: Vishwaconclave Aftermovie -->
-          <div class="reel-card">
-            <div class="reel-card-meta">
-              <span class="mono reel-tag">CAMPUS EVENT // VISHWACONCLAVE</span>
-              <h4 class="reel-card-title">Vishwaconclave Official Aftermovie</h4>
-              <p class="reel-card-role mono">ROLE: AFTERMOVIE EDITOR • TOOLS: PREMIERE PRO</p>
-            </div>
-            <div class="reel-embed-frame">
+          <article class="gallery-card motion-card" data-type="aftermovie">
+            <div class="card-media-wrapper">
               <iframe
                 src="https://www.instagram.com/p/Dbst6qIMOa_/embed/"
                 title="Vishwaconclave Official Aftermovie edited by Tanmay Chavan"
@@ -1388,12 +1390,18 @@
                 loading="lazy">
               </iframe>
             </div>
-            <div class="reel-card-footer">
-              <a href="https://www.instagram.com/p/Dbst6qIMOa_/" target="_blank" rel="noopener noreferrer" class="btn-reel-link mono">
-                <span>VIEW REEL ON INSTAGRAM ↗</span>
+            <div class="motion-card-bar">
+              <div class="card-meta-top">
+                <span class="card-num">REEL 03</span>
+                <span class="card-category">CAMPUS // VISHWACONCLAVE</span>
+              </div>
+              <h3 class="card-title">Vishwaconclave Official Aftermovie</h3>
+              <p class="card-exif">ROLE: AFTERMOVIE EDITOR • TOOLS: PREMIERE PRO</p>
+              <a href="https://www.instagram.com/p/Dbst6qIMOa_/" target="_blank" rel="noopener noreferrer" class="motion-direct-link">
+                <span>WATCH ON INSTAGRAM ↗</span>
               </a>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
