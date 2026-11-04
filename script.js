@@ -1,4 +1,4 @@
-/**
+﻿/**
  * FRAME — Cinema & 35mm Photography Portfolio
  * Complete Interactive Experience Script
  */
@@ -488,7 +488,7 @@
     document.getElementById('lbYear').textContent = data.year;
     document.getElementById('lbDesc').textContent = data.desc;
     document.getElementById('lbCamera').textContent = data.camera;
-    document.getElementById('lbFilm').textContent = data.film;
+    const lbFilmEl = document.getElementById('lbFilm'); if (lbFilmEl) lbFilmEl.textContent = data.film;
     document.getElementById('lbLocation').textContent = data.location;
 
     // Color Swatches
