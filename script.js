@@ -462,11 +462,23 @@
 
   let currentProjectIndex = 0;
 
+  let lastFocusedElement = null;
+
   function openLightbox(index) {
+    lastFocusedElement = document.activeElement;
     currentProjectIndex = index;
     renderLightboxProject();
     lightboxModal.showModal();
+    lbCloseBtn?.focus();
     playSound('shutter');
+  }
+
+  function closeLightbox() {
+    lightboxModal.close();
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
+    playSound('click');
   }
 
   function closeLightbox() {
@@ -540,13 +552,16 @@
     });
   }
 
-  // Keyboard navigation for Lightbox
+  // Keyboard navigation and accessibility for Lightbox
   document.addEventListener('keydown', (e) => {
     if (!lightboxModal.open) return;
     if (e.key === 'ArrowLeft') {
-      lbPrevBtn.click();
+      lbPrevBtn?.click();
     } else if (e.key === 'ArrowRight') {
-      lbNextBtn.click();
+      lbNextBtn?.click();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      closeLightbox();
     }
   });
 

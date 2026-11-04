@@ -4,7 +4,8 @@
   "description": "FRAME — Cinema & Photography Portfolio with Official Instagram Integration for @io.tanmay",
   "scripts": {
     "start": "node local-server.js",
-    "dev": "node --watch local-server.js"
+    "dev": "node --watch local-server.js",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "keywords": [
     "portfolio",
@@ -13,5 +14,8 @@
     "instagram-graph-api"
   ],
   "author": "Tanmay Chavan (@io.tanmay)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
 }

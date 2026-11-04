@@ -1,0 +1,470 @@
+{
+  "assets/drive_photos/20260214_101223_1.jpg": {
+    "baseName": "20260214_101223_1",
+    "originalWidth": 3995,
+    "originalHeight": 2996,
+    "aspectRatio": 1.333444592790387,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260214_101223_1-640.webp",
+        "width": 640,
+        "height": 480,
+        "sizeKB": "48.7"
+      },
+      "1280": {
+        "file": "assets/optimized/20260214_101223_1-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "sizeKB": "226.3"
+      },
+      "1920": {
+        "file": "assets/optimized/20260214_101223_1-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "sizeKB": "601.2"
+      }
+    }
+  },
+  "assets/drive_photos/20260306_190702.jpg": {
+    "baseName": "20260306_190702",
+    "originalWidth": 3003,
+    "originalHeight": 2252,
+    "aspectRatio": 1.3334813499111902,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260306_190702-640.webp",
+        "width": 640,
+        "height": 480,
+        "sizeKB": "17.1"
+      },
+      "1280": {
+        "file": "assets/optimized/20260306_190702-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "sizeKB": "74.8"
+      },
+      "1920": {
+        "file": "assets/optimized/20260306_190702-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "sizeKB": "256.2"
+      }
+    }
+  },
+  "assets/drive_photos/20260621_1009200_1.jpg": {
+    "baseName": "20260621_1009200_1",
+    "originalWidth": 1974,
+    "originalHeight": 2632,
+    "aspectRatio": 0.75,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260621_1009200_1-640.webp",
+        "width": 640,
+        "height": 853,
+        "sizeKB": "106.4"
+      },
+      "1280": {
+        "file": "assets/optimized/20260621_1009200_1-1280.webp",
+        "width": 1280,
+        "height": 1707,
+        "sizeKB": "432.4"
+      },
+      "1920": {
+        "file": "assets/optimized/20260621_1009200_1-1920.webp",
+        "width": 1920,
+        "height": 2560,
+        "sizeKB": "777.0"
+      }
+    }
+  },
+  "assets/drive_photos/20260406_183233_3.jpg": {
+    "baseName": "20260406_183233_3",
+    "originalWidth": 2251,
+    "originalHeight": 3002,
+    "aspectRatio": 0.7498334443704198,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260406_183233_3-640.webp",
+        "width": 640,
+        "height": 854,
+        "sizeKB": "94.2"
+      },
+      "1280": {
+        "file": "assets/optimized/20260406_183233_3-1280.webp",
+        "width": 1280,
+        "height": 1707,
+        "sizeKB": "255.4"
+      },
+      "1920": {
+        "file": "assets/optimized/20260406_183233_3-1920.webp",
+        "width": 1920,
+        "height": 2561,
+        "sizeKB": "420.6"
+      }
+    }
+  },
+  "assets/drive_photos/1781209024838.jpg": {
+    "baseName": "1781209024838",
+    "originalWidth": 3072,
+    "originalHeight": 4096,
+    "aspectRatio": 0.75,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/1781209024838-640.webp",
+        "width": 640,
+        "height": 853,
+        "sizeKB": "47.8"
+      },
+      "1280": {
+        "file": "assets/optimized/1781209024838-1280.webp",
+        "width": 1280,
+        "height": 1707,
+        "sizeKB": "113.4"
+      },
+      "1920": {
+        "file": "assets/optimized/1781209024838-1920.webp",
+        "width": 1920,
+        "height": 2560,
+        "sizeKB": "190.6"
+      }
+    }
+  },
+  "assets/drive_photos/1781371864984.jpg": {
+    "baseName": "1781371864984",
+    "originalWidth": 1598,
+    "originalHeight": 899,
+    "aspectRatio": 1.7775305895439377,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/1781371864984-640.webp",
+        "width": 640,
+        "height": 360,
+        "sizeKB": "17.3"
+      },
+      "1280": {
+        "file": "assets/optimized/1781371864984-1280.webp",
+        "width": 1280,
+        "height": 720,
+        "sizeKB": "44.7"
+      },
+      "1920": {
+        "file": "assets/optimized/1781371864984-1920.webp",
+        "width": 1598,
+        "height": 899,
+        "sizeKB": "63.3"
+      }
+    }
+  },
+  "assets/drive_photos/20260412_214957_2.jpg": {
+    "baseName": "20260412_214957_2",
+    "originalWidth": 2252,
+    "originalHeight": 3004,
+    "aspectRatio": 0.7496671105193076,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260412_214957_2-640.webp",
+        "width": 640,
+        "height": 854,
+        "sizeKB": "10.2"
+      },
+      "1280": {
+        "file": "assets/optimized/20260412_214957_2-1280.webp",
+        "width": 1280,
+        "height": 1707,
+        "sizeKB": "29.0"
+      },
+      "1920": {
+        "file": "assets/optimized/20260412_214957_2-1920.webp",
+        "width": 1920,
+        "height": 2561,
+        "sizeKB": "52.3"
+      }
+    }
+  },
+  "assets/drive_photos/20260629_2020490_1.jpg": {
+    "baseName": "20260629_2020490_1",
+    "originalWidth": 2251,
+    "originalHeight": 3003,
+    "aspectRatio": 0.7495837495837496,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260629_2020490_1-640.webp",
+        "width": 640,
+        "height": 854,
+        "sizeKB": "80.0"
+      },
+      "1280": {
+        "file": "assets/optimized/20260629_2020490_1-1280.webp",
+        "width": 1280,
+        "height": 1708,
+        "sizeKB": "209.2"
+      },
+      "1920": {
+        "file": "assets/optimized/20260629_2020490_1-1920.webp",
+        "width": 1920,
+        "height": 2561,
+        "sizeKB": "343.9"
+      }
+    }
+  },
+  "assets/drive_photos/20260629_125939.jpg": {
+    "baseName": "20260629_125939",
+    "originalWidth": 2252,
+    "originalHeight": 4000,
+    "aspectRatio": 0.563,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260629_125939-640.webp",
+        "width": 640,
+        "height": 1137,
+        "sizeKB": "54.4"
+      },
+      "1280": {
+        "file": "assets/optimized/20260629_125939-1280.webp",
+        "width": 1280,
+        "height": 2274,
+        "sizeKB": "138.2"
+      },
+      "1920": {
+        "file": "assets/optimized/20260629_125939-1920.webp",
+        "width": 1920,
+        "height": 3410,
+        "sizeKB": "228.5"
+      }
+    }
+  },
+  "assets/drive_photos/20260717_125925_1.jpg": {
+    "baseName": "20260717_125925_1",
+    "originalWidth": 2993,
+    "originalHeight": 3989,
+    "aspectRatio": 0.7503133617447982,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260717_125925_1-640.webp",
+        "width": 640,
+        "height": 853,
+        "sizeKB": "50.7"
+      },
+      "1280": {
+        "file": "assets/optimized/20260717_125925_1-1280.webp",
+        "width": 1280,
+        "height": 1706,
+        "sizeKB": "140.0"
+      },
+      "1920": {
+        "file": "assets/optimized/20260717_125925_1-1920.webp",
+        "width": 1920,
+        "height": 2559,
+        "sizeKB": "234.7"
+      }
+    }
+  },
+  "assets/drive_photos/20260728_172218.jpg": {
+    "baseName": "20260728_172218",
+    "originalWidth": 2250,
+    "originalHeight": 4000,
+    "aspectRatio": 0.5625,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260728_172218-640.webp",
+        "width": 640,
+        "height": 1138,
+        "sizeKB": "72.9"
+      },
+      "1280": {
+        "file": "assets/optimized/20260728_172218-1280.webp",
+        "width": 1280,
+        "height": 2276,
+        "sizeKB": "441.4"
+      },
+      "1920": {
+        "file": "assets/optimized/20260728_172218-1920.webp",
+        "width": 1920,
+        "height": 3413,
+        "sizeKB": "1050.0"
+      }
+    }
+  },
+  "assets/drive_photos/20260805_190030_2.jpg": {
+    "baseName": "20260805_190030_2",
+    "originalWidth": 2246,
+    "originalHeight": 2996,
+    "aspectRatio": 0.7496662216288384,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260805_190030_2-640.webp",
+        "width": 640,
+        "height": 854,
+        "sizeKB": "177.8"
+      },
+      "1280": {
+        "file": "assets/optimized/20260805_190030_2-1280.webp",
+        "width": 1280,
+        "height": 1707,
+        "sizeKB": "584.7"
+      },
+      "1920": {
+        "file": "assets/optimized/20260805_190030_2-1920.webp",
+        "width": 1920,
+        "height": 2561,
+        "sizeKB": "1097.6"
+      }
+    }
+  },
+  "assets/drive_photos/20260605_1354451.jpg": {
+    "baseName": "20260605_1354451",
+    "originalWidth": 2598,
+    "originalHeight": 4618,
+    "aspectRatio": 0.5625812039844088,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260605_1354451-640.webp",
+        "width": 640,
+        "height": 1138,
+        "sizeKB": "81.9"
+      },
+      "1280": {
+        "file": "assets/optimized/20260605_1354451-1280.webp",
+        "width": 1280,
+        "height": 2275,
+        "sizeKB": "286.9"
+      },
+      "1920": {
+        "file": "assets/optimized/20260605_1354451-1920.webp",
+        "width": 1920,
+        "height": 3413,
+        "sizeKB": "585.2"
+      }
+    }
+  },
+  "assets/drive_photos/20260624_175504.jpg": {
+    "baseName": "20260624_175504",
+    "originalWidth": 2250,
+    "originalHeight": 3999,
+    "aspectRatio": 0.5626406601650412,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/20260624_175504-640.webp",
+        "width": 640,
+        "height": 1137,
+        "sizeKB": "78.8"
+      },
+      "1280": {
+        "file": "assets/optimized/20260624_175504-1280.webp",
+        "width": 1280,
+        "height": 2275,
+        "sizeKB": "406.8"
+      },
+      "1920": {
+        "file": "assets/optimized/20260624_175504-1920.webp",
+        "width": 1920,
+        "height": 3412,
+        "sizeKB": "979.3"
+      }
+    }
+  },
+  "assets/drive_photos/IMG_20260829_165902633.jpg": {
+    "baseName": "IMG_20260829_165902633",
+    "originalWidth": 3064,
+    "originalHeight": 4085,
+    "aspectRatio": 0.750061199510404,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/IMG_20260829_165902633-640.webp",
+        "width": 640,
+        "height": 853,
+        "sizeKB": "131.4"
+      },
+      "1280": {
+        "file": "assets/optimized/IMG_20260829_165902633-1280.webp",
+        "width": 1280,
+        "height": 1707,
+        "sizeKB": "460.9"
+      },
+      "1920": {
+        "file": "assets/optimized/IMG_20260829_165902633-1920.webp",
+        "width": 1920,
+        "height": 2560,
+        "sizeKB": "856.8"
+      }
+    }
+  },
+  "assets/drive_photos/IMG_20260513_025929_646.jpg": {
+    "baseName": "IMG_20260513_025929_646",
+    "originalWidth": 1440,
+    "originalHeight": 811,
+    "aspectRatio": 1.7755856966707768,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/IMG_20260513_025929_646-640.webp",
+        "width": 640,
+        "height": 360,
+        "sizeKB": "63.6"
+      },
+      "1280": {
+        "file": "assets/optimized/IMG_20260513_025929_646-1280.webp",
+        "width": 1280,
+        "height": 721,
+        "sizeKB": "278.4"
+      },
+      "1920": {
+        "file": "assets/optimized/IMG_20260513_025929_646-1920.webp",
+        "width": 1440,
+        "height": 811,
+        "sizeKB": "386.8"
+      }
+    }
+  },
+  "assets/drive_photos/17812038516661_2.jpg": {
+    "baseName": "17812038516661_2",
+    "originalWidth": 768,
+    "originalHeight": 1024,
+    "aspectRatio": 0.75,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/17812038516661_2-640.webp",
+        "width": 640,
+        "height": 853,
+        "sizeKB": "49.9"
+      },
+      "1280": {
+        "file": "assets/optimized/17812038516661_2-1280.webp",
+        "width": 768,
+        "height": 1024,
+        "sizeKB": "68.3"
+      },
+      "1920": {
+        "file": "assets/optimized/17812038516661_2-1920.webp",
+        "width": 768,
+        "height": 1024,
+        "sizeKB": "68.3"
+      }
+    }
+  },
+  "assets/profile_tanmay_headphone_portrait.jpg": {
+    "baseName": "profile_tanmay_headphone_portrait",
+    "originalWidth": 460,
+    "originalHeight": 576,
+    "aspectRatio": 0.7986111111111112,
+    "variants": {
+      "640": {
+        "file": "assets/optimized/profile_tanmay_headphone_portrait-640.webp",
+        "width": 460,
+        "height": 576,
+        "sizeKB": "26.7"
+      },
+      "1280": {
+        "file": "assets/optimized/profile_tanmay_headphone_portrait-1280.webp",
+        "width": 460,
+        "height": 576,
+        "sizeKB": "26.7"
+      },
+      "1920": {
+        "file": "assets/optimized/profile_tanmay_headphone_portrait-1920.webp",
+        "width": 460,
+        "height": 576,
+        "sizeKB": "26.7"
+      }
+    }
+  }
+}
