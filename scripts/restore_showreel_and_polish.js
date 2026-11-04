@@ -242,3 +242,4 @@ script = script.replace(
 
 fs.writeFileSync('script.js', script, 'utf8');
 console.log('Updated script.js for continuous loop playback!');
+

@@ -1973,9 +1973,22 @@
     });
   }
 
-  // Initialize reels filter on load
+  // Initialize Reel Cards Sound
+  function initReelCards() {
+    document.querySelectorAll('.reel-card').forEach(card => {
+      card.addEventListener('click', () => {
+        playSound('shutter');
+      });
+    });
+  }
+
+  // Initialize reels filter & cards on load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initReelsFilter);
+    document.addEventListener('DOMContentLoaded', () => {
+      initReelsFilter();
+      initReelCards();
+    });
   } else {
     initReelsFilter();
+    initReelCards();
   }
