@@ -70,3 +70,4 @@ html = html.replace(scriptRegex, `<script id="photosData" type="application/json
 
 fs.writeFileSync('index.html', html, 'utf8');
 console.log('Successfully updated index.html with all 30 cards and matching tabs.');
+

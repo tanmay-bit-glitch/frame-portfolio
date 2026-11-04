@@ -4,6 +4,30 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Curation Bug Fix] — Elimination of All Repeated Photos in Curated Set
+*Date: 2026-11-05*
+
+### Fixed & Verified
+1. **Root-Cause Discovery & Elimination of Duplicate Cat Photos:**
+   - Visual inspection and perceptual diff analysis revealed that 4 slots in the curated set were identical (diff = 0):
+     - Frame 12: `12_ancient_hemadpanthi_temple_steps.jpg`
+     - Frame 13: `13_stone_temple_shikhara_facade.jpg`
+     - Frame 18: `18_auditorium_spotlight_beam.jpg`
+     - Frame 28: `28_sunlit_street_cat_portrait.jpg`
+   - Cause: Early automation mistakenly mapped `20260717_125925.jpg` (the cat) to slots 12, 13, and 18, causing the identical cat photo to appear 4 times across different categories.
+2. **Re-Mapping to Verified Authentic Originals from `raw_photos/`:**
+   - **Frame 12 (`Echoes in Basalt // Hemadpanthi Sanctum Portal`):** Re-mapped to authentic original `raw_photos/20260324_185407.jpg` (3000x4000, 5.4 MB), featuring real ancient Hemadpanthi basalt masonry entrance steps and sanctum portal.
+   - **Frame 13 (`Monument of Faith // Medieval Stone Sanctuary`):** Re-mapped to authentic original `raw_photos/20260324_185514 (1).jpg` (3621x2037, 5.15 MB), featuring carved basalt temple spire / shikhara facade in high-contrast monochrome.
+   - **Frame 18 (`Stage Presence // Campus Auditorium Spotlight`):** Re-mapped to authentic original `raw_photos/116118-03.jpg` (2250x4000, 2.48 MB), featuring student attendee in lecture hall with "Some days you just have to create your own sunshine" graphic.
+   - **Frame 28 (`Street Sentinel // Sunlit Alley Cat`):** Preserved as the **one and only** instance of `raw_photos/20260717_125925 (1).jpg` in the entire portfolio.
+3. **Automated Verification:**
+   - Ran `scripts/find_repeats.js` across all 30 frames: confirmed **0 duplicate or near-duplicate pairs** (minimum perceptual diff across any pair in the collection is now 135).
+   - Regenerated all responsive WebP variants (640w, 1280w, 1920w) and blur placeholders.
+   - Replaced files in both root and workspace `curated_photos_review/` and updated `review_catalog.html`.
+   - Updated `data/photos.json` and `index.html` markup and recaptured multi-viewport screenshots.
+
+---
+
 ## [Phase 4 Curation Refinement] — Final 30 Curated Frames & 5 New User Photos Integrated
 *Date: 2026-11-05*
 

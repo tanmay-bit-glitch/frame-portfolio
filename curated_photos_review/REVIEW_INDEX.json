@@ -2,7 +2,7 @@
   {
     "num": 1,
     "filename": "01_mustang_shelby_gt500_cyberpunk.jpg",
-    "title": "Neon Serpent // Shelby GT500",
+    "title": "Neon Predator // Shelby GT500",
     "category": "Machines",
     "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
@@ -11,7 +11,7 @@
   {
     "num": 2,
     "filename": "02_slammed_tuner_and_cafe_racer.jpg",
-    "title": "Street Zillas // Tuner & Cafe Racer",
+    "title": "Stance Culture // Slammed Tuner & Custom Bike",
     "category": "Machines",
     "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
@@ -20,7 +20,7 @@
   {
     "num": 3,
     "filename": "03_stunt_rider_rolling_endo.jpg",
-    "title": "Defying Gravity // Stoppie in Motion",
+    "title": "Kinetic Equilibrium // Rolling Stoppie",
     "category": "Machines",
     "aspectRatio": "1974x2632 (0.75)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
@@ -60,7 +60,7 @@
     "category": "Street",
     "aspectRatio": "2252x1268 (1.776)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-06-24"
+    "date": "2026-05-10"
   },
   {
     "num": 8,
@@ -87,7 +87,7 @@
     "category": "Street",
     "aspectRatio": "4391x7804 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-05-15"
+    "date": "2026-06-05"
   },
   {
     "num": 11,
@@ -103,18 +103,18 @@
     "filename": "12_ancient_hemadpanthi_temple_steps.jpg",
     "title": "Echoes in Basalt // Hemadpanthi Sanctum Portal",
     "category": "Heritage",
-    "aspectRatio": "2993x3989 (0.75)",
+    "aspectRatio": "3000x4000 (0.75)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-07-17"
+    "date": "2026-03-24"
   },
   {
     "num": 13,
     "filename": "13_stone_temple_shikhara_facade.jpg",
     "title": "Monument of Faith // Medieval Stone Sanctuary",
     "category": "Heritage",
-    "aspectRatio": "2993x3989 (0.75)",
-    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
-    "date": "2026-07-17"
+    "aspectRatio": "3621x2037 (1.778)",
+    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "date": "2026-03-24"
   },
   {
     "num": 14,
@@ -122,7 +122,7 @@
     "title": "Golden Darbar // Shreemant Dagdusheth Celebration",
     "category": "Culture",
     "aspectRatio": "3999x3000 (1.333)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
     "date": "2026-09-15"
   },
   {
@@ -131,7 +131,7 @@
     "title": "Pure Radiance // Father & Daughter",
     "category": "People",
     "aspectRatio": "2251x3002 (0.75)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
     "date": "2026-06-29"
   },
   {
@@ -140,7 +140,7 @@
     "title": "The Silent Patriarch // Old Pune Ghats",
     "category": "People",
     "aspectRatio": "2252x4000 (0.563)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
     "date": "2026-06-29"
   },
   {
@@ -157,7 +157,7 @@
     "filename": "18_auditorium_spotlight_beam.jpg",
     "title": "Stage Presence // Campus Auditorium Spotlight",
     "category": "People",
-    "aspectRatio": "2993x3989 (0.75)",
+    "aspectRatio": "2250x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
     "date": "2026-04-18"
   },
@@ -173,7 +173,7 @@
   {
     "num": 20,
     "filename": "20_stargazer_pointing_cosmos.jpg",
-    "title": "Stargazer // Pointing to the Cosmos",
+    "title": "The Cosmic Witness // Pointing to the Infinite",
     "category": "Night",
     "aspectRatio": "2598x4618 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
@@ -182,16 +182,16 @@
   {
     "num": 21,
     "filename": "21_city_overlook_sunset_silhouette.jpg",
-    "title": "Twilight Horizon // Overlook Above the City",
+    "title": "Rooftop Sentinel // Sunset Ridge",
     "category": "Night",
     "aspectRatio": "3003x2252 (1.333)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-06-29"
+    "date": "2026-03-06"
   },
   {
     "num": 22,
     "filename": "22_audi_sport_rally_spec.jpg",
-    "title": "Audi Sport No. 9 // Rally Spec",
+    "title": "Audi Sport // Tarmac Stage",
     "category": "Machines",
     "aspectRatio": "1994x3542 (0.563)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
@@ -200,16 +200,16 @@
   {
     "num": 23,
     "filename": "23_lone_rider_highway_silhouette.jpg",
-    "title": "Lone Rider // Midnight Horizon",
+    "title": "Lone Rider // Highway Silhouette",
     "category": "Machines",
     "aspectRatio": "4000x2252 (1.776)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-04-18"
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-05-29"
   },
   {
     "num": 24,
     "filename": "24_superbike_cockpit_clipons.jpg",
-    "title": "Command Center // Superbike Cockpit",
+    "title": "Cockpit Precision // Superbike Clip-Ons",
     "category": "Machines",
     "aspectRatio": "2252x4000 (0.563)",
     "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
@@ -218,11 +218,11 @@
   {
     "num": 25,
     "filename": "25_midnight_flyover_cables.jpg",
-    "title": "Overpass Solitude // Midnight Cable Span",
+    "title": "Midnight Span // Cable-Stayed Overpass",
     "category": "Street",
     "aspectRatio": "3427x1927 (1.778)",
     "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-06-24"
+    "date": "2026-05-30"
   },
   {
     "num": 26,
@@ -230,8 +230,8 @@
     "title": "Morning Awakening // Old Pune Alleyway",
     "category": "Street",
     "aspectRatio": "1985x3527 (0.563)",
-    "camera": "samsung Galaxy S23 • 5.4mm • f/1.8",
-    "date": "2026-06-29"
+    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
+    "date": "2026-05-18"
   },
   {
     "num": 27,
@@ -257,16 +257,16 @@
     "title": "Gaze Through the Mesh // Indian Leopard",
     "category": "Wildlife",
     "aspectRatio": "3064x4085 (0.75)",
-    "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
-    "date": "2026-03-06"
+    "camera": "Nothing Nothing Phone (4a) • 12.2mm • f/2.9",
+    "date": "2026-08-29"
   },
   {
     "num": 30,
     "filename": "30_birds_silk_cotton_sunset.jpg",
-    "title": "Dusk Duet // Silk-Cotton Crimson Sunset",
+    "title": "Silk Cotton Silhouette // Evening Roost",
     "category": "Wildlife",
     "aspectRatio": "2999x1687 (1.778)",
     "camera": "samsung Galaxy S23 • 7.0mm • f/2.4",
-    "date": "2026-03-26"
+    "date": "2026-02-18"
   }
 ]
