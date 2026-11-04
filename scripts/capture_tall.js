@@ -14,3 +14,4 @@ cp.spawnSync(chrome, [
   url
 ]);
 console.log('Done, size:', require('fs').statSync(outPath).size);
+

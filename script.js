@@ -419,6 +419,49 @@
       });
   }
 
+  /* ==========================================================================
+     FULL-PAGE AMBIENT SPREADING BACKGROUND (PHASE 4)
+     ========================================================================== */
+  const ambientViewport = document.getElementById('galleryAmbientViewport');
+  const layerA = document.getElementById('ambientLayerA');
+  const layerB = document.getElementById('ambientLayerB');
+  let activeAmbientLayer = 'A';
+  let currentAmbientPhotoId = null;
+
+  function showAmbientPhoto(photo) {
+    if (!ambientViewport || !layerA || !layerB || !photo) return;
+    if (currentAmbientPhotoId === photo.id) return;
+    currentAmbientPhotoId = photo.id;
+
+    const imgUrl = (photo.srcset && (photo.srcset['1280'] || photo.srcset['640'])) || photo.placeholder;
+    const nextLayer = activeAmbientLayer === 'A' ? layerB : layerA;
+    const prevLayer = activeAmbientLayer === 'A' ? layerA : layerB;
+
+    nextLayer.style.backgroundImage = 'url(' + imgUrl + ')';
+    nextLayer.classList.remove('is-fading');
+    nextLayer.classList.add('is-active');
+
+    prevLayer.classList.remove('is-active');
+    prevLayer.classList.add('is-fading');
+
+    ambientViewport.classList.add('is-active');
+    activeAmbientLayer = activeAmbientLayer === 'A' ? 'B' : 'A';
+  }
+
+  function hideAmbientPhoto() {
+    if (!ambientViewport) return;
+    if (activeFocusedCard) return; // Keep ambient background alive while a card is focused
+    ambientViewport.classList.remove('is-active');
+    currentAmbientPhotoId = null;
+  }
+
+  function getColumnCount() {
+    const w = window.innerWidth;
+    if (w < 640) return 1;
+    if (w < 1024) return 2;
+    return 3;
+  }
+
   function renderGalleryWithFilter(filter = 'all') {
     if (!galleryGrid) return;
 
@@ -431,7 +474,7 @@
     // Update status counter
     if (galleryCountStatus) {
       const activeName = filter === 'all' ? 'ALL' : filter.toUpperCase();
-      galleryCountStatus.innerHTML = `<span>SHOWING: ${String(activeFilteredPhotos.length).padStart(2, '0')} / ${String(allPhotos.length).padStart(2, '0')} FRAMES (${activeName})</span>`;
+      galleryCountStatus.innerHTML = '<span>SHOWING: ' + String(activeFilteredPhotos.length).padStart(2, '0') + ' / ' + String(allPhotos.length).padStart(2, '0') + ' FRAMES (' + activeName + ')</span>';
     }
 
     // Disconnect any existing observer
@@ -441,99 +484,129 @@
 
     galleryGrid.innerHTML = '';
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const numCols = getColumnCount();
 
-    // Build cards
+    // Distribute photos into columns with equal item count and balanced heights
+    const colBuckets = Array.from({ length: numCols }, () => []);
+    const colHeights = new Array(numCols).fill(0);
+    const maxItemsPerCol = Math.ceil(activeFilteredPhotos.length / numCols);
+
     activeFilteredPhotos.forEach((photo, idx) => {
-      const card = document.createElement('article');
-      card.className = 'gallery-card';
-      card.tabIndex = 0;
-      card.setAttribute('role', 'button');
-      card.setAttribute('aria-haspopup', 'dialog');
-      card.setAttribute('aria-label', `View ${photo.title} (${photo.category})`);
-      card.dataset.index = idx;
-      card.dataset.slug = photo.slug;
-      card.dataset.category = photo.category;
-      card.id = `frame-${idx + 1}`;
+      const relH = photo.height / photo.width;
+      let bestCol = -1;
+      let minH = Infinity;
+      for (let c = 0; c < numCols; c++) {
+        if (colBuckets[c].length < maxItemsPerCol && colHeights[c] < minH) {
+          minH = colHeights[c];
+          bestCol = c;
+        }
+      }
+      if (bestCol === -1) bestCol = 0;
+      colBuckets[bestCol].push({ photo, idx });
+      colHeights[bestCol] += relH;
+    });
 
-      const numStr = `${String(idx + 1).padStart(2, '0')} / ${String(activeFilteredPhotos.length).padStart(2, '0')}`;
-      const exifStr = [photo.exif.aperture, photo.exif.shutterSpeed, photo.exif.iso ? `ISO ${photo.exif.iso}` : ''].filter(Boolean).join(' • ');
+    // Compute column scale factor so all columns finish at the EXACT same baseline at the bottom!
+    const targetHeight = Math.max(...colHeights);
+    const colScales = colHeights.map(h => (h > 0 ? targetHeight / h : 1));
 
-      card.innerHTML = `
-        <div class="card-media-wrapper">
-          <img src="${photo.srcset['640'] || photo.placeholder}" alt="" aria-hidden="true" class="card-ambient-backdrop">
-          <img src="${photo.placeholder}" alt="" aria-hidden="true" class="card-placeholder">
-          <img
-            src="${photo.srcset['1280'] || photo.srcset['640']}"
-            srcset="${photo.srcset['640']} 640w, ${photo.srcset['1280']} 1280w, ${photo.srcset['1920']} 1920w"
-            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-            alt="${escapeHtml(photo.alt)}"
-            width="${photo.width}"
-            height="${photo.height}"
-            loading="${idx < 3 ? 'eager' : 'lazy'}"
-            decoding="async"
-            class="card-img"
-          >
-          <div class="card-overlay" aria-hidden="true">
-            <div class="card-meta-top">
-              <span class="card-num">${numStr}</span>
-              <span class="card-category">${escapeHtml(photo.category)}</span>
-            </div>
-            <div class="card-meta-bottom">
-              <h3 class="card-title">${escapeHtml(photo.title)}</h3>
-              <p class="card-exif">${escapeHtml(exifStr)}</p>
+    // Render columns and cards
+    colBuckets.forEach((bucket, colIdx) => {
+      const colEl = document.createElement('div');
+      colEl.className = 'gallery-column';
+      colEl.dataset.col = colIdx;
+
+      const scale = colScales[colIdx] || 1;
+
+      bucket.forEach(({ photo, idx }) => {
+        const card = document.createElement('article');
+        card.className = 'gallery-card';
+        card.tabIndex = 0;
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-haspopup', 'dialog');
+        card.setAttribute('aria-label', 'View ' + photo.title + ' (' + photo.category + ')');
+        card.dataset.index = idx;
+        card.dataset.slug = photo.slug;
+        card.dataset.category = photo.category;
+        card.id = 'frame-' + (idx + 1);
+
+        const numStr = String(idx + 1).padStart(2, '0') + ' / ' + String(activeFilteredPhotos.length).padStart(2, '0');
+        const exifStr = [photo.exif.aperture, photo.exif.shutterSpeed, photo.exif.iso ? 'ISO ' + photo.exif.iso : ''].filter(Boolean).join(' • ');
+
+        // Scaled aspect ratio guarantees all columns align at the bottom with edge-to-edge images
+        const scaledRatio = (photo.aspectRatio / scale).toFixed(4);
+
+        card.innerHTML = `
+          <div class="card-media-wrapper" style="--card-aspect-ratio: ${scaledRatio};">
+            <img src="${photo.placeholder}" alt="" aria-hidden="true" class="card-placeholder">
+            <img
+              src="${photo.srcset['1280'] || photo.srcset['640']}"
+              srcset="${photo.srcset['640']} 640w, ${photo.srcset['1280']} 1280w, ${photo.srcset['1920']} 1920w"
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+              alt="${escapeHtml(photo.alt)}"
+              width="${photo.width}"
+              height="${photo.height}"
+              loading="${idx < 4 ? 'eager' : 'lazy'}"
+              decoding="async"
+              class="card-img"
+            >
+            <div class="card-overlay" aria-hidden="true">
+              <div class="card-meta-top">
+                <span class="card-num">${numStr}</span>
+                <span class="card-category">${escapeHtml(photo.category)}</span>
+              </div>
+              <div class="card-meta-bottom">
+                <h3 class="card-title">${escapeHtml(photo.title)}</h3>
+                <p class="card-exif">${escapeHtml(exifStr)}</p>
+              </div>
             </div>
           </div>
-        </div>
-      `;
+        `;
 
-      // Handle progressive image loading transition
-      const realImg = card.querySelector('.card-img');
-      const placeholder = card.querySelector('.card-placeholder');
+        // Progressive image loading transition
+        const realImg = card.querySelector('.card-img');
+        const placeholder = card.querySelector('.card-placeholder');
 
-      const onImageLoaded = () => {
-        realImg.classList.add('is-loaded');
-        if (placeholder) {
-          placeholder.classList.add('is-hidden');
+        const onImageLoaded = () => {
+          realImg.classList.add('is-loaded');
+          if (placeholder) {
+            placeholder.classList.add('is-hidden');
+          }
+        };
+
+        if (realImg.complete) {
+          onImageLoaded();
+        } else {
+          realImg.addEventListener('load', onImageLoaded);
         }
-      };
 
-      if (realImg.complete) {
-        onImageLoaded();
-      } else {
-        realImg.addEventListener('load', onImageLoaded);
-      }
+        // Full-page animated blurred background spread on hover
+        card.addEventListener('mouseenter', () => {
+          showAmbientPhoto(photo);
+          card.classList.add('is-hovered');
+        });
 
-      // Dynamic ambient background color shifts when hovering image
-      const workSection = document.getElementById('work');
-      card.addEventListener('mouseenter', () => {
-        if (workSection) {
-          workSection.dataset.hoverCategory = photo.category;
-          workSection.classList.add('is-card-hovered');
-        }
-        card.classList.add('is-hovered');
+        card.addEventListener('mouseleave', () => {
+          card.classList.remove('is-hovered');
+          hideAmbientPhoto();
+        });
+
+        // In-place Click to Zoom / Focus event
+        card.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleFocusCard(card, idx, photo);
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFocusCard(card, idx, photo);
+          }
+        });
+
+        colEl.appendChild(card);
       });
 
-      card.addEventListener('mouseleave', () => {
-        if (workSection && !document.querySelector('.gallery-card:hover')) {
-          delete workSection.dataset.hoverCategory;
-          workSection.classList.remove('is-card-hovered');
-        }
-        card.classList.remove('is-hovered');
-      });
-
-      // In-place Click to Zoom / Focus event
-      card.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleFocusCard(card, idx);
-      });
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleFocusCard(card, idx);
-        }
-      });
-
-      galleryGrid.appendChild(card);
+      galleryGrid.appendChild(colEl);
     });
 
     // Scroll Reveal with IntersectionObserver
@@ -545,7 +618,7 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const card = entry.target;
-            const staggerDelay = (queueCounter % 3) * 80;
+            const staggerDelay = (queueCounter % 3) * 70;
             queueCounter++;
             setTimeout(() => {
               card.classList.add('is-revealed');
@@ -554,8 +627,8 @@
           }
         });
       }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
       });
 
       document.querySelectorAll('.gallery-card').forEach(card => {
@@ -563,6 +636,17 @@
       });
     }
   }
+
+  // Handle window resize column adjustments with debounce
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const activeTab = document.querySelector('.filter-tab.is-active');
+      const filter = activeTab ? activeTab.dataset.filter : 'all';
+      renderGalleryWithFilter(filter);
+    }, 200);
+  });
 
   function setupFilterListeners() {
     filterTabs.forEach(tab => {
@@ -581,9 +665,8 @@
     });
   }
 
-
   /* ==========================================================================
-     IN-PLACE CLICK ZOOM / FOCUS CONTROLLER (PHASE 3 ENHANCEMENT)
+     IN-PLACE CLICK ZOOM / FOCUS SYSTEM (PHASE 4)
      ========================================================================== */
   let activeFocusedCard = null;
   let activeFocusedIndex = -1;
@@ -596,7 +679,6 @@
         focusBackdrop = document.createElement('div');
         focusBackdrop.id = 'galleryFocusBackdrop';
         focusBackdrop.className = 'gallery-focus-backdrop';
-        focusBackdrop.setAttribute('aria-hidden', 'true');
         document.body.appendChild(focusBackdrop);
       }
       focusBackdrop.addEventListener('click', () => {
@@ -605,15 +687,15 @@
     }
   }
 
-  function toggleFocusCard(card, idx) {
+  function toggleFocusCard(card, idx, photo) {
     if (activeFocusedCard === card) {
       unfocusCurrentCard();
     } else {
-      focusCard(card, idx);
+      focusCard(card, idx, photo);
     }
   }
 
-  function focusCard(card, idx) {
+  function focusCard(card, idx, photo) {
     ensureFocusBackdrop();
 
     if (activeFocusedCard && activeFocusedCard !== card) {
@@ -629,6 +711,13 @@
     }
     if (focusBackdrop) {
       focusBackdrop.classList.add('is-active');
+    }
+
+    // Keep ambient spreading photo active
+    if (photo) {
+      showAmbientPhoto(photo);
+    } else if (allPhotos && allPhotos[idx]) {
+      showAmbientPhoto(allPhotos[idx]);
     }
 
     // Gentle scroll adjustment if card is out of comfortable viewing bounds
@@ -652,6 +741,7 @@
     if (focusBackdrop) {
       focusBackdrop.classList.remove('is-active');
     }
+    hideAmbientPhoto();
     playSound('click');
   }
 
@@ -668,7 +758,8 @@
       if (allCards.length > 0) {
         const curIdx = allCards.indexOf(activeFocusedCard);
         const nextIdx = (curIdx + 1) % allCards.length;
-        focusCard(allCards[nextIdx], nextIdx);
+        const nextPhotoIdx = parseInt(allCards[nextIdx].dataset.index, 10);
+        focusCard(allCards[nextIdx], nextIdx, allPhotos[nextPhotoIdx]);
       }
     } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
       e.preventDefault();
@@ -676,7 +767,8 @@
       if (allCards.length > 0) {
         const curIdx = allCards.indexOf(activeFocusedCard);
         const prevIdx = (curIdx - 1 + allCards.length) % allCards.length;
-        focusCard(allCards[prevIdx], prevIdx);
+        const prevPhotoIdx = parseInt(allCards[prevIdx].dataset.index, 10);
+        focusCard(allCards[prevIdx], prevIdx, allPhotos[prevPhotoIdx]);
       }
     }
   });

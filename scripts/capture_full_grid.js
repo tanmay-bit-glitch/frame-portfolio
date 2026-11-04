@@ -32,3 +32,4 @@ cp.spawnSync(chrome, [
 fs.unlinkSync('preview-tall.html');
 
 console.log('Full grid screenshot captured, size:', fs.statSync(path.join(screenshotsDir, 'phase4-gallery-full-grid.png')).size);
+

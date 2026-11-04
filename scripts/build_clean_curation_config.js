@@ -114,12 +114,12 @@ const photoConfigs = [
   {
     num: 10,
     id: 'photo-10',
-    slug: 'pulse-of-pune-midday-chowk',
-    title: 'Pulse of Pune // Midday Chowk',
+    slug: 'urban-transit-metro-platform',
+    title: 'Urban Transit // Metro Platform Vista',
     category: 'Street',
-    raw_file: '20260605_135445.jpg',
-    new_filename: '10_pune_chowk_summer_transit.jpg',
-    alt: 'Bustling Pune city street intersection transit under harsh summer sun',
+    raw_file: '20260624_180610.jpg',
+    new_filename: '10_metro_platform_overlook.jpg',
+    alt: 'Transit commuters waiting on elevated metro platform overlooking the city street during golden hour',
     featured: false
   },
   {
@@ -187,7 +187,7 @@ const photoConfigs = [
     slug: 'silent-patriarch-old-pune-ghats',
     title: 'The Silent Patriarch // Old Pune Ghats',
     category: 'People',
-    raw_file: '20260629_125939.jpg',
+    raw_file: '20260214_101223.jpg',
     new_filename: '16_elder_in_gandhi_topi_monochrome.jpg',
     alt: 'Respectful portrait of an elderly gentleman in traditional white Gandhi topi',
     featured: false

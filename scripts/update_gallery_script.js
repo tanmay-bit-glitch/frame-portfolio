@@ -264,3 +264,4 @@ if (isCrlf) script = script.replace(/\n/g, '\r\n');
 
 fs.writeFileSync('script.js', script, 'utf8');
 console.log('Successfully updated script.js with in-place click zoom, hover ambient shifts, and keyboard controls!');
+

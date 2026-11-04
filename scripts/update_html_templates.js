@@ -25,3 +25,4 @@ function updateHtmlFile(filePath) {
 
 updateHtmlFile('index.html');
 updateHtmlFile('preview-gallery.html');
+

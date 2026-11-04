@@ -11,3 +11,4 @@ s = s.replace(
 if (isCrlf) s = s.replace(/\n/g, '\r\n');
 fs.writeFileSync('script.js', s, 'utf8');
 console.log('Added card.id to script.js');
+

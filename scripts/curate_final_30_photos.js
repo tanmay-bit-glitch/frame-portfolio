@@ -201,23 +201,23 @@ const final30Definitions = [
   {
     "num": 10,
     "id": "photo-10",
-    "slug": "pulse-of-pune-midday-chowk",
-    "title": "Pulse of Pune // Midday Chowk",
+    "slug": "urban-transit-metro-platform",
+    "title": "Urban Transit // Metro Platform Vista",
     "category": "Street",
-    "orig_src": "raw_photos/20260605_135445.jpg",
-    "new_filename": "10_pune_chowk_summer_transit.jpg",
-    "alt": "Bustling Pune city street intersection transit under harsh summer sun",
+    "orig_src": "raw_photos/20260624_180610.jpg",
+    "new_filename": "10_metro_platform_overlook.jpg",
+    "alt": "Transit commuters waiting on elevated metro platform overlooking the city street during golden hour",
     "featured": false,
     "exif": {
       "make": "samsung",
       "model": "Galaxy S23",
-      "lens": "Samsung Galaxy S23 Rear Wide Camera",
-      "focalLength": "5.4mm",
-      "focalLength35mm": "23mm",
-      "aperture": "f/1.8",
-      "shutterSpeed": "1/3200s",
-      "iso": 25,
-      "dateTaken": "2026-06-05"
+      "lens": "Samsung Galaxy S23 Rear Telephoto Camera",
+      "focalLength": "7.0mm",
+      "focalLength35mm": "69mm",
+      "aperture": "f/2.4",
+      "shutterSpeed": "1/100s",
+      "iso": 40,
+      "dateTaken": "2026-06-24"
     }
   },
   {
@@ -336,7 +336,7 @@ const final30Definitions = [
     "slug": "silent-patriarch-old-pune-ghats",
     "title": "The Silent Patriarch // Old Pune Ghats",
     "category": "People",
-    "orig_src": "raw_photos/20260629_125939.jpg",
+    "orig_src": "raw_photos/20260214_101223.jpg",
     "new_filename": "16_elder_in_gandhi_topi_monochrome.jpg",
     "alt": "Respectful portrait of an elderly gentleman in traditional white Gandhi topi",
     "featured": false,
@@ -348,8 +348,8 @@ const final30Definitions = [
       "focalLength35mm": "69mm",
       "aperture": "f/2.4",
       "shutterSpeed": "1/50s",
-      "iso": 50,
-      "dateTaken": "2026-06-29"
+      "iso": 32,
+      "dateTaken": "2026-02-14"
     }
   },
   {
