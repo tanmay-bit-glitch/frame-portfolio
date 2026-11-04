@@ -4796,3 +4796,172 @@ body:hover .custom-cursor {
     display: none; /* On tiny mobile screens, top laser bar provides sleek feedback */
   }
 }
+
+/* ==========================================================================
+   STEP 2 ADDITIONS: SHOWREEL, WHAT I DO & EMBEDDED AFTERMOVIE
+   ========================================================================== */
+
+.showreel-section {
+  position: relative;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+
+.showreel-section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.in-page-player {
+  margin-top: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.what-i-do-section {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+
+.what-i-do-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 32px 26px;
+  position: relative;
+  transition: transform var(--dur-base) var(--ease-cinema), border-color var(--dur-base), box-shadow var(--dur-base);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-subtle);
+}
+
+.service-num {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Embedded Aftermovie in Main Work Section */
+.work-featured-video-block {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+.featured-video-header {
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+
+.featured-video-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.featured-video-title {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3.5vw, 36px);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.featured-video-desc {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.featured-video-player-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.featured-video-embed {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.featured-video-embed iframe {
+  width: 100%;
+  height: 580px;
+  display: block;
+  border: none;
+}
+
+.btn-video-fallback {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all var(--dur-fast);
+}
+
+.btn-video-fallback:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-surface);
+}
+
+.about-setup-line {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}

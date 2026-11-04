@@ -571,6 +571,14 @@
   const showreelCloseBtn = document.getElementById('showreelCloseBtn');
   const showreelBackdrop = document.getElementById('showreelBackdrop');
 
+  const inPageReelPlayBtn = document.getElementById('inPageReelPlayBtn');
+  if (inPageReelPlayBtn && showreelModal) {
+    inPageReelPlayBtn.addEventListener('click', () => {
+      showreelModal.showModal();
+      playSound('shutter');
+    });
+  }
+
   if (showreelBtn && showreelModal) {
     showreelBtn.addEventListener('click', () => {
       showreelModal.showModal();
@@ -658,7 +666,7 @@
       });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.gear-card, .discipline-card, .laurel-item, .ig-card, .ig-profile-card, .stories-module').forEach(el => {
+    document.querySelectorAll('.service-card, .discipline-card, .laurel-item, .ig-card, .ig-profile-card, .stories-module').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 600ms cubic-bezier(0.19, 1, 0.22, 1), transform 600ms cubic-bezier(0.19, 1, 0.22, 1)';
@@ -1326,7 +1334,7 @@
     { id: 'instagram', label: 'FEED', elem: document.getElementById('instagram') },
     { id: 'experience', label: 'CAMPUS', elem: document.getElementById('experience') },
     { id: 'about', label: 'ABOUT', elem: document.getElementById('about') },
-    { id: 'gear', label: 'GEAR', elem: document.getElementById('gear') },
+    { id: 'showreel', label: 'REEL', elem: document.getElementById('showreel') },
     { id: 'skills', label: 'CRAFT', elem: document.getElementById('skills') },
     { id: 'contact', label: 'CONTACT', elem: document.getElementById('contact') }
   ];
