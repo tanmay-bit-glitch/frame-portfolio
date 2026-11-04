@@ -4965,3 +4965,36 @@ body:hover .custom-cursor {
   letter-spacing: 0.05em;
   color: var(--accent);
 }
+
+/* Direct Email Button Above Concierge Form */
+.direct-email-bar {
+  margin-bottom: 32px;
+}
+
+.direct-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  background: var(--accent);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px var(--accent-glow);
+  transition: all var(--dur-fast) var(--ease-cinema);
+}
+
+.direct-email-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+}
+
+.direct-email-btn svg {
+  flex-shrink: 0;
+}
