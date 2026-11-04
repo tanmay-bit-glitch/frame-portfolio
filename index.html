@@ -184,84 +184,60 @@
   </nav>
 
   <main id="top">
-    <!-- HERO SECTION -->
-    <section class="hero section-pad is-counting" aria-labelledby="hero-heading">
-      <!-- Cinematic Headphone Hero Background Layer -->
-      <div class="hero-bg-layer" aria-hidden="true">
-        <img src="assets/hero_headphone_bg.png" alt="Tanmay Chavan — Cinematic Headphone Frame" class="hero-bg-img">
-        <div class="hero-bg-gradient-overlay"></div>
+    <!-- HERO SECTION (FLYING PORTRAIT CUTOUT HERO) -->
+    <section class="hero hero-cutout-stage" id="hero" aria-labelledby="hero-title">
+      <!-- Layer 1: Dark Backdrop & Subtle Vignette (no photo background, no video) -->
+      <div class="hero-dark-backdrop" aria-hidden="true">
+        <div class="hero-ambient-glow"></div>
+        <div class="hero-vignette-overlay"></div>
       </div>
 
-      <!-- 35mm Academy Optical Countdown Leader -->
-      <div class="leader-countdown" data-frame="number" aria-hidden="true">
-        <div class="leader-target">
-          <div class="target-crosshair horiz"></div>
-          <div class="target-crosshair vert"></div>
-          <div class="target-circle c1"></div>
-          <div class="target-circle c2"></div>
-          <div class="target-sweep"></div>
+      <!-- Layer 4 (Part A): Corner HUD Texts -->
+      <div class="hero-corner-hud" aria-hidden="true">
+        <div class="corner-hud-item top-left">
+          <span class="mono">Photographer · Videographer · Editor</span>
         </div>
-        <span class="leader-number is-ticking">3</span>
-        <div class="leader-hud">
-          <span class="film-stock-tag">SAMSUNG S23 // CAPTURED</span>
-          <span class="take-tag">TAKE 001 · 24 FPS</span>
+        <div class="corner-hud-item top-right">
+          <a href="#about" class="mono scroll-cue">SCROLL ↓</a>
+        </div>
+        <div class="corner-hud-item bottom-left">
+          <span class="mono">Tanmay Chavan</span>
+        </div>
+        <div class="corner-hud-item bottom-right">
+          <span class="mono">Pune, India</span>
         </div>
       </div>
 
-      <div class="countdown-haze" aria-hidden="true"></div>
-
-      <!-- Ambient Optical Light Glow -->
-      <div class="hero-ambient-glow" aria-hidden="true"></div>
-
-      <!-- Viewfinder Overlay Corner Marks -->
-      <div class="viewfinder-hud" aria-hidden="true">
-        <div class="vf-corner tl">⌜</div>
-        <div class="vf-corner tr">⌝</div>
-        <div class="vf-corner bl">⌞</div>
-        <div class="vf-corner br">⌟</div>
-        <div class="vf-center-cross">+</div>
+      <!-- Layer 2: Giant Title BEHIND the cutout portrait -->
+      <div class="hero-title-container">
+        <h1 id="hero-title" class="giant-name-title">TANMAY</h1>
       </div>
 
-      <div class="hero-content">
-        <div class="hero-top-meta">
-          <p class="eyebrow">
-            <span class="availability-dot"></span>
-            <span>STUDENT CREATOR IN PUNE — BUILDING ONE FRAME AT A TIME</span>
-          </p>
-          <button class="replay-leader-btn" id="replayCountdownBtn" type="button"
-            title="Replay 35mm Academy countdown leader">
-            ↺ REPLAY LEADER
-          </button>
-        </div>
+      <!-- Layer 3: Cutout Portrait IN FRONT of the letters, anchored to bottom -->
+      <div class="hero-cutout-wrapper" id="heroCutoutWrapper">
+        <picture class="hero-cutout-picture">
+          <source type="image/webp" srcset="assets/cutout/portrait_cutout_600.webp 600w, assets/cutout/portrait_cutout_1000.webp 1000w, assets/cutout/portrait_cutout_1600.webp 1600w" sizes="(max-width: 600px) 90vw, (max-width: 1024px) 70vw, 55vw">
+          <img src="assets/cutout/portrait_cutout_1000.png"
+               alt="Tanmay Chavan"
+               id="travelingPortrait"
+               class="hero-portrait-cutout"
+               width="1024"
+               height="1023">
+        </picture>
+      </div>
 
-        <h1 id="hero-heading">
-          I STOP WHEN<br>
-          <span class="headline-accent">A FRAME</span><br>
-          FEELS RIGHT.
-        </h1>
-
+      <!-- Layer 4 (Part B): Subtitle & Action Buttons -->
+      <div class="hero-bottom-controls">
+        <p class="hero-tagline-subtitle">I STOP WHEN A FRAME FEELS RIGHT.</p>
         <div class="hero-actions-row">
-          <a href="#work" class="btn-primary">
-            <span>EXPLORE FRAMES</span>
+          <a href="#showreel" class="btn-primary hero-btn">
+            <span>WATCH THE REEL</span>
+            <span class="play-icon-triangle">▶</span>
+          </a>
+          <a href="#work" class="btn-secondary hero-btn">
+            <span>SEE MY PHOTOS</span>
             <span class="btn-arrow">↓</span>
           </a>
-          <a href="#showreel" class="btn-secondary" id="watchReelBtn">
-            <span class="play-icon-triangle">▶</span>
-            <span>WATCH THE REEL</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-footer">
-        <ul class="role-tags" aria-label="Creative Disciplines">
-          <li>Photography</li>
-          <li>Videography</li>
-          <li>Editing</li>
-          <li>Always exploring</li>
-        </ul>
-        <div class="hero-footer-location mono">
-          <span>PUNE, MAHARASHTRA // ROOTS IN NAGPUR</span>
-          <span class="lat-long">MAKING WITH A SAMSUNG GALAXY S23</span>
         </div>
       </div>
     </section>
@@ -308,14 +284,17 @@
         <div class="about-portrait-card">
           <div class="portrait-frame">
             <div class="portrait-sprocket top" aria-hidden="true"></div>
-            <img src="assets/optimized/profile_tanmay_portrait-640.webp"
-              srcset="assets/optimized/profile_tanmay_portrait-640.webp 1x, assets/optimized/profile_tanmay_portrait-1280.webp 2x"
-              alt="Tanmay Chavan — Portrait"
-              width="460"
-              height="575"
-              loading="lazy"
-              decoding="async"
-              class="portrait-img">
+            <picture>
+              <source type="image/webp" srcset="assets/cutout/portrait_cutout_600.webp 1x, assets/cutout/portrait_cutout_1000.webp 2x">
+              <img src="assets/cutout/portrait_cutout_600.png"
+                alt="Tanmay Chavan — Portrait"
+                id="aboutPortraitDockImg"
+                width="460"
+                height="575"
+                loading="lazy"
+                decoding="async"
+                class="portrait-img portrait-cutout-dock-img">
+            </picture>
             <div class="portrait-sprocket bottom" aria-hidden="true"></div>
           </div>
           <div class="camera-tag mono">TANMAY CHAVAN // PHOTOGRAPHY &amp; EDITING</div>

@@ -203,86 +203,13 @@
   }
 
   /* ==========================================================================
-     5. 35MM ACADEMY COUNTDOWN LEADER
+     5. 35MM ACADEMY COUNTDOWN LEADER (ARCHIVED / DISABLED IN HERO-FLY)
      ========================================================================== */
-  let countdownTimer = null;
-
-  function runCountdown() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-
-    if (prefersReduced.matches) {
-      hero.classList.remove('is-counting');
-      return;
-    }
-
-    let leader = document.querySelector('.leader-countdown');
-    if (!leader) {
-      // Re-create leader if user clicks "REPLAY LEADER"
-      leader = document.createElement('div');
-      leader.className = 'leader-countdown';
-      leader.setAttribute('data-frame', 'number');
-      leader.setAttribute('aria-hidden', 'true');
-      leader.innerHTML = `
-        <div class="leader-target">
-          <div class="target-crosshair horiz"></div>
-          <div class="target-crosshair vert"></div>
-          <div class="target-circle c1"></div>
-          <div class="target-circle c2"></div>
-          <div class="target-sweep"></div>
-        </div>
-        <span class="leader-number is-ticking">3</span>
-        <div class="leader-hud">
-          <span class="film-stock-tag">35MM SMPTE // 5219</span>
-          <span class="take-tag">TAKE 001 · 24 FPS</span>
-        </div>
-      `;
-      hero.appendChild(leader);
-    }
-
-    hero.classList.add('is-counting');
-    const number = leader.querySelector('.leader-number');
-    const values = ['3', '2', '1', '●'];
-    let frame = 0;
-
-    if (number) number.textContent = values[0];
-    playSound('beep');
-
-    if (countdownTimer) clearInterval(countdownTimer);
-
-    countdownTimer = setInterval(() => {
-      frame += 1;
-      if (frame < values.length) {
-        if (number) {
-          number.textContent = values[frame];
-          number.classList.remove('is-ticking');
-          void number.offsetWidth;
-          number.classList.add('is-ticking');
-        }
-        playSound(values[frame] === '●' ? 'shutter' : 'beep');
-      } else {
-        clearInterval(countdownTimer);
-        leader.animate([
-          { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
-          { opacity: 0, transform: 'translate(-50%, -50%) scale(0.6)' }
-        ], {
-          duration: 500,
-          easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-          fill: 'forwards'
-        }).finished.then(() => {
-          leader.remove();
-          hero.classList.remove('is-counting');
-        });
-      }
-    }, 450);
-  }
-
-  runCountdown();
-
+  // Archived in /archive/hero_legacy_elements.html per Step 3 instructions.
+  // The leader countdown is disabled so the giant title and cutout portrait take center stage.
   const replayBtn = document.getElementById('replayCountdownBtn');
   if (replayBtn) {
     replayBtn.addEventListener('click', () => {
-      runCountdown();
       playSound('click');
     });
   }
