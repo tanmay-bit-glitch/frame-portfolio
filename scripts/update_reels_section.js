@@ -369,3 +369,4 @@ if (!script.includes('initReelsFilter')) {
   fs.writeFileSync('script.js', script, 'utf8');
   console.log('Added initReelsFilter to script.js');
 }
+
