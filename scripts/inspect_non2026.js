@@ -7,3 +7,4 @@ console.log('Total files in raw_photos:', files.length);
 
 const non2026 = files.filter(f => !f.startsWith('2026'));
 console.log('Non-2026 files:', non2026);
+

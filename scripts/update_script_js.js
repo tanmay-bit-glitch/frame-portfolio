@@ -138,3 +138,4 @@ if (lastClosing !== -1) {
 
 fs.writeFileSync(scriptPath, js, 'utf8');
 console.log('Successfully updated script.js with hero video player and minimal lightbox click-to-close!');
+

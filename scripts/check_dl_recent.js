@@ -17,3 +17,4 @@ if (fs.existsSync(dlDir)) {
 } else {
   console.log('dlDir does not exist');
 }
+

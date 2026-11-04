@@ -28,3 +28,4 @@ all.slice(0, 40).forEach(f => {
   const rel = path.relative(rootDir, f.path);
   console.log(`${f.mtime.toISOString()} [${(f.size/1024).toFixed(1)} KB] ${rel}`);
 });
+

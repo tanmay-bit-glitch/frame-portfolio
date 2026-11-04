@@ -416,3 +416,4 @@ const phase4Css = `
 css += '\n' + phase4Css;
 fs.writeFileSync(stylesPath, css, 'utf8');
 console.log('Appended Phase 4 and minimalist lightbox CSS to styles.css');
+

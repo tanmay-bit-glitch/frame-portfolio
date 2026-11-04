@@ -272,3 +272,4 @@ if (html.includes('<!-- INSTAGRAM FOLLOW STRIP -->')) {
 
 fs.writeFileSync(indexPath, html, 'utf8');
 console.log('Successfully updated index.html with new filters, hero video, reels section, bio, and minimal lightbox!');
+

@@ -4,6 +4,41 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Phase 4 Update] — Full Archive Expansion to 61 Curated Frames & User Upload Ingestion
+*Date: 2026-11-04*
+
+### Added & Updated
+1. **Full Archive Ingestion (All 40 Newly Uploaded Candidate Photos):**
+   - Screened all 86 newly uploaded files in `raw_photos/` added by Tanmay at 22:28 IST.
+   - Eliminated burst duplicates and non-image artifacts while preserving every distinct composition.
+   - Identified 40 pristine, high-resolution original photos across automotive, street, night, architecture, and campus life.
+   - Integrated all 40 new frames alongside the 21 existing approved frames, expanding the portfolio archive to **61 curated frames total**.
+   - Sequentially copied and numbered all 61 full-resolution original files into [`curated_photos_review/`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/) (`01_` through `61_`).
+   - Regenerated the interactive visual review catalog [`curated_photos_review/review_catalog.html`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/review_catalog.html) and `REVIEW_INDEX.json` showing all 61 items with real Samsung Galaxy S23 EXIF.
+
+2. **WebP Generation & Gallery Markup Synchronization:**
+   - Generated 120 responsive WebP variants across 640w, 1280w, and 1920w in `assets/photos/` with stripped GPS data and inline blur placeholders.
+   - Updated [`data/photos.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/photos.json) with all 61 verified entries.
+   - Updated [`index.html`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/index.html) gallery filter toolbar with exact counts:
+     - `ALL [61]`
+     - `MACHINES [20]`
+     - `STREET [16]`
+     - `NIGHT [10]`
+     - `PEOPLE [06]`
+     - `HERITAGE [04]`
+     - `CULTURE [03]`
+     - `WILDLIFE [02]`
+   - Synchronized embedded `<script id="photosData">` in `index.html` with all 61 items so runtime filter transitions and minimal blur lightbox operate seamlessly.
+
+3. **Multi-Viewport Visual Verification:**
+   - Captured automated high-fidelity screenshots across viewports:
+     - Gallery Grid (61 Frames): [`phase4-gallery-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-375.png), [`phase4-gallery-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-768.png), [`phase4-gallery-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-1440.png)
+     - Showreel Hero: [`phase4-showreel-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-showreel-375.png), [`phase4-showreel-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-showreel-768.png), [`phase4-showreel-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-showreel-1440.png)
+     - Reels Showcase: [`phase4-reels-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-reels-375.png), [`phase4-reels-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-reels-768.png), [`phase4-reels-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-reels-1440.png)
+     - Full Visual Catalog Overview: [`review-catalog-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/review-catalog-1440.png)
+
+---
+
 ## [Phase 4] — Hero Showreel Video Player, Embedded Reels Showcase, 21 Curated Frames & Minimal Lightbox
 *Date: 2026-11-04*
 
