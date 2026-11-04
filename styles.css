@@ -5486,3 +5486,24 @@ body:hover .custom-cursor {
   }
 }
 
+
+/* Smooth Scroll Offset for Sticky Header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section[id],
+main > section {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+  section[id],
+  main > section {
+    scroll-margin-top: 80px;
+  }
+}

@@ -1645,12 +1645,14 @@
 
   const pageSections = [
     { id: 'top', label: 'HOME', elem: document.getElementById('top') || document.body },
-    { id: 'work', label: 'WORK', elem: document.getElementById('work') },
-    { id: 'instagram', label: 'FEED', elem: document.getElementById('instagram') },
-    { id: 'experience', label: 'CAMPUS', elem: document.getElementById('experience') },
     { id: 'about', label: 'ABOUT', elem: document.getElementById('about') },
     { id: 'showreel', label: 'REEL', elem: document.getElementById('showreel') },
-    { id: 'skills', label: 'CRAFT', elem: document.getElementById('skills') },
+    { id: 'disciplines', label: 'CRAFT', elem: document.getElementById('disciplines') },
+    { id: 'work', label: 'WORK', elem: document.getElementById('work') },
+    { id: 'reels', label: 'REELS', elem: document.getElementById('reels') },
+    { id: 'instagram', label: 'FEED', elem: document.getElementById('instagram') },
+    { id: 'experience', label: 'CAMPUS', elem: document.getElementById('experience') },
+    { id: 'skills', label: 'CREATE', elem: document.getElementById('skills') },
     { id: 'contact', label: 'CONTACT', elem: document.getElementById('contact') }
   ];
 
