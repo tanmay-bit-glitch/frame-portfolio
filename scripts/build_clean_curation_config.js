@@ -390,3 +390,4 @@ module.exports = { final30Definitions };
 
 fs.writeFileSync('scripts/curate_final_30_photos.js', outScript, 'utf8');
 console.log('Successfully wrote scripts/curate_final_30_photos.js with all 30 direct raw_photos mappings!');
+

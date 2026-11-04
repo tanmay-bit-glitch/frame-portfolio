@@ -4,6 +4,31 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Phase 4 Gallery Polish] — End-to-End Grid Alignment, In-Place Click Zoom Focus & Ambient Hover Glow
+*Date: 2026-11-05*
+
+### Added & Improved
+1. **Geometric Frame Alignment (Flawless Row & Baseline Termination):**
+   - Converted the staggered multi-column masonry into a unified 3-column CSS Grid (`grid-template-columns: repeat(3, 1fr)` desktop, 2-column tablet, 1-column mobile).
+   - Applied a consistent `aspect-ratio: 4 / 5` frame container with `object-fit: contain` and soft ambient blurred backdrops.
+   - Guaranteed **zero image cropping** across all aspect ratios (portrait and landscape) while ensuring every single row aligns horizontally.
+   - The final 10th row (Frames 28, 29, 30) terminates flush across all 3 columns at the exact same horizontal baseline with zero jagged empty gaps.
+2. **In-Place Click-to-Focus Mode (No Distracting Sidebar or Description):**
+   - Clicking any photo zooms it directly at its place (`transform: scale(1.065)`, elevated z-index, and crisp amber border glow).
+   - Keeps the preview overlay (frame number, category badge, title, authentic EXIF specs) visible and pinned, exactly matching the hover presentation.
+   - Focus backdrop and surrounding card blurring (`filter: blur(5px) brightness(0.55)`) visually isolates the active frame in a cinema spotlight.
+   - Supports seamless dismissal on backdrop click, card click, or `Escape` key, plus `ArrowLeft` / `ArrowRight` keyboard navigation across frames.
+3. **Dynamic Category Ambient Background Glow on Hover:**
+   - Hovering any frame shifts the section background with a rich atmospheric radial glow tailored to the photo's category (warm amber for Street/Machines, deep cosmic indigo for Night, temple darbar gold for Culture/Heritage, lush emerald for Wildlife).
+   - Surrounding cards gently dim to 0.42 opacity, creating a magnetic spotlight effect around the hovered frame.
+4. **Visual Evidence Captured:**
+   - In-Place Click Focused Zoom: [`phase4-gallery-focused-zoom.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-focused-zoom.png)
+   - Dynamic Ambient Background Shift on Hover: [`phase4-gallery-hover-bg.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-hover-bg.png)
+   - Bottom Row End Alignment: [`phase4-gallery-bottom-aligned.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-bottom-aligned.png)
+   - Full 30-Frame Grid: [`phase4-gallery-full-grid.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-full-grid.png)
+
+---
+
 ## [Curation Bug Fix] — Elimination of All Repeated Photos in Curated Set
 *Date: 2026-11-05*
 

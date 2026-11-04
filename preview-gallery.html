@@ -52,7 +52,7 @@
 <style>
   body { background: #030407 !important; color: #f4f4f7 !important; padding: 24px; min-height: 100vh; }
   .work { padding-top: 10px !important; }
-  .photo-card { opacity: 1 !important; transform: none !important; }
+  .gallery-card { opacity: 1 !important; transform: none !important; }
 </style>
 </head>
 <body>
@@ -87,6 +87,7 @@
       <div class="gallery-masonry" id="galleryGrid" role="region" aria-label="Curated photography gallery">
         <!-- Rendered dynamically by script.js -->
       </div>
+      <div class="gallery-focus-backdrop" id="galleryFocusBackdrop" aria-hidden="true"></div>
 
       <!-- Embedded Raw Photo Data for instant zero-latency loading -->
       <script id="photosData" type="application/json">
