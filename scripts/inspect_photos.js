@@ -6,3 +6,4 @@ console.log('Count:', photos.length);
 photos.forEach((p, idx) => {
   console.log(`${idx + 1}. [${p.id}] [${p.category}] "${p.title}" -> ${p.slug}`);
 });
+

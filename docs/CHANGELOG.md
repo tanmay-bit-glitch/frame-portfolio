@@ -4,6 +4,51 @@ All notable changes across each phase are documented here.
 
 ---
 
+## [Phase 4] — Hero Showreel Video Player, Embedded Reels Showcase, 21 Curated Frames & Minimal Lightbox
+*Date: 2026-11-04*
+
+### Added & Updated
+1. **Curated Photo Selection & Titling Refinements (21 Approved Frames):**
+   - Implemented Tanmay's specific curation removals (photos 2, 4, 5, 9, 10, 12, 23, 24, 25).
+   - Re-numbered the top 21 pristine, visually verified frames sequentially from `01_...` to `21_...` in [`curated_photos_review/`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/curated_photos_review/).
+   - Corrected Frame 11 subject and title to **Bajaj Pulsar NS400Z // Midnight Beam** (`pulsar-ns400z-midnight-beam`, Category: `Machines`).
+   - Regenerated responsive WebP exports across 640w, 1280w, and 1920w (63 files) into `assets/photos/`.
+   - Updated [`data/photos.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/photos.json) and gallery filter toolbar (`ALL [21]`, `MACHINES [06]`, `STREET [05]`, `HERITAGE [02]`, `CULTURE [01]`, `PEOPLE [02]`, `NIGHT [03]`, `WILDLIFE [02]`).
+
+2. **Authentic Bio & Institutional Roles:**
+   - Updated About section and role badges with Tanmay's real credentials:
+     - **Volunteer at V-Click Production** (College Multimedia Club)
+     - **Multimedia Head at SESA** (Software Engineering Student Association)
+     - **Aftermovie Lead at Vishwaconclave**
+
+3. **Minimalist Zoom Lightbox with Backdrop Blur:**
+   - Overhauled lightbox modal per Tanmay's instruction: *"when i click on the photo dont show me the discription of the image just zoom the image and make the bg blur"*.
+   - Removed technical metadata sidebar, camera EXIF, and palette color swatches.
+   - Zoomed photo is centered with pure hardware-accelerated 28px backdrop blur (`backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); background: rgba(3, 4, 7, 0.88)`).
+   - Clicking either the zoomed photo or the blurred backdrop smoothly dismisses the modal.
+
+4. **Hero Showreel In-Page Video Player (`#showreel`):**
+   - Transferred Tanmay's Premiere Pro export `Sequence 04_2.mp4` to `assets/video/hero_showreel.mp4`.
+   - Built custom HTML5 video player with poster frame, custom play/pause overlay, muted-by-default audio toggle, and fullscreen trigger.
+   - Connected `IntersectionObserver` to automatically pause playback when scrolled out of view and resume when scrolled back into view.
+
+5. **Motion Showcase & Embedded Reels Section (`#reels`):**
+   - Created [`data/reels.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/reels.json) cataloging Tanmay's motion productions.
+   - Added Featured 16:9 Production Card: **Vishwaconclave Official Podcast** (`https://youtu.be/kZRQnZmLlC4`) with responsive embedded iframe and fallback button.
+   - Added Responsive 9:16 Vertical Reels Grid:
+     - **SESA Department Aftermovie** (`https://www.instagram.com/p/DfBzMGPtoJJ/`)
+     - **SWD Club Motion Reel** (`https://www.instagram.com/p/DeH4FCFsSzH/`)
+     - **Vishwaconclave Official Aftermovie** (`https://www.instagram.com/p/Dbst6qIMOa_/`)
+   - Removed old mock 01:45 reel placeholder.
+
+6. **Multi-Viewport Evidence:**
+   - Captured automated screenshots across 375px (Mobile), 768px (Tablet), and 1440px (Desktop):
+     - Showreel: [`phase4-showreel-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-showreel-375.png), [`phase4-showreel-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-showreel-768.png), [`phase4-showreel-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-showreel-1440.png)
+     - Reels Showcase: [`phase4-reels-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-reels-375.png), [`phase4-reels-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-reels-768.png), [`phase4-reels-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-reels-1440.png)
+     - Gallery Grid: [`phase4-gallery-375.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-375.png), [`phase4-gallery-768.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-768.png), [`phase4-gallery-1440.png`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/curation/screenshots/phase4-gallery-1440.png)
+
+---
+
 ## [Phase 2 Review & Correction] — Dedicated Photo Review Folder & Attractive Visual Titling
 *Date: 2026-11-04*
 

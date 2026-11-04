@@ -1,0 +1,62 @@
+[
+  {
+    "id": "reel-01",
+    "title": "Vishwaconclave Official Podcast",
+    "type": "youtube",
+    "url": "https://youtu.be/kZRQnZmLlC4",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/kZRQnZmLlC4",
+    "aspect": "16:9",
+    "category": "Podcast & Production",
+    "role": "Video & Audio Editor",
+    "client": "Vishwaconclave",
+    "tools": ["Premiere Pro", "Audition / Sound Design"],
+    "date": "2026",
+    "duration": "TODO",
+    "lesson": "Pacing multi-camera dialogues and balancing speech clarity with ambient noise."
+  },
+  {
+    "id": "reel-02",
+    "title": "SESA Department Aftermovie",
+    "type": "instagram",
+    "url": "https://www.instagram.com/p/DfBzMGPtoJJ/",
+    "embedUrl": "https://www.instagram.com/p/DfBzMGPtoJJ/embed/",
+    "aspect": "9:16",
+    "category": "Aftermovie",
+    "role": "Aftermovie Editor & Multimedia Head",
+    "client": "Software Engineering Student Association (SESA)",
+    "tools": ["Premiere Pro"],
+    "date": "2026",
+    "duration": "TODO",
+    "lesson": "Building rhythm with quick beat-matched cuts while preserving emotional narrative arc."
+  },
+  {
+    "id": "reel-03",
+    "title": "SWD Club Motion Reel",
+    "type": "instagram",
+    "url": "https://www.instagram.com/p/DeH4FCFsSzH/",
+    "embedUrl": "https://www.instagram.com/p/DeH4FCFsSzH/embed/",
+    "aspect": "9:16",
+    "category": "Social Motion",
+    "role": "Reel Editor",
+    "client": "Social Welfare Development (SWD) Club",
+    "tools": ["Premiere Pro", "CapCut"],
+    "date": "2026",
+    "duration": "TODO",
+    "lesson": "Retaining viewer attention in the first 2 seconds through kinetic visual hooks."
+  },
+  {
+    "id": "reel-04",
+    "title": "Vishwaconclave Official Aftermovie",
+    "type": "instagram",
+    "url": "https://www.instagram.com/p/Dbst6qIMOa_/",
+    "embedUrl": "https://www.instagram.com/p/Dbst6qIMOa_/embed/",
+    "aspect": "9:16",
+    "category": "Campus Event",
+    "role": "Aftermovie Editor",
+    "client": "Vishwaconclave / VIT Pune",
+    "tools": ["Premiere Pro"],
+    "date": "2026",
+    "duration": "TODO",
+    "lesson": "Harmonizing crowd cheers, stage lighting shifts, and live concert energy into a single flow."
+  }
+]

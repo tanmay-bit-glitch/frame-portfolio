@@ -17,3 +17,4 @@ console.log('MP4 files:', mp4s);
 const recent = stats.filter(f => f.mtime > new Date('2026-11-04T18:00:00Z'));
 console.log('Files with recent mtime (>18:00 UTC):', recent.length);
 recent.forEach(r => console.log('Recent:', r.name, r.size, r.mtime));
+

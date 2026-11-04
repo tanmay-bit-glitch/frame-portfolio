@@ -20,3 +20,4 @@ console.log('Astrophotography 2026-09-27 photos:', astrophotography.length);
 
 const fortOrMonsoon = files.filter(f => f.startsWith('20260815'));
 console.log('2026-08-15 photos:', fortOrMonsoon.length);
+

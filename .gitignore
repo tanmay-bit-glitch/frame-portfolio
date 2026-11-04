@@ -22,5 +22,6 @@ Thumbs.db
 raw_photos/
 rejects/
 
-# Curation scratch thumbnails
+# Curation scratch thumbnails and profiles
 curation/thumbnails/
+curation/chrome_*/

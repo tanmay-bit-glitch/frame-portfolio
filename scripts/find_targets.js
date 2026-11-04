@@ -29,3 +29,4 @@ function findFiles(dir) {
 }
 
 console.log(findFiles(path.join(__dirname, '..')));
+

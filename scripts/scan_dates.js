@@ -14,3 +14,4 @@ files.forEach(f => {
 });
 
 console.log('Photos grouped by date prefix:', grouped);
+

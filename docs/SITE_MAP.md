@@ -65,25 +65,29 @@ frame-portfolio/
 | **Header** | Sticky navigation bar, wordmark, 24 FPS REC timecode pill, theme switcher, index trigger | Lines 56–99 | Lines 330–480 | Theme switcher: 110–140; Sound FX: 150–190; Timecode: 600–640 |
 | **Menu Overlay** | Fullscreen primary navigation overlay (`#site-menu`) | Lines 102–160 | Lines 500–750 | Menu toggle: 270–320 |
 | **Hero (`#top`)** | 35mm Academy countdown leader, main headline, call-to-actions, location tags | Lines 164–244 | Lines 780–1180 | Leader countdown: 200–260 |
-| **Showreel (`#showreel`)** | In-page showreel player canvas placeholder (shot on S23) | Lines 247–275 | Lines 4805–4830 | Reel modal / play listener: 575–595 |
-| **Disciplines (`#disciplines`)** | "What I Do" (Photography, Event Coverage, Reels, Video Editing) | Lines 278–322 | Lines 4832–4880 | Card fade-in observer: 660–670 |
-| **Selected Work (`#work`)** | Category filter tabs, filmstrip carousel, inspect HUD, and embedded Aftermovie | Lines 325–855 | Lines 1250–1620 | Filtering: 345–380; Lightbox: 460–565 |
-| **Aftermovie (`#aftermovie`)** | Vishwaconclave aftermovie embedded video with fallback link | Lines 830–854 | Lines 4885–4940 | Native iframe embedding |
-| **Instagram (`#instagram`)** | Authentic profile card (@io.tanmay), feed filters, dynamic grid | Lines 857–926 | Lines 2740–3450 | Feed fetch & rendering: 670–880 |
-| **Campus Experience (`#experience`)** | VIT Pune Multimedia roles (Vishwaconclave & SWD) | Lines 929–1059 | Lines 4070–4410 | Focus & hover styles |
-| **About (`#about`)** | Personal story (2 short paragraphs), setup line, chapter laurels, portrait card | Lines 1062–1132 | Lines 1630–1770 | Scroll fade-in observer |
-| **How I Create (`#skills`)** | Creative craft philosophy, quote, disciplines matrix | Lines 1135–1203 | Lines 1860–1985 | Card hover & focus |
-| **Contact (`#contact`)** | Direct Email CTA button, 3-step project builder, coordinates, live IST clock | Lines 1205–1305 | Lines 1990–2180 | Concierge chip state & mailto generation: 590–640; Clock: 645–660 |
-| **Footer** | Wordmark, minimal footer navigation, single mention of secondary accounts | Lines 1485–1515 | Lines 4015–4070 | Back to top anchor |
-| **Lightbox (`#lightboxModal`)** | Shot inspection dialog, dynamic metadata, palette swatches, keyboard controls | Lines 1307–1375 | Lines 2185–2460 | Focus trap, Arrow/Esc keys: 460–565 |
+| **Showreel (`#showreel`)** | In-page showreel player with Premiere Pro MP4 export, audio toggle, fullscreen | Lines 247–297 | Lines 5015–5095 | In-page video controls, autoplay pause-on-scroll: 1680–1755 |
+| **Disciplines (`#disciplines`)** | "What I Do" (Photography, Event Coverage, Reels, Video Editing) | Lines 299–337 | Lines 4832–4880 | Card fade-in observer |
+| **Selected Work (`#work`)** | Category filter tabs, responsive masonry gallery from `photos.json` | Lines 339–390 | Lines 1250–1620 | Dynamic render & filtering: 380–510 |
+| **Instagram Strip (`#instagram`)** | Clean follow strip linking to official account @io.tanmay | Lines 990–1016 | Lines 2740–2800 | Direct link CTA |
+| **Reels Showcase (`#reels`)** | Motion archive: 16:9 podcast embed + 9:16 Instagram reels grid | Lines 1018–1120 | Lines 5100–5220 | Responsive aspect ratios & iframe loading |
+| **Campus Experience (`#experience`)** | College multimedia roles (V-Click, SESA, Vishwaconclave, SWD) | Lines 1122–1215 | Lines 4070–4410 | Focus & hover styles |
+| **About (`#about`)** | Personal story, V-Click & SESA credentials, setup line, portrait card | Lines 1218–1295 | Lines 1630–1770 | Scroll fade-in observer |
+| **How I Create (`#skills`)** | Creative craft philosophy, quote, disciplines matrix | Lines 1298–1365 | Lines 1860–1985 | Card hover & focus |
+| **Contact (`#contact`)** | Direct Email CTA button, 3-step project builder, coordinates, live IST clock | Lines 1368–1470 | Lines 1990–2180 | Concierge chip state & mailto generation |
+| **Footer** | Wordmark, minimal footer navigation, secondary handles | Lines 1475–1505 | Lines 4015–4070 | Back to top anchor |
+| **Lightbox (`#lightboxModal`)** | Minimalist zoom-only view with centered photo & 28px backdrop blur | Lines 1510–1545 | Lines 5340–5400 | Click-to-close backdrop & photo, Esc/Arrow keys |
 
 ---
 
 ## 4. Where Photos and Data Come From
-1. **Portfolio Images:** Raw files stored in `assets/drive_photos/`. Responsive WebP exports generated into `assets/optimized/` via `scripts/optimize-images.js`. Referenced in `index.html` via `data-img`, `srcset`, and `sizes`.
-2. **Instagram Feed:** Managed by `script.js` -> fetches from `/api/instagram/posts` (if live proxy configured in `.env`), otherwise gracefully falls back to `data/instagram-fallback.json` using local asset covers in `assets/ig_covers/`.
-3. **Showreel:** Currently uses preview frame `assets/optimized/17812038516661_2-1280.webp`. Awaiting real video file from Tanmay.
-4. **Vishwaconclave Aftermovie:** Directly embedded from Instagram URL `https://www.instagram.com/p/Dbst6qIMOa_/embed/`.
+1. **Portfolio Images:** Raw files stored in `curated_photos_review/` (21 approved full-res frames) and `raw_photos/`. Responsive WebP exports generated into `assets/photos/` (640w, 1280w, 1920w) with clean slugs and base64 blur placeholders. Dynamic catalog configured in [`data/photos.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/photos.json).
+2. **Showreel Video:** `assets/video/hero_showreel.mp4` (Premiere Pro export `Sequence 04_2.mp4` by Tanmay).
+3. **Reels & Motion Archive:** Configured in [`data/reels.json`](file:///c:/Users/tchav/Documents/Workspace/protfolio/frame/frame-portfolio/data/reels.json):
+   - Vishwaconclave Official Podcast (`https://youtu.be/kZRQnZmLlC4`)
+   - SESA Department Aftermovie (`https://www.instagram.com/p/DfBzMGPtoJJ/`)
+   - SWD Club Motion Reel (`https://www.instagram.com/p/DeH4FCFsSzH/`)
+   - Vishwaconclave Official Aftermovie (`https://www.instagram.com/p/Dbst6qIMOa_/`)
+4. **Instagram Feed:** Clean external follow strip linking directly to @io.tanmay.
 
 ---
 

@@ -11,17 +11,7 @@
   },
   {
     "index": 2,
-    "newName": "02_audi_sport_rally_spec.jpg",
-    "originalFile": "20260406_181043.jpg",
-    "category": "Machines",
-    "title": "Audi Sport No. 9 // Rally Spec",
-    "subject": "Audi Sport #9 race car with rally livery and illuminated amber LED bumper light bars",
-    "orientation": "portrait",
-    "sizeMb": "4.73"
-  },
-  {
-    "index": 3,
-    "newName": "03_slammed_tuner_and_cafe_racer.jpg",
+    "newName": "02_slammed_tuner_and_cafe_racer.jpg",
     "originalFile": "20260406_182413.jpg",
     "category": "Machines",
     "title": "Street Zillas // Tuner & Cafe Racer",
@@ -30,28 +20,8 @@
     "sizeMb": "4.97"
   },
   {
-    "index": 4,
-    "newName": "04_polo_gt_tiffany_blue.jpg",
-    "originalFile": "20260406_175521.jpg",
-    "category": "Machines",
-    "title": "Tiffany Stance // Polo GT Carbon",
-    "subject": "Custom slammed Tiffany Blue Volkswagen Polo GT with carbon hood and demon-eye headlamps",
-    "orientation": "portrait",
-    "sizeMb": "4.63"
-  },
-  {
-    "index": 5,
-    "newName": "05_stealth_altroz_custom.jpg",
-    "originalFile": "20260406_180550.jpg",
-    "category": "Machines",
-    "title": "Dark Knight // Stealth Hatch",
-    "subject": "Matte black custom Tata Altroz with red aero splitter accent and custom vented hood",
-    "orientation": "portrait",
-    "sizeMb": "4.45"
-  },
-  {
-    "index": 6,
-    "newName": "06_stunt_rider_rolling_endo.jpg",
+    "index": 3,
+    "newName": "03_stunt_rider_rolling_endo.jpg",
     "originalFile": "20260621_100920(0).jpg",
     "category": "Machines",
     "title": "Defying Gravity // Stoppie in Motion",
@@ -60,8 +30,8 @@
     "sizeMb": "2.59"
   },
   {
-    "index": 7,
-    "newName": "07_aprilia_rs457_superbike.jpg",
+    "index": 4,
+    "newName": "04_aprilia_rs457_superbike.jpg",
     "originalFile": "20261014_143051.jpg",
     "category": "Machines",
     "title": "Factory Racing // Aprilia RS 457",
@@ -70,8 +40,8 @@
     "sizeMb": "2.25"
   },
   {
-    "index": 8,
-    "newName": "08_royal_enfield_cruiser_meet.jpg",
+    "index": 5,
+    "newName": "05_royal_enfield_cruiser_meet.jpg",
     "originalFile": "20261014_123458.jpg",
     "category": "Machines",
     "title": "The Twin Rumble // Shotgun 650 Meet",
@@ -80,48 +50,18 @@
     "sizeMb": "5.43"
   },
   {
-    "index": 9,
-    "newName": "09_thruxton_cb350_lineup.jpg",
-    "originalFile": "20261014_131807 (1).jpg",
-    "category": "Machines",
-    "title": "Classic Iron // Thruxton & CB350 Lineup",
-    "subject": "Lineup of Triumph Thruxton 400 and red Honda CB350RS under event canopies",
-    "orientation": "portrait",
-    "sizeMb": "3.63"
-  },
-  {
-    "index": 10,
-    "newName": "10_defender_urban_silhouette.jpg",
-    "originalFile": "20260315_151841.jpg",
-    "category": "Machines",
-    "title": "Obsidian Presence // Defender 110",
-    "subject": "All-black Land Rover Defender with illuminated square LED taillights on avenue",
-    "orientation": "portrait",
-    "sizeMb": "2.14"
-  },
-  {
-    "index": 11,
-    "newName": "11_yamaha_mt15_night_glow.jpg",
+    "index": 6,
+    "newName": "06_pulsar_ns400z_midnight_beam.jpg",
     "originalFile": "20260529_231551.jpg",
     "category": "Machines",
-    "title": "Midnight Stalker // MT-15 Beam",
-    "subject": "Rider on Yamaha MT-15 with twin projector LED headlights piercing dark street",
+    "title": "Bajaj Pulsar NS400Z // Midnight Beam",
+    "subject": "Rider on Bajaj Pulsar NS400Z with twin projector LED headlights piercing dark street",
     "orientation": "portrait",
     "sizeMb": "2.43"
   },
   {
-    "index": 12,
-    "newName": "12_ktm_duke_midnight_post.jpg",
-    "originalFile": "20260530_002201.jpg",
-    "category": "Machines",
-    "title": "Midnight Vigil // Duke Under the Lamppost",
-    "subject": "Helmeted rider seated on KTM Duke motorcycle under lamppost electrical box at midnight",
-    "orientation": "portrait",
-    "sizeMb": "3.36"
-  },
-  {
-    "index": 13,
-    "newName": "13_south_mumbai_victorian_heritage.jpg",
+    "index": 7,
+    "newName": "07_south_mumbai_victorian_heritage.jpg",
     "originalFile": "20260510_055252.jpg",
     "category": "Street",
     "title": "Colonial Monoliths // Fort Heritage Corridor",
@@ -130,8 +70,8 @@
     "sizeMb": "1.51"
   },
   {
-    "index": 14,
-    "newName": "14_rail_lines_suspension_bridge.jpg",
+    "index": 8,
+    "newName": "08_rail_lines_suspension_bridge.jpg",
     "originalFile": "20260624_175504.jpg",
     "category": "Street",
     "title": "Steel Arteries // Cable-Stayed Horizon",
@@ -140,8 +80,8 @@
     "sizeMb": "4.30"
   },
   {
-    "index": 15,
-    "newName": "15_night_flower_market_glow.jpg",
+    "index": 9,
+    "newName": "09_night_flower_market_glow.jpg",
     "originalFile": "20260805_190030 (1).jpg",
     "category": "Street",
     "title": "Midnight Bloom // The Florist Bazaar",
@@ -150,8 +90,8 @@
     "sizeMb": "5.29"
   },
   {
-    "index": 16,
-    "newName": "16_pune_chowk_summer_transit.jpg",
+    "index": 10,
+    "newName": "10_pune_chowk_summer_transit.jpg",
     "originalFile": "20260605_135445.jpg",
     "category": "Street",
     "title": "Pulse of Pune // Midday Chowk",
@@ -160,8 +100,8 @@
     "sizeMb": "10.58"
   },
   {
-    "index": 17,
-    "newName": "17_urban_canyon_monsoon_sky.jpg",
+    "index": 11,
+    "newName": "11_urban_canyon_monsoon_sky.jpg",
     "originalFile": "20260728_172218.jpg",
     "category": "Street",
     "title": "Skyward Breach // Urban Monsoon Sky",
@@ -170,8 +110,8 @@
     "sizeMb": "3.96"
   },
   {
-    "index": 18,
-    "newName": "18_ancient_hemadpanthi_temple_steps.jpg",
+    "index": 12,
+    "newName": "12_ancient_hemadpanthi_temple_steps.jpg",
     "originalFile": "20260324_185407.jpg",
     "category": "Heritage",
     "title": "Echoes in Basalt // Hemadpanthi Sanctum Portal",
@@ -180,8 +120,8 @@
     "sizeMb": "5.15"
   },
   {
-    "index": 19,
-    "newName": "19_stone_temple_shikhara_facade.jpg",
+    "index": 13,
+    "newName": "13_stone_temple_shikhara_facade.jpg",
     "originalFile": "20260324_185514 (1).jpg",
     "category": "Heritage",
     "title": "Monument of Faith // Medieval Stone Sanctuary",
@@ -190,8 +130,8 @@
     "sizeMb": "4.91"
   },
   {
-    "index": 20,
-    "newName": "20_dagdusheth_ganpati_darbar.jpg",
+    "index": 14,
+    "newName": "14_dagdusheth_ganpati_darbar.jpg",
     "originalFile": "20260916_201426.jpg",
     "category": "Culture",
     "title": "Golden Darbar // Shreemant Dagdusheth Celebration",
@@ -200,8 +140,8 @@
     "sizeMb": "2.26"
   },
   {
-    "index": 21,
-    "newName": "21_father_daughter_candid_smile.jpg",
+    "index": 15,
+    "newName": "15_father_daughter_candid_smile.jpg",
     "originalFile": "20260629_125939.jpg",
     "category": "People",
     "title": "Pure Radiance // Father & Daughter",
@@ -210,8 +150,8 @@
     "sizeMb": "1.92"
   },
   {
-    "index": 22,
-    "newName": "22_elder_in_gandhi_topi_monochrome.jpg",
+    "index": 16,
+    "newName": "16_elder_in_gandhi_topi_monochrome.jpg",
     "originalFile": "20260214_101223.jpg",
     "category": "People",
     "title": "The Silent Patriarch // Old Pune Ghats",
@@ -220,38 +160,8 @@
     "sizeMb": "4.95"
   },
   {
-    "index": 23,
-    "newName": "23_car_meet_street_culture.jpg",
-    "originalFile": "20260406_175844.jpg",
-    "category": "People",
-    "title": "Car Meet Chronicles // Subculture Dialogue",
-    "subject": "Candid conversation at car meet: guy in Bonkers graphic tee and girl with VR46 cap & tattoo sleeve",
-    "orientation": "portrait",
-    "sizeMb": "1.83"
-  },
-  {
-    "index": 24,
-    "newName": "24_girl_gazing_sky_on_scooter.jpg",
-    "originalFile": "20260925_075825(0).jpg",
-    "category": "People",
-    "title": "Daydreaming at Dawn // Field Solitude",
-    "subject": "Young woman reclining back on orange TVS Jupiter scooter looking up at the sky in open field",
-    "orientation": "portrait",
-    "sizeMb": "5.57"
-  },
-  {
-    "index": 25,
-    "newName": "25_kart_track_portrait.jpg",
-    "originalFile": "20261025_164506(0) (1).jpg",
-    "category": "People",
-    "title": "Paddock Cool // Go-Kart Circuit Stance",
-    "subject": "Young man in sunglasses and F1 graphic tee standing by yellow tire barriers of go-kart track",
-    "orientation": "portrait",
-    "sizeMb": "5.25"
-  },
-  {
-    "index": 26,
-    "newName": "26_rock_guitarist_stage_spotlight.jpg",
+    "index": 17,
+    "newName": "17_rock_guitarist_stage_spotlight.jpg",
     "originalFile": "20260412_214957 (2).jpg",
     "category": "Night",
     "title": "Riff Under Spotlight // Live Stage Energy",
@@ -260,8 +170,8 @@
     "sizeMb": "0.66"
   },
   {
-    "index": 27,
-    "newName": "27_stargazer_30s_night_sky.jpg",
+    "index": 18,
+    "newName": "18_stargazer_30s_night_sky.jpg",
     "originalFile": "20260927_043405.jpg",
     "category": "Night",
     "title": "Infinite Canvas // 30-Second Star Trail Gaze",
@@ -270,8 +180,8 @@
     "sizeMb": "2.29"
   },
   {
-    "index": 28,
-    "newName": "28_city_overlook_sunset_silhouette.jpg",
+    "index": 19,
+    "newName": "19_city_overlook_sunset_silhouette.jpg",
     "originalFile": "20260306_190702.jpg",
     "category": "Night",
     "title": "Twilight Horizon // Overlook Above the City",
@@ -280,8 +190,8 @@
     "sizeMb": "2.78"
   },
   {
-    "index": 29,
-    "newName": "29_indian_leopard_through_wire.jpg",
+    "index": 20,
+    "newName": "20_indian_leopard_through_wire.jpg",
     "originalFile": "IMG_20260829_165902633.jpg",
     "category": "Wildlife",
     "title": "Gaze Through the Mesh // Indian Leopard",
@@ -290,8 +200,8 @@
     "sizeMb": "5.76"
   },
   {
-    "index": 30,
-    "newName": "30_birds_silk_cotton_sunset.jpg",
+    "index": 21,
+    "newName": "21_birds_silk_cotton_sunset.jpg",
     "originalFile": "20260218_180805 (3).jpg",
     "category": "Wildlife",
     "title": "Dusk Duet // Silk-Cotton Crimson Sunset",

@@ -164,3 +164,4 @@ const rootReviewDir = path.join(__dirname, '../../curated_photos_review');
 if (fs.existsSync(rootReviewDir)) {
   fs.writeFileSync(path.join(rootReviewDir, 'review_catalog.html'), html);
 }
+

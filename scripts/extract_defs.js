@@ -12,3 +12,4 @@ if (match) {
 } else {
   console.log('Could not find photoDefinitions');
 }
+
