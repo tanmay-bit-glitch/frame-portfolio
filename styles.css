@@ -5422,3 +5422,17 @@ body:hover .custom-cursor {
   }
 }
 
+
+.reels-grid-work {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+@media (max-width: 900px) {
+  .reels-grid-work {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .reels-grid-work {
+    grid-template-columns: 1fr !important;
+  }
+}
