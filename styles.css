@@ -4,6 +4,9 @@
    ========================================================================== */
 
 :root {
+  --font-main: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Archivo Black', 'Archivo', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   /* Dark Mode (NOIR / Default) */
   --bg: #070706;
   --bg-surface: #0e0e0c;
@@ -1710,7 +1713,7 @@ body:hover .custom-cursor {
 }
 
 .card-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 700;
   color: #fff;
@@ -1770,8 +1773,8 @@ body:hover .custom-cursor {
    ========================================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 60px;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 50px;
   align-items: center;
 }
 
@@ -1850,8 +1853,10 @@ body:hover .custom-cursor {
 /* Portrait Card with Film Sprockets */
 .about-portrait-card {
   position: relative;
-  max-width: 310px;
+  width: 100%;
+  max-width: 360px;
   margin: 0 auto;
+  align-self: center;
 }
 
 .portrait-frame {
@@ -4202,11 +4207,12 @@ body:hover .custom-cursor {
 }
 
 .campus-main-heading {
-  font-family: 'Syne', 'Archivo Black', sans-serif;
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5.5vw, 68px);
   text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+  margin-bottom: 24px;
 }
 
 .campus-header-subtitle {
@@ -4295,9 +4301,9 @@ body:hover .custom-cursor {
 
 /* Campus Cards Grid */
 .campus-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
 .campus-card {
@@ -5436,3 +5442,20 @@ body:hover .custom-cursor {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Responsive Campus & About Fix */
+
+@media (max-width: 1024px) {
+  .campus-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-portrait-card {
+    max-width: 320px;
+  }
+}
+

@@ -26,3 +26,4 @@ capture('preview-reels.html', '15-work-reels-desktop.png', 1440, 960);
 capture('preview-reels.html', '16-work-reels-tablet.png', 768, 1100);
 capture('preview-reels.html', '17-work-reels-mobile.png', 375, 800);
 capture('index.html', '18-index-work-reels.png', 1440, 1100);
+
