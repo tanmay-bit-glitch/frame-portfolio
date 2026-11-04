@@ -480,7 +480,7 @@
 
     const data = frame.dataset;
     document.getElementById('lbIndex').textContent = `FRAME 00${currentProjectIndex + 1} // REEL 0${currentProjectIndex + 1}`;
-    document.getElementById('lbAspect').textContent = data.aspect || '2.39:1 SCOPE';
+    const lbAspectEl = document.getElementById('lbAspect'); if (lbAspectEl) lbAspectEl.textContent = data.aspect || '';
     document.getElementById('lbImage').src = data.img;
     document.getElementById('lbImage').alt = data.title;
     document.getElementById('lbCategory').textContent = data.type || 'EDITORIAL';
@@ -1343,6 +1343,15 @@
   let isDraggingScrollHud = false;
 
   function updateScrollTelemetry() {
+    if (!opticScrollHud) {
+      if (laserBeamFill) {
+        const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight) - window.innerHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        laserBeamFill.style.width = `${progress}%`;
+      }
+      return;
+    }
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
     const docHeight = Math.max(
       document.body.scrollHeight, document.documentElement.scrollHeight,
