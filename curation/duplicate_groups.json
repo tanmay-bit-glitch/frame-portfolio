@@ -1,0 +1,830 @@
+[
+  {
+    "key": "1781203851666",
+    "winner": "1781203851666(1) (2).jpg",
+    "winnerDetails": "768x1024, 364089 bytes, Sharpness: 269",
+    "losers": [
+      {
+        "filename": "1781203851666(1).jpg",
+        "details": "768x1366, 458663 bytes, Sharpness: 212"
+      },
+      {
+        "filename": "1781203851666(1) (1).jpg",
+        "details": "768x1366, 443365 bytes, Sharpness: 208"
+      }
+    ],
+    "reason": "Kept 1781203851666(1) (2).jpg: highest resolution (768x1024) and best sharpness/dynamic range (269 score) without duplicate cropping."
+  },
+  {
+    "key": "20251130_113036",
+    "winner": "20251130_113036(1) (1).jpg",
+    "winnerDetails": "1809x3213, 1849000 bytes, Sharpness: 342",
+    "losers": [
+      {
+        "filename": "20251130_113036(1).jpg",
+        "details": "1809x3213, 1834425 bytes, Sharpness: 335"
+      }
+    ],
+    "reason": "Kept 20251130_113036(1) (1).jpg: highest resolution (1809x3213) and best sharpness/dynamic range (342 score) without duplicate cropping."
+  },
+  {
+    "key": "20260113_180446",
+    "winner": "20260113_180446.jpg",
+    "winnerDetails": "1625x2887, 1066473 bytes, Sharpness: 13",
+    "losers": [
+      {
+        "filename": "20260113_180446 (1).jpg",
+        "details": "2990x1682, 761936 bytes, Sharpness: 15"
+      }
+    ],
+    "reason": "Kept 20260113_180446.jpg: highest resolution (1625x2887) and best sharpness/dynamic range (13 score) without duplicate cropping."
+  },
+  {
+    "key": "20260218_180805",
+    "winner": "20260218_180805 (3).jpg",
+    "winnerDetails": "2999x1687, 2118200 bytes, Sharpness: 689",
+    "losers": [
+      {
+        "filename": "20260218_180805 (2).jpg",
+        "details": "2999x1687, 2218835 bytes, Sharpness: 656"
+      },
+      {
+        "filename": "20260218_180805 (4).jpg",
+        "details": "2999x1687, 2120118 bytes, Sharpness: 640"
+      },
+      {
+        "filename": "20260218_180805.jpg",
+        "details": "1941x1092, 1144443 bytes, Sharpness: 569"
+      }
+    ],
+    "reason": "Kept 20260218_180805 (3).jpg: highest resolution (2999x1687) and best sharpness/dynamic range (689 score) without duplicate cropping."
+  },
+  {
+    "key": "20260315_151841",
+    "winner": "20260315_151841 (1).jpg",
+    "winnerDetails": "1932x3433, 3869575 bytes, Sharpness: 2283",
+    "losers": [
+      {
+        "filename": "20260315_151841.jpg",
+        "details": "1816x2422, 2240500 bytes, Sharpness: 1716"
+      }
+    ],
+    "reason": "Kept 20260315_151841 (1).jpg: highest resolution (1932x3433) and best sharpness/dynamic range (2283 score) without duplicate cropping."
+  },
+  {
+    "key": "20260324_185407",
+    "winner": "20260324_185407.jpg",
+    "winnerDetails": "3000x4000, 5400556 bytes, Sharpness: 200",
+    "losers": [
+      {
+        "filename": "20260324_185407 (1).jpg",
+        "details": "3000x1688, 3402259 bytes, Sharpness: 442"
+      }
+    ],
+    "reason": "Kept 20260324_185407.jpg: highest resolution (3000x4000) and best sharpness/dynamic range (200 score) without duplicate cropping."
+  },
+  {
+    "key": "20260324_185514",
+    "winner": "20260324_185514.jpg",
+    "winnerDetails": "3549x2662, 2723487 bytes, Sharpness: 566",
+    "losers": [
+      {
+        "filename": "20260324_185514 (1).jpg",
+        "details": "3621x2037, 5152095 bytes, Sharpness: 412"
+      }
+    ],
+    "reason": "Kept 20260324_185514.jpg: highest resolution (3549x2662) and best sharpness/dynamic range (566 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_175521",
+    "winner": "20260406_175521.jpg",
+    "winnerDetails": "2210x3925, 4852824 bytes, Sharpness: 953",
+    "losers": [
+      {
+        "filename": "20260406_175521 (2).jpg",
+        "details": "2252x3005, 4142981 bytes, Sharpness: 1336"
+      },
+      {
+        "filename": "20260406_175521 (1).jpg",
+        "details": "2252x3005, 3965763 bytes, Sharpness: 1249"
+      }
+    ],
+    "reason": "Kept 20260406_175521.jpg: highest resolution (2210x3925) and best sharpness/dynamic range (953 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_180550",
+    "winner": "20260406_180550.jpg",
+    "winnerDetails": "1994x3542, 4666868 bytes, Sharpness: 1510",
+    "losers": [
+      {
+        "filename": "20260406_180550(1).jpg",
+        "details": "1994x3542, 3488721 bytes, Sharpness: 1387"
+      },
+      {
+        "filename": "20260406_180550 (1).jpg",
+        "details": "1994x2659, 3217706 bytes, Sharpness: 1010"
+      }
+    ],
+    "reason": "Kept 20260406_180550.jpg: highest resolution (1994x3542) and best sharpness/dynamic range (1510 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_181043",
+    "winner": "20260406_181043.jpg",
+    "winnerDetails": "2252x4000, 4960606 bytes, Sharpness: 1324",
+    "losers": [
+      {
+        "filename": "20260406_181043 (1).jpg",
+        "details": "2252x3003, 3647300 bytes, Sharpness: 1265"
+      }
+    ],
+    "reason": "Kept 20260406_181043.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (1324 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_181100",
+    "winner": "20260406_181100.jpg",
+    "winnerDetails": "2084x3701, 4110875 bytes, Sharpness: 833",
+    "losers": [
+      {
+        "filename": "20260406_181100 (1).jpg",
+        "details": "2083x2779, 2744757 bytes, Sharpness: 1242"
+      }
+    ],
+    "reason": "Kept 20260406_181100.jpg: highest resolution (2084x3701) and best sharpness/dynamic range (833 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_182009",
+    "winner": "20260406_182009.jpg",
+    "winnerDetails": "1983x3522, 3018464 bytes, Sharpness: 291",
+    "losers": [
+      {
+        "filename": "20260406_182009 (2).jpg",
+        "details": "1905x2541, 2076753 bytes, Sharpness: 380"
+      },
+      {
+        "filename": "20260406_182009 (1).jpg",
+        "details": "1905x2541, 2019965 bytes, Sharpness: 369"
+      }
+    ],
+    "reason": "Kept 20260406_182009.jpg: highest resolution (1983x3522) and best sharpness/dynamic range (291 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_182131",
+    "winner": "20260406_182131.jpg",
+    "winnerDetails": "2252x4000, 3352367 bytes, Sharpness: 591",
+    "losers": [
+      {
+        "filename": "20260406_182131 (1).jpg",
+        "details": "1820x2426, 1997308 bytes, Sharpness: 760"
+      }
+    ],
+    "reason": "Kept 20260406_182131.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (591 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_182413",
+    "winner": "20260406_182413.jpg",
+    "winnerDetails": "2252x4000, 5211481 bytes, Sharpness: 1941",
+    "losers": [
+      {
+        "filename": "20260406_182413 (1).jpg",
+        "details": "2251x3002, 3870797 bytes, Sharpness: 1790"
+      },
+      {
+        "filename": "20260406_182413 (2).jpg",
+        "details": "2251x3002, 3506442 bytes, Sharpness: 1663"
+      }
+    ],
+    "reason": "Kept 20260406_182413.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (1941 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_183233",
+    "winner": "20260406_183233 (1).jpg",
+    "winnerDetails": "2252x4000, 2955086 bytes, Sharpness: 411",
+    "losers": [
+      {
+        "filename": "20260406_183233.jpg",
+        "details": "2252x4000, 2955020 bytes, Sharpness: 411"
+      },
+      {
+        "filename": "20260406_183233 (2).jpg",
+        "details": "2251x3002, 2309681 bytes, Sharpness: 491"
+      }
+    ],
+    "reason": "Kept 20260406_183233 (1).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (411 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_183720",
+    "winner": "20260406_183720.jpg",
+    "winnerDetails": "2016x3581, 2804720 bytes, Sharpness: 837",
+    "losers": [
+      {
+        "filename": "20260406_183720 (1).jpg",
+        "details": "2071x2764, 2026756 bytes, Sharpness: 733"
+      }
+    ],
+    "reason": "Kept 20260406_183720.jpg: highest resolution (2016x3581) and best sharpness/dynamic range (837 score) without duplicate cropping."
+  },
+  {
+    "key": "20260406_191816",
+    "winner": "20260406_191816.jpg",
+    "winnerDetails": "2153x3822, 1105330 bytes, Sharpness: 23",
+    "losers": [
+      {
+        "filename": "20260406_191816 (1).jpg",
+        "details": "2173x2897, 893403 bytes, Sharpness: 29"
+      }
+    ],
+    "reason": "Kept 20260406_191816.jpg: highest resolution (2153x3822) and best sharpness/dynamic range (23 score) without duplicate cropping."
+  },
+  {
+    "key": "20260412_214957",
+    "winner": "20260412_214957 (2).jpg",
+    "winnerDetails": "2252x3004, 694949 bytes, Sharpness: 66",
+    "losers": [
+      {
+        "filename": "20260412_214957.jpg",
+        "details": "2252x1268, 466276 bytes, Sharpness: 95"
+      },
+      {
+        "filename": "20260412_214957 (1).jpg",
+        "details": "2252x1268, 466266 bytes, Sharpness: 95"
+      }
+    ],
+    "reason": "Kept 20260412_214957 (2).jpg: highest resolution (2252x3004) and best sharpness/dynamic range (66 score) without duplicate cropping."
+  },
+  {
+    "key": "20260419_183555",
+    "winner": "20260419_183555.jpg",
+    "winnerDetails": "1854x3293, 2550586 bytes, Sharpness: 155",
+    "losers": [
+      {
+        "filename": "20260419_183555(1).jpg",
+        "details": "1854x3292, 1890624 bytes, Sharpness: 105"
+      }
+    ],
+    "reason": "Kept 20260419_183555.jpg: highest resolution (1854x3293) and best sharpness/dynamic range (155 score) without duplicate cropping."
+  },
+  {
+    "key": "20260419_190831",
+    "winner": "20260419_190831(0) (2).jpg",
+    "winnerDetails": "1635x2180, 662441 bytes, Sharpness: 221",
+    "losers": [
+      {
+        "filename": "20260419_190831(0) (1).jpg",
+        "details": "1635x2180, 653636 bytes, Sharpness: 215"
+      },
+      {
+        "filename": "20260419_190831(0).jpg",
+        "details": "1227x2180, 647657 bytes, Sharpness: 140"
+      }
+    ],
+    "reason": "Kept 20260419_190831(0) (2).jpg: highest resolution (1635x2180) and best sharpness/dynamic range (221 score) without duplicate cropping."
+  },
+  {
+    "key": "20260510_055626",
+    "winner": "20260510_055626.jpg",
+    "winnerDetails": "3421x1927, 2297032 bytes, Sharpness: 64",
+    "losers": [
+      {
+        "filename": "20260510_055626 (1).jpg",
+        "details": "3421x1927, 2265804 bytes, Sharpness: 54"
+      }
+    ],
+    "reason": "Kept 20260510_055626.jpg: highest resolution (3421x1927) and best sharpness/dynamic range (64 score) without duplicate cropping."
+  },
+  {
+    "key": "20260514_010124",
+    "winner": "20260514_010124.jpg",
+    "winnerDetails": "1843x3277, 1508883 bytes, Sharpness: 578",
+    "losers": [
+      {
+        "filename": "20260514_010124 (1).jpg",
+        "details": "1843x3277, 1393658 bytes, Sharpness: 479"
+      },
+      {
+        "filename": "20260514_010124 (2).jpg",
+        "details": "1693x3009, 1101697 bytes, Sharpness: 503"
+      }
+    ],
+    "reason": "Kept 20260514_010124.jpg: highest resolution (1843x3277) and best sharpness/dynamic range (578 score) without duplicate cropping."
+  },
+  {
+    "key": "20260514_011720",
+    "winner": "20260514_011720(0).jpg",
+    "winnerDetails": "2252x4000, 2662888 bytes, Sharpness: 187",
+    "losers": [
+      {
+        "filename": "20260514_011720(0) (1).jpg",
+        "details": "2252x4000, 2486817 bytes, Sharpness: 153"
+      }
+    ],
+    "reason": "Kept 20260514_011720(0).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (187 score) without duplicate cropping."
+  },
+  {
+    "key": "20260529_231034",
+    "winner": "20260529_231034.jpg",
+    "winnerDetails": "3998x2249, 2697604 bytes, Sharpness: 173",
+    "losers": [
+      {
+        "filename": "20260529_231034(1).png",
+        "details": "3649x575, 1178135 bytes, Sharpness: 4120"
+      }
+    ],
+    "reason": "Kept 20260529_231034.jpg: highest resolution (3998x2249) and best sharpness/dynamic range (173 score) without duplicate cropping."
+  },
+  {
+    "key": "20260529_233158",
+    "winner": "20260529_233158.jpg",
+    "winnerDetails": "4000x2252, 2864434 bytes, Sharpness: 565",
+    "losers": [
+      {
+        "filename": "20260529_233158 (1).jpg",
+        "details": "3004x2252, 2126712 bytes, Sharpness: 526"
+      }
+    ],
+    "reason": "Kept 20260529_233158.jpg: highest resolution (4000x2252) and best sharpness/dynamic range (565 score) without duplicate cropping."
+  },
+  {
+    "key": "20260529_233446",
+    "winner": "20260529_233446.jpg",
+    "winnerDetails": "2252x4000, 2383413 bytes, Sharpness: 312",
+    "losers": [
+      {
+        "filename": "20260529_233446 (1).jpg",
+        "details": "2252x2816, 1735820 bytes, Sharpness: 354"
+      }
+    ],
+    "reason": "Kept 20260529_233446.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (312 score) without duplicate cropping."
+  },
+  {
+    "key": "20260529_235248",
+    "winner": "20260529_235248(1) (1).jpg",
+    "winnerDetails": "2252x4000, 2221210 bytes, Sharpness: 659",
+    "losers": [
+      {
+        "filename": "20260529_235248(1).jpg",
+        "details": "2252x4000, 3356394 bytes, Sharpness: 579"
+      }
+    ],
+    "reason": "Kept 20260529_235248(1) (1).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (659 score) without duplicate cropping."
+  },
+  {
+    "key": "20260530_001144",
+    "winner": "20260530_001144 (1).jpg",
+    "winnerDetails": "1504x2672, 748895 bytes, Sharpness: 207",
+    "losers": [
+      {
+        "filename": "20260530_001144.jpg",
+        "details": "1504x2672, 701322 bytes, Sharpness: 184"
+      }
+    ],
+    "reason": "Kept 20260530_001144 (1).jpg: highest resolution (1504x2672) and best sharpness/dynamic range (207 score) without duplicate cropping."
+  },
+  {
+    "key": "20260530_001239",
+    "winner": "20260530_001239.jpg",
+    "winnerDetails": "3427x1927, 1917766 bytes, Sharpness: 286",
+    "losers": [
+      {
+        "filename": "20260530_001239(1).jpg",
+        "details": "3426x1926, 1332193 bytes, Sharpness: 250"
+      }
+    ],
+    "reason": "Kept 20260530_001239.jpg: highest resolution (3427x1927) and best sharpness/dynamic range (286 score) without duplicate cropping."
+  },
+  {
+    "key": "20260530_175750",
+    "winner": "20260530_175750.jpg",
+    "winnerDetails": "2252x4000, 5262064 bytes, Sharpness: 938",
+    "losers": [
+      {
+        "filename": "20260530_175750 (1).jpg",
+        "details": "2251x3003, 3645038 bytes, Sharpness: 719"
+      }
+    ],
+    "reason": "Kept 20260530_175750.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (938 score) without duplicate cropping."
+  },
+  {
+    "key": "20260605_135445",
+    "winner": "20260605_135445.jpg",
+    "winnerDetails": "4391x7804, 11089414 bytes, Sharpness: 471",
+    "losers": [
+      {
+        "filename": "20260605_135445(1).jpg",
+        "details": "2598x4618, 2769486 bytes, Sharpness: 437"
+      }
+    ],
+    "reason": "Kept 20260605_135445.jpg: highest resolution (4391x7804) and best sharpness/dynamic range (471 score) without duplicate cropping."
+  },
+  {
+    "key": "20260606_135430",
+    "winner": "20260606_135430 (1).jpg",
+    "winnerDetails": "1944x3455, 3146383 bytes, Sharpness: 1001",
+    "losers": [
+      {
+        "filename": "20260606_135430.jpg",
+        "details": "2032x2711, 2574243 bytes, Sharpness: 1087"
+      }
+    ],
+    "reason": "Kept 20260606_135430 (1).jpg: highest resolution (1944x3455) and best sharpness/dynamic range (1001 score) without duplicate cropping."
+  },
+  {
+    "key": "20260619_134023",
+    "winner": "20260619_134023.jpg",
+    "winnerDetails": "1776x3156, 2101274 bytes, Sharpness: 312",
+    "losers": [
+      {
+        "filename": "20260619_134023 (1).jpg",
+        "details": "1776x3156, 1443291 bytes, Sharpness: 215"
+      }
+    ],
+    "reason": "Kept 20260619_134023.jpg: highest resolution (1776x3156) and best sharpness/dynamic range (312 score) without duplicate cropping."
+  },
+  {
+    "key": "20260621_100920",
+    "winner": "20260621_100920(0).jpg",
+    "winnerDetails": "1855x3295, 2716161 bytes, Sharpness: 558",
+    "losers": [
+      {
+        "filename": "20260621_100920(0) (1).jpg",
+        "details": "1974x2632, 2643789 bytes, Sharpness: 736"
+      }
+    ],
+    "reason": "Kept 20260621_100920(0).jpg: highest resolution (1855x3295) and best sharpness/dynamic range (558 score) without duplicate cropping."
+  },
+  {
+    "key": "20260622_221147",
+    "winner": "20260622_221147.jpg",
+    "winnerDetails": "2250x4000, 1946657 bytes, Sharpness: 332",
+    "losers": [
+      {
+        "filename": "20260622_221147(1).jpg",
+        "details": "2250x4000, 1100949 bytes, Sharpness: 223"
+      }
+    ],
+    "reason": "Kept 20260622_221147.jpg: highest resolution (2250x4000) and best sharpness/dynamic range (332 score) without duplicate cropping."
+  },
+  {
+    "key": "20260624_183116",
+    "winner": "20260624_183116.jpg",
+    "winnerDetails": "1864x3316, 1171307 bytes, Sharpness: 14",
+    "losers": [
+      {
+        "filename": "20260624_183116 (1).jpg",
+        "details": "1864x3316, 858639 bytes, Sharpness: 10"
+      },
+      {
+        "filename": "20260624_183116 (2).jpg",
+        "details": "1864x3316, 858639 bytes, Sharpness: 10"
+      }
+    ],
+    "reason": "Kept 20260624_183116.jpg: highest resolution (1864x3316) and best sharpness/dynamic range (14 score) without duplicate cropping."
+  },
+  {
+    "key": "20260629_125939",
+    "winner": "20260629_125939.jpg",
+    "winnerDetails": "2252x4000, 2010062 bytes, Sharpness: 128",
+    "losers": [
+      {
+        "filename": "20260629_125939 (1).jpg",
+        "details": "2251x3002, 1597521 bytes, Sharpness: 127"
+      }
+    ],
+    "reason": "Kept 20260629_125939.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (128 score) without duplicate cropping."
+  },
+  {
+    "key": "20260629_202049",
+    "winner": "20260629_202049(0) (1).jpg",
+    "winnerDetails": "2251x3003, 1988254 bytes, Sharpness: 640",
+    "losers": [
+      {
+        "filename": "20260629_202049(0).jpg",
+        "details": "1663x2954, 1565179 bytes, Sharpness: 576"
+      }
+    ],
+    "reason": "Kept 20260629_202049(0) (1).jpg: highest resolution (2251x3003) and best sharpness/dynamic range (640 score) without duplicate cropping."
+  },
+  {
+    "key": "20260629_203522",
+    "winner": "20260629_203522(1).jpg",
+    "winnerDetails": "1473x2618, 1533043 bytes, Sharpness: 552",
+    "losers": [
+      {
+        "filename": "20260629_203522(1) (1).jpg",
+        "details": "1473x2618, 1422330 bytes, Sharpness: 450"
+      }
+    ],
+    "reason": "Kept 20260629_203522(1).jpg: highest resolution (1473x2618) and best sharpness/dynamic range (552 score) without duplicate cropping."
+  },
+  {
+    "key": "20260717_114455",
+    "winner": "20260717_114455 (1).jpg",
+    "winnerDetails": "2500x4000, 2740597 bytes, Sharpness: 377",
+    "losers": [
+      {
+        "filename": "20260717_114455.jpg",
+        "details": "2500x4000, 3453235 bytes, Sharpness: 170"
+      }
+    ],
+    "reason": "Kept 20260717_114455 (1).jpg: highest resolution (2500x4000) and best sharpness/dynamic range (377 score) without duplicate cropping."
+  },
+  {
+    "key": "20260717_114502",
+    "winner": "20260717_114502 (2).jpg",
+    "winnerDetails": "2201x3912, 2392864 bytes, Sharpness: 376",
+    "losers": [
+      {
+        "filename": "20260717_114502 (1).jpg",
+        "details": "2201x3912, 3021286 bytes, Sharpness: 201"
+      },
+      {
+        "filename": "20260717_114502.jpg",
+        "details": "2106x3744, 1948224 bytes, Sharpness: 370"
+      }
+    ],
+    "reason": "Kept 20260717_114502 (2).jpg: highest resolution (2201x3912) and best sharpness/dynamic range (376 score) without duplicate cropping."
+  },
+  {
+    "key": "20260717_125925",
+    "winner": "20260717_125925.jpg",
+    "winnerDetails": "2993x3989, 2326423 bytes, Sharpness: 189",
+    "losers": [
+      {
+        "filename": "20260717_125925 (1).jpg",
+        "details": "2993x3989, 2326399 bytes, Sharpness: 189"
+      }
+    ],
+    "reason": "Kept 20260717_125925.jpg: highest resolution (2993x3989) and best sharpness/dynamic range (189 score) without duplicate cropping."
+  },
+  {
+    "key": "20260805_190030",
+    "winner": "20260805_190030 (1).jpg",
+    "winnerDetails": "2252x4000, 5542915 bytes, Sharpness: 1688",
+    "losers": [
+      {
+        "filename": "20260805_190030.jpg",
+        "details": "2252x4000, 5370382 bytes, Sharpness: 1621"
+      },
+      {
+        "filename": "20260805_190030 (2).jpg",
+        "details": "2246x2996, 4580607 bytes, Sharpness: 1993"
+      }
+    ],
+    "reason": "Kept 20260805_190030 (1).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (1688 score) without duplicate cropping."
+  },
+  {
+    "key": "20260805_190435",
+    "winner": "20260805_190435 (2).jpg",
+    "winnerDetails": "2252x4000, 1946137 bytes, Sharpness: 165",
+    "losers": [
+      {
+        "filename": "20260805_190435 (1).jpg",
+        "details": "2252x4000, 1803479 bytes, Sharpness: 153"
+      },
+      {
+        "filename": "20260805_190435.jpg",
+        "details": "2252x4000, 1793597 bytes, Sharpness: 159"
+      },
+      {
+        "filename": "20260805_190435 (2)(1).jpg",
+        "details": "2252x4000, 1182098 bytes, Sharpness: 140"
+      }
+    ],
+    "reason": "Kept 20260805_190435 (2).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (165 score) without duplicate cropping."
+  },
+  {
+    "key": "20260808_050635",
+    "winner": "20260808_050635 (1).jpg",
+    "winnerDetails": "4000x3000, 1806759 bytes, Sharpness: 82",
+    "losers": [
+      {
+        "filename": "20260808_050635.jpg",
+        "details": "4000x3000, 1731226 bytes, Sharpness: 87"
+      }
+    ],
+    "reason": "Kept 20260808_050635 (1).jpg: highest resolution (4000x3000) and best sharpness/dynamic range (82 score) without duplicate cropping."
+  },
+  {
+    "key": "20260815_142638",
+    "winner": "20260815_142638 (1).jpg",
+    "winnerDetails": "2250x4000, 2065669 bytes, Sharpness: 3",
+    "losers": [
+      {
+        "filename": "20260815_142638.jpg",
+        "details": "2250x4000, 1797471 bytes, Sharpness: 4"
+      }
+    ],
+    "reason": "Kept 20260815_142638 (1).jpg: highest resolution (2250x4000) and best sharpness/dynamic range (3 score) without duplicate cropping."
+  },
+  {
+    "key": "20260915_093544",
+    "winner": "20260915_093544 (1).jpg",
+    "winnerDetails": "3999x3000, 6300207 bytes, Sharpness: 242",
+    "losers": [
+      {
+        "filename": "20260915_093544.jpg",
+        "details": "3999x2250, 4791098 bytes, Sharpness: 246"
+      }
+    ],
+    "reason": "Kept 20260915_093544 (1).jpg: highest resolution (3999x3000) and best sharpness/dynamic range (242 score) without duplicate cropping."
+  },
+  {
+    "key": "20260925_075825",
+    "winner": "20260925_075825(0) (1).jpg",
+    "winnerDetails": "2250x3999, 4407825 bytes, Sharpness: 1513",
+    "losers": [
+      {
+        "filename": "20260925_075825(0).jpg",
+        "details": "2246x3992, 5835951 bytes, Sharpness: 1469"
+      }
+    ],
+    "reason": "Kept 20260925_075825(0) (1).jpg: highest resolution (2250x3999) and best sharpness/dynamic range (1513 score) without duplicate cropping."
+  },
+  {
+    "key": "20260927_043405",
+    "winner": "20260927_043405.jpg",
+    "winnerDetails": "3712x6596, 2399812 bytes, Sharpness: 19",
+    "losers": [
+      {
+        "filename": "20260927_043405(1).jpg",
+        "details": "2598x4618, 1542176 bytes, Sharpness: 35"
+      },
+      {
+        "filename": "20260927_043405(1) (1).jpg",
+        "details": "2598x4618, 1042599 bytes, Sharpness: 22"
+      }
+    ],
+    "reason": "Kept 20260927_043405.jpg: highest resolution (3712x6596) and best sharpness/dynamic range (19 score) without duplicate cropping."
+  },
+  {
+    "key": "20261001_075311",
+    "winner": "20261001_075311 (1).jpg",
+    "winnerDetails": "2246x3990, 4146576 bytes, Sharpness: 649",
+    "losers": [
+      {
+        "filename": "20261001_075311.jpg",
+        "details": "2246x3990, 3686715 bytes, Sharpness: 542"
+      }
+    ],
+    "reason": "Kept 20261001_075311 (1).jpg: highest resolution (2246x3990) and best sharpness/dynamic range (649 score) without duplicate cropping."
+  },
+  {
+    "key": "20261014_123458",
+    "winner": "20261014_123458.jpg",
+    "winnerDetails": "2252x4000, 5698762 bytes, Sharpness: 1569",
+    "losers": [
+      {
+        "filename": "20261014_123458 (1).jpg",
+        "details": "2252x4000, 5628752 bytes, Sharpness: 1528"
+      }
+    ],
+    "reason": "Kept 20261014_123458.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (1569 score) without duplicate cropping."
+  },
+  {
+    "key": "20261014_124956",
+    "winner": "20261014_124956 (3).jpg",
+    "winnerDetails": "3000x4000, 3376868 bytes, Sharpness: 195",
+    "losers": [
+      {
+        "filename": "20261014_124956 (2).jpg",
+        "details": "2033x3613, 1733640 bytes, Sharpness: 221"
+      },
+      {
+        "filename": "20261014_124956.jpg",
+        "details": "2033x3613, 1722207 bytes, Sharpness: 224"
+      },
+      {
+        "filename": "20261014_124956 (1).jpg",
+        "details": "2033x3613, 1722139 bytes, Sharpness: 224"
+      }
+    ],
+    "reason": "Kept 20261014_124956 (3).jpg: highest resolution (3000x4000) and best sharpness/dynamic range (195 score) without duplicate cropping."
+  },
+  {
+    "key": "20261014_131807",
+    "winner": "20261014_131807 (1).jpg",
+    "winnerDetails": "2252x4000, 3801867 bytes, Sharpness: 879",
+    "losers": [
+      {
+        "filename": "20261014_131807.jpg",
+        "details": "2252x4000, 3908776 bytes, Sharpness: 865"
+      }
+    ],
+    "reason": "Kept 20261014_131807 (1).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (879 score) without duplicate cropping."
+  },
+  {
+    "key": "20261014_132013",
+    "winner": "20261014_132013 (1).jpg",
+    "winnerDetails": "1548x2749, 1119062 bytes, Sharpness: 384",
+    "losers": [
+      {
+        "filename": "20261014_132013.jpg",
+        "details": "1548x2749, 1096917 bytes, Sharpness: 380"
+      }
+    ],
+    "reason": "Kept 20261014_132013 (1).jpg: highest resolution (1548x2749) and best sharpness/dynamic range (384 score) without duplicate cropping."
+  },
+  {
+    "key": "20261014_132024",
+    "winner": "20261014_132024.jpg",
+    "winnerDetails": "2252x4000, 2415082 bytes, Sharpness: 155",
+    "losers": [
+      {
+        "filename": "20261014_132024 (2).jpg",
+        "details": "2252x4000, 2415017 bytes, Sharpness: 155"
+      },
+      {
+        "filename": "20261014_132024 (3).jpg",
+        "details": "2252x4000, 2294071 bytes, Sharpness: 151"
+      }
+    ],
+    "reason": "Kept 20261014_132024.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (155 score) without duplicate cropping."
+  },
+  {
+    "key": "20261014_143051",
+    "winner": "20261014_143051 (1).jpg",
+    "winnerDetails": "2250x3999, 4885737 bytes, Sharpness: 306",
+    "losers": [
+      {
+        "filename": "20261014_143051.jpg",
+        "details": "2250x3999, 2355604 bytes, Sharpness: 276"
+      },
+      {
+        "filename": "20261014_143051 (2).jpg",
+        "details": "1929x3428, 3584275 bytes, Sharpness: 315"
+      }
+    ],
+    "reason": "Kept 20261014_143051 (1).jpg: highest resolution (2250x3999) and best sharpness/dynamic range (306 score) without duplicate cropping."
+  },
+  {
+    "key": "20261025_164506",
+    "winner": "20261025_164506(0).jpg",
+    "winnerDetails": "2252x4000, 6745954 bytes, Sharpness: 889",
+    "losers": [
+      {
+        "filename": "20261025_164506(0) (1).jpg",
+        "details": "2078x3689, 5505888 bytes, Sharpness: 956"
+      }
+    ],
+    "reason": "Kept 20261025_164506(0).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (889 score) without duplicate cropping."
+  },
+  {
+    "key": "20261025_164623",
+    "winner": "20261025_164623 (1).jpg",
+    "winnerDetails": "2252x4000, 5968543 bytes, Sharpness: 707",
+    "losers": [
+      {
+        "filename": "20261025_164623.jpg",
+        "details": "2064x3666, 4783186 bytes, Sharpness: 856"
+      }
+    ],
+    "reason": "Kept 20261025_164623 (1).jpg: highest resolution (2252x4000) and best sharpness/dynamic range (707 score) without duplicate cropping."
+  },
+  {
+    "key": "20261025_164633",
+    "winner": "20261025_164633.jpg",
+    "winnerDetails": "2252x4000, 5680673 bytes, Sharpness: 589",
+    "losers": [
+      {
+        "filename": "20261025_164633 (1).jpg",
+        "details": "2078x3689, 4582062 bytes, Sharpness: 618"
+      }
+    ],
+    "reason": "Kept 20261025_164633.jpg: highest resolution (2252x4000) and best sharpness/dynamic range (589 score) without duplicate cropping."
+  },
+  {
+    "key": "IMG_20260829_165902",
+    "winner": "IMG_20260829_165902633 (2).jpg",
+    "winnerDetails": "3072x4096, 5614849 bytes, Sharpness: 1179",
+    "losers": [
+      {
+        "filename": "IMG_20260829_165902633.jpg",
+        "details": "3064x4085, 6035327 bytes, Sharpness: 988"
+      }
+    ],
+    "reason": "Kept IMG_20260829_165902633 (2).jpg: highest resolution (3072x4096) and best sharpness/dynamic range (1179 score) without duplicate cropping."
+  },
+  {
+    "key": "IMG_3025",
+    "winner": "IMG_3025(1) (1).jpg",
+    "winnerDetails": "1897x3371, 3121537 bytes, Sharpness: 1134",
+    "losers": [
+      {
+        "filename": "IMG_3025(1).jpg",
+        "details": "1897x3371, 3121353 bytes, Sharpness: 1134"
+      }
+    ],
+    "reason": "Kept IMG_3025(1) (1).jpg: highest resolution (1897x3371) and best sharpness/dynamic range (1134 score) without duplicate cropping."
+  },
+  {
+    "key": "_DSC4263",
+    "winner": "_DSC4263~4 (1).jpg",
+    "winnerDetails": "6015x3384, 1972859 bytes, Sharpness: 96",
+    "losers": [
+      {
+        "filename": "_DSC4263~4.jpg",
+        "details": "3387x3387, 1253847 bytes, Sharpness: 108"
+      }
+    ],
+    "reason": "Kept _DSC4263~4 (1).jpg: highest resolution (6015x3384) and best sharpness/dynamic range (96 score) without duplicate cropping."
+  }
+]

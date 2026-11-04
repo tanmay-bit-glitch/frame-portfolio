@@ -21,3 +21,6 @@ Thumbs.db
 # Raw Media & Curation Source (Local Only)
 raw_photos/
 rejects/
+
+# Curation scratch thumbnails
+curation/thumbnails/
