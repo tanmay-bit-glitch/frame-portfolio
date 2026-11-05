@@ -2153,19 +2153,29 @@ body:hover .custom-cursor {
 
 .quote-author-row {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 2px;
   margin-top: 6px;
-  padding-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.quote-author-bold {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.quote-calligraphy-sign {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: clamp(32px, 3.5vw, 46px);
+  line-height: 0.95;
   color: var(--accent);
-  text-transform: uppercase;
+  filter: drop-shadow(0 0 14px rgba(224, 93, 44, 0.4));
+  margin-bottom: 2px;
+  transform: rotate(-1deg);
+  transform-origin: left;
+  display: block;
+}
+
+.quote-author-meta {
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
 
 .skills-matrix {
@@ -2281,6 +2291,9 @@ body:hover .custom-cursor {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+  .quote-calligraphy-sign {
+    font-size: 30px;
   }
 }
 
