@@ -228,10 +228,17 @@
     lastMenuFocusedElement = document.activeElement;
     menu.inert = false;
     menu.setAttribute('aria-hidden', 'false');
-    menu.classList.add('is-open');
     menuButton.setAttribute('aria-expanded', 'true');
-    closeButton?.focus();
-    playSound('click');
+    menu.classList.add('is-open');
+
+    // Defer focus and sound off the critical input frame to ensure instant Next Paint (<16ms INP)
+    requestAnimationFrame(() => {
+      closeButton?.focus({ preventScroll: true });
+    });
+
+    if (soundEnabled) {
+      setTimeout(() => playSound('click'), 0);
+    }
   }
 
   function closeMenu(targetSelector) {
@@ -253,7 +260,7 @@
       menu.inert = true;
       menu.setAttribute('aria-hidden', 'true');
       if (!targetSelector) {
-        lastMenuFocusedElement?.focus();
+        lastMenuFocusedElement?.focus({ preventScroll: true });
       }
     }, delay);
   }
