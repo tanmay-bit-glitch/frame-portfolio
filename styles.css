@@ -5577,6 +5577,16 @@ main > section {
   filter: drop-shadow(0 0 35px rgba(224, 93, 44, 0.22));
 }
 
+.giant-name-title.font-calligraphic {
+  font-family: 'Herr Von Muellerhoff', 'Mrs Saint Delafield', cursive;
+  font-size: clamp(140px, 26vw, 380px);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  filter: drop-shadow(0 0 50px rgba(224, 93, 44, 0.45));
+}
+
 /* Layer 3: Cutout Portrait In Front of Letters */
 .hero-cutout-wrapper {
   position: absolute;
