@@ -81,3 +81,4 @@ capture('preview-campus.html', '19-campus-frame-updated-1440.png', 1440, 1150);
 capture('preview-about.html', '20-about-profile-placed-properly-1440.png', 1440, 900);
 capture('preview-about.html', '21-about-profile-mobile-375.png', 375, 950);
 console.log('Done captures!');
+

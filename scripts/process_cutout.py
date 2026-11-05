@@ -59,3 +59,4 @@ for w in widths:
     print(f"Width {w}px -> PNG: {png_size/1024:.1f} KB, WebP: {webp_size/1024:.1f} KB")
 
 print("Cutout processing complete!")
+

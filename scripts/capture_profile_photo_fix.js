@@ -39,3 +39,4 @@ capture(fileUrl, 'profile-photo-hero-1440.png', 1440, 960);
 capture(fileUrl, 'profile-photo-hero-375.png', 375, 812);
 
 console.log('Profile photo verification captures completed.');
+

@@ -223,3 +223,4 @@ if (fs.existsSync(localTarget)) {
 } else {
   console.error('Failed to capture calligraphy-font-options.png');
 }
+

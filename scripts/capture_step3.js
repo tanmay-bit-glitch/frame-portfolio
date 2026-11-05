@@ -56,3 +56,4 @@ const footerUrl = `file:///${path.resolve('preview-footer.html').replace(/\\/g, 
 capture(footerUrl, 'step3-footer-1440.png', 1440, 500);
 
 console.log('Step 3 captures completed.');
+

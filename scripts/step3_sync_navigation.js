@@ -206,3 +206,4 @@ if (normScript.includes(normOldPageSections)) {
 } else {
   console.error('Could not find oldPageSections in script.js');
 }
+

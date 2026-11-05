@@ -62,3 +62,4 @@ const previewUrl = `file:///${path.resolve('preview-step2-flow.html').replace(/\
 capture(previewUrl, 'step2-flow-1440.png', 1440, 1100);
 
 console.log('Step 2 captures completed.');
+

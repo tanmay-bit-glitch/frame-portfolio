@@ -197,3 +197,4 @@ if (fs.existsSync(target)) {
   fs.copyFileSync(target, artifactTarget);
   console.log('Saved step2-cutout-zoom-audit.png:', fs.statSync(target).size, 'bytes');
 }
+

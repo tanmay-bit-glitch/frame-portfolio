@@ -28,3 +28,4 @@ html = html.slice(0, showreelStart) + fullAboutBlock + html.slice(showreelStart)
 
 fs.writeFileSync(indexPath, html, 'utf8');
 console.log('Step 1: Successfully reordered sections in index.html');
+

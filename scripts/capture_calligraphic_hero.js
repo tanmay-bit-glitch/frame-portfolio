@@ -31,3 +31,4 @@ const fileUrl = `file:///${path.resolve('index.html').replace(/\\/g, '/')}`;
 capture(fileUrl, 'calligraphic-hero-1440.png', 1440, 950);
 capture(fileUrl, 'calligraphic-hero-768.png', 768, 1024);
 capture(fileUrl, 'calligraphic-hero-375.png', 375, 812);
+

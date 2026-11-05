@@ -25,3 +25,4 @@ if (allGood) {
   console.error('\nFAILURE: Some internal links target missing DOM IDs.');
   process.exit(1);
 }
+

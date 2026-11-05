@@ -47,3 +47,4 @@ capture(aboutUrl, 'step1-about-768.png', 768, 900);
 capture(aboutUrl, 'step1-about-375.png', 375, 900);
 
 console.log('Step 1 captures completed.');
+

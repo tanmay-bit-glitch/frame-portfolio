@@ -258,3 +258,4 @@ if (css.includes('\r\n')) {
 
 fs.writeFileSync(cssPath, finalCss, 'utf8');
 console.log('Step 2: styles.css successfully updated');
+

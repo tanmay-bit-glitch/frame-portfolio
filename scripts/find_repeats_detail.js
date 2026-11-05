@@ -24,3 +24,4 @@ console.log(disciplines.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
 
 console.log('\n=== HOW I CREATE TEXT ===');
 console.log(skills.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
+

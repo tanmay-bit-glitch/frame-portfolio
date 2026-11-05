@@ -250,3 +250,4 @@ if (normScript.includes(normMarker)) {
 } else {
   console.error('Could not find targetSection5Marker in script.js');
 }
+

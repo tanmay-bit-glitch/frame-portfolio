@@ -334,3 +334,4 @@ if (!css.includes('.hero-cutout-stage')) {
   fs.writeFileSync(cssPath, css, 'utf8');
   console.log('styles.css updated with hero cutout styles.');
 }
+

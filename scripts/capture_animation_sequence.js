@@ -64,3 +64,4 @@ capture('preview-scroll-midflight.html', 'step4-travel-midflight-1440.png', 1440
 capture('preview-scroll-docked.html', 'step4-travel-docked-1440.png', 1440, 960);
 
 console.log('Animation captures completed successfully.');
+

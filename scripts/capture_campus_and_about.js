@@ -27,3 +27,4 @@ capture(fileBase + '#experience', '19-campus-frame-updated-1440.png', 1440, 1100
 capture(fileBase + '#about', '20-about-profile-placed-properly-1440.png', 1440, 1000);
 capture(fileBase + '#about', '21-about-profile-mobile-375.png', 375, 950);
 console.log('Captured all visual evidence!');
+

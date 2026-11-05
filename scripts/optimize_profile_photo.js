@@ -31,3 +31,4 @@ cp.spawnSync(ffmpeg, [
 
 console.log('640 size:', fs.statSync(out640).size);
 console.log('1280 size:', fs.statSync(out1280).size);
+

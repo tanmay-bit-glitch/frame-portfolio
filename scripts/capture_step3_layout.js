@@ -42,3 +42,4 @@ capture(`${fileUrl}#about`, 'step3-about-dock-768.png', 768, 900);
 capture(`${fileUrl}#about`, 'step3-about-dock-375.png', 375, 900);
 
 console.log('Step 3 captures completed.');
+

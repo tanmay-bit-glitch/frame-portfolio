@@ -10,3 +10,4 @@ lines.forEach((line, i) => {
     console.log(`Line ${i + 1}: <${tagMatch ? tagMatch[1] : 'elem'} id="${idMatch ? idMatch[1] : 'NONE'}" class="${classMatch ? classMatch[1] : ''}">`);
   }
 });
+
