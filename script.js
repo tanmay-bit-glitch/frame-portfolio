@@ -1799,103 +1799,12 @@
 
 
   /* ==========================================================================
-     HERO SHOWREEL VIDEO CONTROLLER (PHASE 4)
+     FEATURED SAMPLE VIDEO CONTROLLER
      ========================================================================== */
   function initHeroVideoPlayer() {
     const video = document.getElementById('heroShowreelVideo');
-    const wrapper = document.querySelector('.hero-video-wrapper');
-    const playBtn = document.getElementById('heroVideoPlayBtn');
-    const audioToggle = document.getElementById('heroAudioToggle');
-    const fullscreenBtn = document.getElementById('heroFullscreenBtn');
-
-    if (!video || !wrapper) return;
-
-    // Continuous autoplay playback per user requirements
-    video.muted = true;
-    video.loop = true;
-    video.play().catch(err => {
-      console.log('Video autoplay waiting for interaction:', err);
-    });
-
-    function updatePlayState() {
-      if (video.paused) {
-        wrapper.classList.remove('is-playing');
-        if (playBtn) playBtn.innerHTML = '<span class="play-icon">▶</span>';
-      } else {
-        wrapper.classList.add('is-playing');
-        if (playBtn) playBtn.innerHTML = '<span class="play-icon">❚❚</span>';
-      }
-    }
-
-    function togglePlay() {
-      if (video.paused) {
-        video.play().then(updatePlayState).catch(err => {
-          console.log('Video play prevented:', err);
-        });
-      } else {
-        video.pause();
-        updatePlayState();
-      }
-      playSound('click');
-    }
-
-    playBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      togglePlay();
-    });
-
-    video.addEventListener('click', () => {
-      togglePlay();
-    });
-
-    video.addEventListener('play', updatePlayState);
-    video.addEventListener('pause', updatePlayState);
-    video.addEventListener('ended', () => {
-      wrapper.classList.remove('is-playing');
-    });
-
-    // Audio Toggle (Muted by default)
-    if (audioToggle) {
-      audioToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        video.muted = !video.muted;
-        const icon = audioToggle.querySelector('.audio-icon');
-        const label = audioToggle.querySelector('.audio-label');
-        if (video.muted) {
-          if (icon) icon.textContent = '🔇';
-          if (label) label.textContent = 'SOUND OFF';
-        } else {
-          if (icon) icon.textContent = '🔊';
-          if (label) label.textContent = 'SOUND ON';
-        }
-        playSound('click');
-      });
-    }
-
-    // Fullscreen Toggle
-    if (fullscreenBtn) {
-      fullscreenBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (!document.fullscreenElement) {
-          if (wrapper.requestFullscreen) {
-            wrapper.requestFullscreen();
-          } else if (video.requestFullscreen) {
-            video.requestFullscreen();
-          }
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          }
-        }
-        playSound('click');
-      });
-    }
-
-    // Continuous loop: re-trigger on ended
-    video.addEventListener('ended', () => {
-      video.currentTime = 0;
-      video.play().catch(() => {});
-    });
+    if (!video) return;
+    // Standard normal HTML5 video element with native browser controls
   }
 
   // Initialize hero video player on DOMContentLoaded

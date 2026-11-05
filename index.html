@@ -116,7 +116,7 @@
           <span class="link-text">ABOUT ME</span>
         </a>
         <a href="#showreel" data-num="02">
-          <span class="link-meta">2026 SHOWREEL</span>
+          <span class="link-meta">2026 SHOWREEL · <span class="nav-pending-tag">PENDING</span></span>
           <span class="link-text">FRAMES IN MOTION</span>
         </a>
         <a href="#disciplines" data-num="03">
@@ -219,7 +219,7 @@
             <span class="btn-play-badge" aria-hidden="true">
               <svg width="8" height="9" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 1px;"><polygon points="5 3 20 12 5 21"/></svg>
             </span>
-            <span>WATCH THE REEL</span>
+            <span>WATCH VIDEO</span>
           </a>
           <a href="#work" class="btn-secondary hero-btn">
             <span>SEE MY PHOTOS</span>
@@ -262,7 +262,7 @@
               <span class="btn-play-badge" aria-hidden="true">
                 <svg width="8" height="9" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 1px;"><polygon points="5 3 20 12 5 21"/></svg>
               </span>
-              <span>WATCH THE REEL</span>
+              <span>WATCH VIDEO</span>
             </a>
             <a href="#contact" class="btn-secondary about-btn">
               <span>SAY HELLO</span>
@@ -299,36 +299,45 @@
       <div class="showreel-section-container">
         <div class="section-header-split">
           <div>
-            <p class="eyebrow">SHOWREEL // 02</p>
+            <div class="showreel-eyebrow-row">
+              <p class="eyebrow">SHOWREEL // 02</p>
+              <span class="showreel-pending-pill mono">
+                <span class="pending-dot"></span>
+                <span>STATUS: PENDING</span>
+              </span>
+            </div>
             <h2 id="showreel-heading">FRAMES IN<br><span class="text-stroke">MOTION.</span></h2>
           </div>
-          <p class="section-intro-text">
-            A fast cut of visual rhythm, streets, automotive motion, and atmosphere. Shot on Samsung Galaxy S23.
-          </p>
+          <div class="showreel-intro-block">
+            <p class="section-intro-text">
+              Official 2026 Showreel currently in the edit suite. In the meantime, watch sample footage, automotive motion, and color grading shot on Samsung Galaxy S23.
+            </p>
+          </div>
         </div>
 
         <div class="showreel-player-canvas in-page-player">
-          <div class="hero-video-wrapper">
-            <video id="heroShowreelVideo" class="hero-showreel-video" autoplay muted loop playsinline preload="auto">
+          <div class="normal-video-container">
+            <video id="heroShowreelVideo" class="normal-video-element" controls playsinline preload="metadata" poster="assets/video/showreel_poster.jpg">
               <source src="assets/video/hero_showreel.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
-            <div class="hero-video-controls-overlay" id="heroVideoOverlay">
-              <button class="hero-video-play-btn" id="heroVideoPlayBtn" type="button" aria-label="Play or Pause Showreel">
-                <span class="play-icon">▶</span>
-              </button>
-              <div class="hero-video-bar">
-                <span class="hero-video-title mono">TANMAY CHAVAN // SHOWREEL 2026</span>
-                <div class="hero-video-actions">
-                  <button type="button" class="btn-video-ctrl mono" id="heroAudioToggle" aria-label="Toggle Sound">
-                    <span class="audio-icon">🔇</span>
-                    <span class="audio-label">SOUND OFF</span>
-                  </button>
-                  <button type="button" class="btn-video-ctrl mono" id="heroFullscreenBtn" aria-label="Toggle Fullscreen">
-                    <span>⛶ FULLSCREEN</span>
-                  </button>
-                </div>
+          </div>
+
+          <!-- Pending Notice Card -->
+          <div class="showreel-pending-banner">
+            <div class="pending-info">
+              <div class="pending-badge-row">
+                <span class="pending-chip mono">SHOWREEL: PENDING</span>
+                <span class="pending-sub mono">EDIT IN PROGRESS</span>
               </div>
+              <h3 class="pending-title">OFFICIAL 2026 MASTER SHOWREEL DROPPING SOON</h3>
+              <p class="pending-desc">A full-length cinematic compilation covering commercial sets, college aftermovies, and automotive visuals is being crafted. The player above features raw sample pacing & grade.</p>
+            </div>
+            <div class="pending-tag-col mono">
+              <span class="pending-signal">
+                <span class="signal-radar"></span>
+                <span>IN PRODUCTION</span>
+              </span>
             </div>
           </div>
         </div>
