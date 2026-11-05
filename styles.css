@@ -1904,7 +1904,7 @@ body:hover .custom-cursor {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 25%;
   filter: contrast(1.05) brightness(1.0) saturate(1.02);
   display: block;
   transition: transform var(--dur-slow) var(--ease-cinema), filter var(--dur-slow);
@@ -5609,23 +5609,7 @@ main > section {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Traveling Flying Portrait Flyer Element (Vanilla JS RAF) */
-.hero-flying-flyer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  pointer-events: none;
-  display: none;
-  will-change: transform, width, height;
-}
 
-.hero-flying-flyer .flyer-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: bottom center;
-}
 
 /* Layer 4: Corner HUD */
 .hero-corner-hud {
@@ -5711,11 +5695,7 @@ main > section {
   font-size: 11.5px;
 }
 
-/* Landing Slot inside About */
-.portrait-cutout-dock-img {
-  background: #0a0a09;
-  object-fit: contain;
-}
+
 
 @media (max-width: 768px) {
   .hero-cutout-wrapper {
