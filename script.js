@@ -225,7 +225,7 @@
   let lastMenuFocusedElement = null;
 
   function openMenu() {
-    lastFocusedElement = document.activeElement;
+    lastMenuFocusedElement = document.activeElement;
     menu.inert = false;
     menu.setAttribute('aria-hidden', 'false');
     menu.classList.add('is-open');
@@ -237,28 +237,54 @@
   function closeMenu(targetSelector) {
     menu.classList.remove('is-open');
     menuButton.setAttribute('aria-expanded', 'false');
-    const delay = prefersReduced.matches ? 0 : 500;
+    if (targetSelector) {
+      const target = document.querySelector(targetSelector);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        try {
+          history.pushState(null, '', targetSelector);
+        } catch (_) {
+          window.location.hash = targetSelector;
+        }
+      }
+    }
+    const delay = prefersReduced.matches ? 0 : 400;
     setTimeout(() => {
       menu.inert = true;
       menu.setAttribute('aria-hidden', 'true');
-      if (targetSelector) {
-        const target = document.querySelector(targetSelector);
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      } else {
+      if (!targetSelector) {
         lastMenuFocusedElement?.focus();
       }
     }, delay);
   }
 
-  if (menuButton && closeButton) {
-    menuButton.addEventListener('click', openMenu);
+  function toggleMenu() {
+    if (menu.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  if (menuButton && closeButton && menu) {
+    menuButton.addEventListener('click', toggleMenu);
     closeButton.addEventListener('click', () => closeMenu());
+    
+    // Close when clicking directly on overlay background
+    menu.addEventListener('click', (e) => {
+      if (e.target === menu || e.target.classList.contains('menu-bg-glow')) {
+        closeMenu();
+      }
+    });
+
     menuLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
         const target = link.getAttribute('href');
-        closeMenu(target);
-        playSound('click');
+        if (target && target.startsWith('#')) {
+          e.preventDefault();
+          closeMenu(target);
+          playSound('click');
+        }
       });
     });
 
