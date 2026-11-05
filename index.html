@@ -215,7 +215,7 @@
       <div class="hero-bottom-controls">
         <p class="hero-tagline-subtitle">I STOP WHEN A FRAME FEELS RIGHT.</p>
         <div class="hero-actions-row">
-          <a href="#showreel" class="btn-primary hero-btn">
+          <a href="#motion-video" class="btn-primary hero-btn">
             <span class="btn-play-badge" aria-hidden="true">
               <svg width="8" height="9" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 1px;"><polygon points="5 3 20 12 5 21"/></svg>
             </span>
@@ -258,7 +258,7 @@
 
           <!-- Action Buttons -->
           <div class="about-actions-row">
-            <a href="#showreel" class="btn-primary about-btn">
+            <a href="#motion-video" class="btn-primary about-btn">
               <span class="btn-play-badge" aria-hidden="true">
                 <svg width="8" height="9" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 1px;"><polygon points="5 3 20 12 5 21"/></svg>
               </span>
@@ -293,8 +293,7 @@
       </div>
     </section>
 
-    <!-- SHOWREEL SECTION (VERY TOP) -->
-    <!-- TODO: Add final showreel video file or embed link (e.g. assets/showreel.mp4 or YouTube / Vimeo) -->
+    <!-- SHOWREEL SECTION // 02 (OFFICIAL MASTER SHOWREEL: PENDING) -->
     <section class="showreel-section section-pad" id="showreel" aria-labelledby="showreel-heading">
       <div class="showreel-section-container">
         <div class="section-header-split">
@@ -310,34 +309,52 @@
           </div>
           <div class="showreel-intro-block">
             <p class="section-intro-text">
-              Official 2026 Showreel currently in the edit suite. In the meantime, watch sample footage, automotive motion, and color grading shot on Samsung Galaxy S23.
+              Official 2026 Master Showreel is currently being cut in DaVinci Resolve &amp; Premiere Pro. A curated director's cut compiling commercial cinematography, automotive motion, and college aftermovies is dropping soon.
             </p>
           </div>
         </div>
 
-        <div class="showreel-player-canvas in-page-player">
-          <div class="normal-video-container">
-            <video id="heroShowreelVideo" class="normal-video-element" controls playsinline preload="metadata" poster="assets/video/showreel_poster.jpg">
-              <source src="assets/video/hero_showreel.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
-          </div>
+        <!-- Sleek Studio Teaser / Pending Card -->
+        <div class="showreel-pending-stage">
+          <div class="pending-stage-backdrop">
+            <div class="pending-grid-overlay" aria-hidden="true"></div>
+            <span class="pending-reticle reticle-tl" aria-hidden="true"></span>
+            <span class="pending-reticle reticle-tr" aria-hidden="true"></span>
+            <span class="pending-reticle reticle-bl" aria-hidden="true"></span>
+            <span class="pending-reticle reticle-br" aria-hidden="true"></span>
 
-          <!-- Pending Notice Card -->
-          <div class="showreel-pending-banner">
-            <div class="pending-info">
-              <div class="pending-badge-row">
-                <span class="pending-chip mono">SHOWREEL: PENDING</span>
-                <span class="pending-sub mono">EDIT IN PROGRESS</span>
+            <div class="pending-stage-content">
+              <div class="pending-header-meta">
+                <span class="pending-chip mono">TC // 00:00:00:00</span>
+                <span class="pending-chip mono highlight">
+                  <span class="pending-dot"></span>
+                  <span>OFFICIAL SHOWREEL: PENDING</span>
+                </span>
+                <span class="pending-chip mono">SUITE: RESOLVE &amp; PREMIERE</span>
               </div>
-              <h3 class="pending-title">OFFICIAL 2026 MASTER SHOWREEL DROPPING SOON</h3>
-              <p class="pending-desc">A full-length cinematic compilation covering commercial sets, college aftermovies, and automotive visuals is being crafted. The player above features raw sample pacing & grade.</p>
-            </div>
-            <div class="pending-tag-col mono">
-              <span class="pending-signal">
-                <span class="signal-radar"></span>
-                <span>IN PRODUCTION</span>
-              </span>
+
+              <div class="pending-centerpiece">
+                <div class="pending-film-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="3"></rect>
+                    <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"></path>
+                  </svg>
+                </div>
+                <h3 class="pending-main-title">2026 MASTER SHOWREEL IN PRODUCTION</h3>
+                <p class="pending-sub-desc">
+                  Tanmay is currently compiling his best cinematography, automotive tracking, and festival aftermovies into one official showcase.
+                </p>
+              </div>
+
+              <div class="pending-footer-action">
+                <a href="#motion-video" class="btn-primary pending-cta-btn">
+                  <span class="btn-play-badge" aria-hidden="true">
+                    <svg width="8" height="9" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 1px;"><polygon points="5 3 20 12 5 21"/></svg>
+                  </span>
+                  <span>WATCH VIDEO FOOTAGE &amp; REELS ↓</span>
+                </a>
+                <span class="pending-footnote mono">CINEMATIC VIDEO CUT, COLLEGE AFTERMOVIES &amp; PODCAST AVAILABLE IN SECTION 05</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1295,6 +1312,30 @@
           <p class="section-intro-text">
             Short-form visual pacing, dynamic camera movement, event narratives, and multi-cam podcast editing. Official video editing and aftermovie productions by Tanmay Chavan.
           </p>
+        </div>
+
+        
+        <!-- Featured Motion Video Showcase -->
+        <div class="featured-video-block" id="motion-video">
+          <div class="featured-video-header">
+            <div class="featured-video-meta">
+              <span class="mono eyebrow">FEATURED VIDEO // SAMPLE CUT</span>
+              <span class="featured-video-pill mono">SHOT ON S23</span>
+            </div>
+            <h3 class="featured-video-title">Automotive &amp; Motion Visuals</h3>
+            <p class="featured-video-desc">Dynamic speed pacing, camera tracking, and natural-light color grading shot on Samsung Galaxy S23. Cut in DaVinci Resolve &amp; Premiere Pro.</p>
+          </div>
+          <div class="normal-video-container">
+            <video id="heroShowreelVideo" class="normal-video-element" controls playsinline preload="metadata" poster="assets/video/showreel_poster.jpg">
+              <source src="assets/video/hero_showreel.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+
+        <!-- Section Subheader for Reels Grid -->
+        <div class="reels-grid-header">
+          <span class="mono eyebrow">SHORT-FORM REELS // CAMPUS &amp; FESTIVALS</span>
         </div>
 
         <!-- 3-Column Reels Grid With Original Thumbnails -->
